@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-13 AI 项目雷达</title>
+  <style>
+    :root {
+      --background: #f7f6f2;
+      --foreground: #20201e;
+      --muted: #6e6a62;
+      --line: #d7d1c6;
+      --panel: #ffffff;
+      --panel-soft: #efebe3;
+      --accent: #276b5f;
+      --accent-soft: #dfece8;
+      --accent-strong: #17483f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 12% 10%, rgba(39, 107, 95, 0.10), transparent 28%),
+        linear-gradient(180deg, #faf8f4 0%, var(--background) 100%);
+      color: var(--foreground);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    main { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 36px 0 48px; }
+    .hero { padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+    .eyebrow { margin: 0 0 8px; color: var(--accent); font-weight: 700; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 12px; font-size: clamp(36px, 6vw, 72px); line-height: 0.98; }
+    h2 { margin-bottom: 12px; font-size: 26px; }
+    h3 { margin-bottom: 6px; font-size: 15px; }
+    .intro { max-width: 720px; margin-bottom: 0; color: var(--muted); font-size: 18px; line-height: 1.7; }
+    .radar-section, .list-section { margin-top: 28px; }
+    .project-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+    button, a { font: inherit; }
+    .tab {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--foreground);
+      padding: 9px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+    .tab.active { background: var(--accent); border-color: var(--accent); color: white; }
+    .radar-layout {
+      display: grid;
+      grid-template-columns: minmax(320px, 0.9fr) minmax(320px, 1.1fr);
+      gap: 28px;
+      align-items: center;
+    }
+    .radar-visual { min-width: 0; padding: 12px; }
+    .radar-visual svg { display: block; width: 100%; max-width: 540px; margin: 0 auto; }
+    .grid-line { fill: none; stroke: var(--line); stroke-width: 1; }
+    .axis-line { stroke: var(--line); stroke-width: 1; }
+    .axis-label { fill: var(--foreground); font-size: 12px; font-weight: 700; }
+    .axis-value { fill: var(--muted); font-size: 11px; }
+    .radar-shape { fill: rgba(39, 107, 95, 0.22); stroke: var(--accent); stroke-width: 2.5; }
+    .radar-dot { fill: var(--accent-strong); stroke: var(--panel); stroke-width: 2; }
+    .project-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 18px 45px rgba(32, 32, 30, 0.08);
+    }
+    .card-topline { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    .card-topline span {
+      background: var(--accent-soft);
+      color: var(--accent-strong);
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 13px;
+    }
+    .score { color: var(--accent); font-size: 20px; font-weight: 700; }
+    .metrics { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 18px 0; }
+    .metrics div { background: var(--panel-soft); border-radius: 8px; padding: 10px 8px; text-align: center; }
+    .metrics dt { color: var(--muted); font-size: 12px; }
+    .metrics dd { margin: 3px 0 0; font-size: 20px; font-weight: 700; }
+    .copy-block { margin-top: 16px; }
+    .copy-block p { margin-bottom: 0; color: var(--muted); line-height: 1.65; }
+    .repo-link {
+      display: inline-flex;
+      margin-top: 22px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--accent);
+      color: white;
+      padding: 11px 16px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .project-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .project-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 10px;
+      padding: 14px;
+      text-align: left;
+      cursor: pointer;
+    }
+    .project-row.selected { border-color: var(--accent); background: var(--accent-soft); }
+    .project-row strong, .project-row small { display: block; }
+    .project-row small { margin-top: 4px; color: var(--muted); }
+    .project-row > span:last-child { color: var(--accent); font-size: 24px; font-weight: 700; }
+    @media (max-width: 820px) {
+      main { width: min(100% - 24px, 720px); padding-top: 24px; }
+      .radar-layout, .project-list { grid-template-columns: 1fr; }
+      .project-card { padding: 18px; }
+      .metrics { grid-template-columns: repeat(5, minmax(48px, 1fr)); }
+    }
+    @media (max-width: 520px) {
+      .metrics { grid-template-columns: repeat(2, 1fr); }
+      .tab { flex: 1 1 auto; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <p class="eyebrow">2026-07-13</p>
+      <h1>AI 项目雷达</h1>
+      <p class="intro">用统一五轴快速判断每个项目为什么入选：热度、增速、可用、新颖、活跃。README 核验作为可信度状态单独显示。</p>
+    </section>
+
+    <section class="radar-section" aria-label="项目雷达">
+      <div id="project-tabs" class="project-tabs" role="list" aria-label="选择项目"></div>
+      <div class="radar-layout">
+        <div class="radar-visual" aria-label="项目雷达图">
+          <svg viewBox="0 0 300 300" role="img" aria-label="五轴评分雷达图">
+            <g id="grid"></g>
+            <g id="labels"></g>
+            <polygon id="radar-shape" class="radar-shape" points=""></polygon>
+            <g id="dots"></g>
+          </svg>
+        </div>
+        <article class="project-card">
+          <div id="card-topline" class="card-topline"></div>
+          <h2 id="project-name"></h2>
+          <p id="project-score" class="score"></p>
+          <dl id="metrics" class="metrics"></dl>
+          <div class="copy-block"><h3>摘要</h3><p id="summary"></p></div>
+          <div class="copy-block"><h3>项目亮点</h3><p id="highlight"></p></div>
+          <div class="copy-block"><h3>适合谁</h3><p id="audience"></p></div>
+          <div class="copy-block"><h3>为什么选它</h3><p id="reason"></p></div>
+          <a id="repo-link" href="#" target="_blank" rel="noreferrer" class="repo-link">打开原始项目</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="list-section" aria-label="项目列表">
+      <h2>今日项目</h2>
+      <div id="project-list" class="project-list"></div>
+    </section>
+  </main>
+  <script>
+    const axes = [
+      { key: "popularity", label: "热度" },
+      { key: "growth", label: "增速" },
+      { key: "usability", label: "可用" },
+      { key: "novelty", label: "新颖" },
+      { key: "activity", label: "活跃" },
+    ];
+    const projects = [
+      { id: "router", name: "WorkWeave Router", selection: "High Momentum", score: 88, verified: "README 已核验", metrics: { popularity: 92, growth: 94, usability: 88, novelty: 78, activity: 86 }, summary: "本地模型路由工具，放在 Claude Code、Codex CLI、Cursor 等 AI 编程工具前面，根据 prompt 内容和规则选择更合适的模型。", highlight: "它解决的是“什么时候该用哪个模型”的问题，而不是再做一个聊天界面，可能成为 AI 编程工具链里的基础层。", audience: "经常在多个模型之间切换、想控制 AI 编程成本/速度/能力组合的开发者或团队。", reason: "HN 讨论高，README/项目结构清楚，模型路由也是 AI 编程基础设施里的长期问题。", url: "https://github.com/workweave/router" },
+      { id: "ditto", name: "Ditto", selection: "Useful Tool", score: 86, verified: "README 已核验", metrics: { popularity: 76, growth: 84, usability: 92, novelty: 88, activity: 82 }, summary: "读取本地 Claude Code、Codex、Copilot CLI 等 coding-agent 会话日志，提取偏好、规则、设计判断和写作习惯，生成私有 agent profile / you.md。", highlight: "不是普通“记忆”功能，而是从实际工作行为中提炼可复用的 agent 上下文。", audience: "重度使用 AI 编程工具、经常重复告诉 agent 自己偏好和项目标准的人。", reason: "不是因为 star 绝对最高，而是可用性、差异化和活跃度都不错，切中 AI 编程个性化问题。", url: "https://github.com/ohad6k/ditto" },
+      { id: "cadam", name: "CADAM", selection: "High Momentum", score: 80, verified: "README 已核验", metrics: { popularity: 91, growth: 92, usability: 70, novelty: 84, activity: 74 }, summary: "Adam CAD 的开源 AI CAD 项目，尝试把 AI 辅助带入 CAD 设计和建模流程。", highlight: "代表 AI 从通用聊天/编程场景进入 CAD 这类垂直专业软件。", audience: "关注 AI CAD、工程设计软件、垂直 AI 工具的人。", reason: "发布热度和增速高，是 AI CAD 垂直专业工具信号；活跃度和可用性仍需继续观察。", url: "https://github.com/Adam-CAD/CADAM" },
+      { id: "vox", name: "Vox Director", selection: "Early Signal", score: 77, verified: "README 已核验", metrics: { popularity: 64, growth: 78, usability: 74, novelty: 88, activity: 78 }, summary: "视频生产 agent skill。输入一个主题，生成 Vox 风格纸片拼贴解释/广告视频，覆盖脚本、关键帧、动效、旁白、音乐、字幕和 mp4 合成。", highlight: "不是单次生成素材，而是把视频制作拆成多阶段、可审核的生产流水线。", audience: "关注内容生产自动化、视频生成流水线、agent skill 设计的人。", reason: "热度不算顶尖，但端到端内容生产流水线有差异化，README 流程也较完整。", url: "https://github.com/Alisa0808/vox-director" },
+      { id: "commerce", name: "Agentic Commerce Map", selection: "Category Map", score: 75, verified: "README 已核验", metrics: { popularity: 62, growth: 70, usability: 80, novelty: 74, activity: 76 }, summary: "agentic commerce 资源库，整理 AI agent 代理购物/交易相关的协议、MCP servers、平台、支付、库存、营销、SEO/GEO 等资源。", highlight: "把“AI 帮用户购物/交易”拆成协议、平台适配、支付、搜索可见性和商家准备度等具体问题。", audience: "做行业扫描、找协议入口、理解 AI agent 对电商链路影响的人。", reason: "它是 agentic commerce 方向地图，不是单一工具；活跃度体现在资源整理和分类结构上。", url: "https://github.com/MentionNetwork/awesome-agentic-commerce" },
+      { id: "subagents", name: "Gemini CLI Subagents", selection: "Trend Representative", score: 73, verified: "README 已核验", metrics: { popularity: 45, growth: 60, usability: 78, novelty: 76, activity: 72 }, summary: "Gemini CLI 子 agent 库，包含多个 specialist subagents。每个 subagent 是带 frontmatter 的 Markdown 文件，有自己的系统提示词、工具权限和上下文窗口。", highlight: "体现 agent 工作流从“一个大助手做所有事”转向“主 agent 调度多个专业助手”的模式。", audience: "研究 subagent 架构、命令行 AI 工作流、可复用 agent 模板的人。", reason: "热度较低，但 subagent 分工模式有代表性，README 结构清楚。", url: "https://github.com/JosephHampton/awesome-gemini-cli-subagents" },
+    ];
+    const center = 150;
+    const radius = 116;
+    let active = projects[0];
+    function point(index, value) {
+      const angle = -Math.PI / 2 + index * (Math.PI * 2 / axes.length);
+      const r = radius * value / 100;
+      return { x: center + Math.cos(angle) * r, y: center + Math.sin(angle) * r };
+    }
+    function polygon(value) {
+      return axes.map((_, index) => {
+        const p = point(index, value);
+        return `${p.x},${p.y}`;
+      }).join(" ");
+    }
+    function drawBase() {
+      const grid = document.getElementById("grid");
+      const labels = document.getElementById("labels");
+      [25, 50, 75, 100].forEach(value => {
+        const poly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+        poly.setAttribute("points", polygon(value));
+        poly.setAttribute("class", "grid-line");
+        grid.appendChild(poly);
+      });
+      axes.forEach((axis, index) => {
+        const end = point(index, 100);
+        const labelPoint = point(index, 122);
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", center);
+        line.setAttribute("y1", center);
+        line.setAttribute("x2", end.x);
+        line.setAttribute("y2", end.y);
+        line.setAttribute("class", "axis-line");
+        grid.appendChild(line);
+        const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        label.setAttribute("x", labelPoint.x);
+        label.setAttribute("y", labelPoint.y);
+        label.setAttribute("class", "axis-label");
+        label.setAttribute("text-anchor", Math.abs(labelPoint.x - center) < 8 ? "middle" : labelPoint.x > center ? "start" : "end");
+        label.setAttribute("dominant-baseline", "middle");
+        label.textContent = axis.label;
+        labels.appendChild(label);
+      });
+    }
+    function renderControls() {
+      document.getElementById("project-tabs").innerHTML = projects.map(project => `<button class="tab${project.id === active.id ? " active" : ""}" type="button" data-id="${project.id}">${project.name}</button>`).join("");
+      document.getElementById("project-list").innerHTML = projects.map(project => `<button class="project-row${project.id === active.id ? " selected" : ""}" type="button" data-id="${project.id}"><span><strong>${project.name}</strong><small>${project.selection}</small></span><span>${project.score}</span></button>`).join("");
+      document.querySelectorAll("[data-id]").forEach(button => {
+        button.addEventListener("click", () => {
+          active = projects.find(project => project.id === button.getAttribute("data-id")) || projects[0];
+          update();
+        });
+      });
+    }
+    function update() {
+      renderControls();
+      document.getElementById("radar-shape").setAttribute("points", axes.map((axis, index) => {
+        const p = point(index, active.metrics[axis.key]);
+        return `${p.x},${p.y}`;
+      }).join(" "));
+      document.getElementById("dots").innerHTML = axes.map((axis, index) => {
+        const p = point(index, active.metrics[axis.key]);
+        return `<circle cx="${p.x}" cy="${p.y}" r="4.5" class="radar-dot"></circle>`;
+      }).join("");
+      document.querySelectorAll(".axis-value").forEach(node => node.remove());
+      const labels = document.getElementById("labels");
+      axes.forEach((axis, index) => {
+        const p = point(index, 83);
+        const value = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        value.setAttribute("x", p.x);
+        value.setAttribute("y", p.y);
+        value.setAttribute("class", "axis-value");
+        value.setAttribute("text-anchor", "middle");
+        value.setAttribute("dominant-baseline", "middle");
+        value.textContent = active.metrics[axis.key];
+        labels.appendChild(value);
+      });
+      document.getElementById("card-topline").innerHTML = `<span>${active.selection}</span><span>${active.verified}</span>`;
+      document.getElementById("project-name").textContent = active.name;
+      document.getElementById("project-score").textContent = `总分 ${active.score}`;
+      document.getElementById("metrics").innerHTML = axes.map(axis => `<div><dt>${axis.label}</dt><dd>${active.metrics[axis.key]}</dd></div>`).join("");
+      document.getElementById("summary").textContent = active.summary;
+      document.getElementById("highlight").textContent = active.highlight;
+      document.getElementById("audience").textContent = active.audience;
+      document.getElementById("reason").textContent = active.reason;
+      document.getElementById("repo-link").setAttribute("href", active.url);
+    }
+    drawBase();
+    update();
+  </script>
+</body>
+</html>
