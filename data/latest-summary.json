@@ -5,22 +5,22 @@
   "report_url": "https://luoluozi996.github.io/ai-radar/ai-project-radar-2026-07-15.html",
   "top_items": [
     {
-      "title": "nautechsystems/nautilus_trader",
+      "title": "reyamira/models",
       "source": "GitHub",
-      "url": "https://github.com/nautechsystems/nautilus_trader",
-      "score": 96
+      "url": "https://github.com/reyamira/models",
+      "score": 85
     },
     {
-      "title": "open-multi-agent/open-multi-agent",
+      "title": "btwld/ack",
       "source": "GitHub",
-      "url": "https://github.com/open-multi-agent/open-multi-agent",
-      "score": 92
+      "url": "https://github.com/btwld/ack",
+      "score": 78
     },
     {
-      "title": "tphakala/birdnet-go",
+      "title": "zoedolan/Vybn",
       "source": "GitHub",
-      "url": "https://github.com/tphakala/birdnet-go",
-      "score": 92
+      "url": "https://github.com/zoedolan/Vybn",
+      "score": 78
     }
   ]
 }
