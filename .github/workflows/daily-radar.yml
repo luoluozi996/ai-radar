@@ -69,7 +69,7 @@ jobs:
           import urllib.request
           from pathlib import Path
 
-          def clean(value, limit=86):
+          def clean(value, limit=96):
               value = re.sub(r"\s+", " ", value or "").strip()
               if len(value) <= limit:
                   return value
@@ -79,10 +79,10 @@ jobs:
               match = re.match(r"https://github\.com/([^/]+/[^/#?]+)", url or "")
               return match.group(1) if match else ""
 
-          def fetch_github_meta(item):
+          def fetch_github_description(item):
               repo = github_repo_name(item.get("url", ""))
               if not repo:
-                  return {}
+                  return ""
               headers = {
                   "Accept": "application/vnd.github+json",
                   "User-Agent": "ai-radar-wechat-summary/1.0",
@@ -96,69 +96,49 @@ jobs:
                       data = json.loads(response.read().decode("utf-8"))
               except Exception as exc:  # noqa: BLE001 - notification should still be sent.
                   print(f"[warn] GitHub meta failed for {repo}: {exc}")
-                  return {}
-              return {
-                  "description": data.get("description") or "",
-                  "language": data.get("language") or "",
-                  "stars": data.get("stargazers_count") or 0,
-                  "topics": data.get("topics") or [],
-              }
+                  return ""
+              return data.get("description") or ""
 
           def enrich(item):
               if item.get("source") == "GitHub":
                   item = dict(item)
-                  item["meta"] = fetch_github_meta(item)
+                  item["project_description"] = fetch_github_description(item)
                   return item
               return item
 
-          def item_insight(item):
+          def github_highlight(title, description):
+              text = f"{title} {description}".lower()
+              if any(word in text for word in ["trading", "market", "backtest", "finance", "crypto"]):
+                  return "面向量化/自动交易场景，亮点是把策略开发、回测和执行放进更工程化的框架。"
+              if any(word in text for word in ["agent", "agents", "orchestration", "workflow", "multi-agent"]):
+                  return "面向多智能体协作，亮点是把 agent 编排和动态工作流做成可复用框架。"
+              if any(word in text for word in ["bird", "bat", "audio", "sound", "soundscape"]):
+                  return "把 AI 用在实时声音分析和生态监测上，是一个很具体的垂直场景落地信号。"
+              if any(word in text for word in ["code", "coding", "coder", "developer", "cli"]):
+                  return "面向 AI 编程/开发提效，亮点是更接近真实开发流程，而不只是演示型工具。"
+              if any(word in text for word in ["rag", "search", "knowledge", "retrieval"]):
+                  return "面向知识检索/RAG 场景，亮点是把信息组织、搜索和生成连接到一起。"
+              if any(word in text for word in ["model", "llm", "inference", "benchmark"]):
+                  return "面向模型工程或 LLM 应用，亮点是提供可试用、可评估或可部署的工程入口。"
+              if any(word in text for word in ["web", "app", "sdk", "framework", "ui"]):
+                  return "面向 AI 应用开发，亮点是降低从原型到可用产品的搭建成本。"
+              repo = title.split("/")[-1].replace("-", " ").replace("_", " ")
+              return f"围绕 {repo} 的开源项目，亮点是把 AI 能力落到一个更具体的工具场景。"
+
+          def item_highlight(item):
               source = item.get("source", "")
               title = item.get("title", "Untitled")
-              meta = item.get("meta") or {}
-              description = clean(item.get("summary") or meta.get("description"), 74)
-              language = meta.get("language")
-              topics = [topic for topic in meta.get("topics", [])[:3] if topic]
+              description = item.get("project_description") or item.get("summary") or ""
 
               if source == "GitHub":
-                  if description:
-                      parts = [f"它主打：{description}"]
-                      if language:
-                          parts.append(f"主要语言：{language}")
-                      if topics:
-                          parts.append(f"标签：{', '.join(topics)}")
-                      return "；".join(parts) + "。"
-                  return f"{title} 是今天进入 Top 3 的活跃开源项目，适合先判断它解决的是不是你的真实需求。"
-
+                  return github_highlight(title, description)
               if source == "Hacker News":
-                  return "这是开发者社区讨论信号，价值在评论里的真实使用反馈、质疑和反例。"
+                  return "开发者社区正在讨论的话题，亮点是能看到真实反馈、质疑和反例。"
               if source == "Hugging Face":
-                  return "这是模型或 Demo 热度信号，价值在可试用性、license 和示例输入输出。"
+                  return "近期升温的模型或 Demo，亮点是可以直接看示例、试效果和判断复用价值。"
               if source == "RSS":
-                  return description or "这是文章/官方发布信号，价值在判断产品、研究或生态方向变化。"
-              return description or "这是值得进一步点开核验的 AI 内容信号。"
-
-          def item_action(item):
-              source = item.get("source", "")
-              title = item.get("title", "").lower()
-              description = (item.get("summary") or (item.get("meta") or {}).get("description") or "").lower()
-              text = f"{title} {description}"
-
-              if source == "GitHub":
-                  if any(word in text for word in ["agent", "workflow", "flow", "automation"]):
-                      return "先看示例任务和执行结果，再判断能不能替代一段现有手工流程。"
-                  if any(word in text for word in ["code", "coding", "coder", "cli", "developer"]):
-                      return "先看 Quick Start 和 CLI/API 示例，判断今天能不能直接试跑。"
-                  if any(word in text for word in ["trading", "finance", "bot"]):
-                      return "先核对风险、回测方式和使用限制，不要只看项目热度。"
-                  return "先看 README 的使用场景和安装路径，再看最近提交，决定试用还是收藏。"
-
-              if source == "Hacker News":
-                  return "先读高赞评论和反对意见，再决定是否进入原文。"
-              if source == "Hugging Face":
-                  return "先看 demo、license 和示例输入输出，确认是否能复用。"
-              if source == "RSS":
-                  return "先扫摘要和发布时间，再判断是否需要阅读全文。"
-              return "先看完整日报里的雷达图和链接，再决定下一步。"
+                  return clean(description, 58) or "来自官方或高质量博客的更新，亮点是帮助判断产品和研究方向变化。"
+              return clean(description, 58) or "值得进一步点开核验的 AI 内容信号。"
 
           sendkey = os.environ["SERVERCHAN_SENDKEY"]
           data = json.loads(Path("data/latest-summary.json").read_text(encoding="utf-8"))
@@ -175,16 +155,14 @@ jobs:
               score = item.get("score", "-")
               title = item.get("title", "Untitled")
               lines.extend([
-                  f"{idx}. {title}",
-                  f"   来源：{source}｜评分：{score}",
-                  f"   看点：{item_insight(item)}",
-                  f"   建议：{item_action(item)}",
+                  f"{idx}. {title}（{source}｜{score}）",
+                  f"   亮点：{item_highlight(item)}",
                   "",
               ])
 
           lines.extend([
               "【怎么读】",
-              "微信里先看方向和取舍；具体链接、项目小雷达和排序理由放在完整日报里。",
+              "微信里先看一句话亮点；具体链接、项目小雷达和排序理由放在完整日报里。",
               "",
               "【完整日报】",
               data["report_url"],
