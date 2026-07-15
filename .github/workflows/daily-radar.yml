@@ -54,6 +54,9 @@ jobs:
         env:
           SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_BASE_URL: ${{ secrets.AI_BASE_URL }}
+          AI_MODEL: ${{ secrets.AI_MODEL }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         shell: bash
         run: |
@@ -117,21 +120,31 @@ jobs:
                   item["github_meta"] = fetch_github_meta(item)
               return item
 
-          def extract_response_text(data):
-              if data.get("output_text"):
-                  return data["output_text"].strip()
-              parts = []
-              for output in data.get("output", []):
-                  for content in output.get("content", []):
-                      text = content.get("text")
-                      if text:
-                          parts.append(text)
-              return "".join(parts).strip()
+          def provider_config():
+              api_key = os.environ.get("AI_API_KEY") or os.environ.get("OPENAI_API_KEY")
+              if not api_key:
+                  return None
+              base_url = os.environ.get("AI_BASE_URL") or "https://api.openai.com/v1"
+              base_url = base_url.rstrip("/")
+              model = os.environ.get("AI_MODEL") or "gpt-4.1-mini"
+              return api_key, base_url, model
+
+          def extract_chat_text(data):
+              choices = data.get("choices") or []
+              if choices:
+                  message = choices[0].get("message") or {}
+                  content = message.get("content")
+                  if isinstance(content, str):
+                      return content.strip()
+                  if isinstance(content, list):
+                      return "".join(part.get("text", "") for part in content if isinstance(part, dict)).strip()
+              return ""
 
           def ai_highlight(item):
-              api_key = os.environ.get("OPENAI_API_KEY")
-              if not api_key:
+              config = provider_config()
+              if not config:
                   return ""
+              api_key, base_url, model = config
               meta = item.get("github_meta") or {}
               title = item.get("title", "")
               source = item.get("source", "")
@@ -144,23 +157,23 @@ jobs:
                   f"标题：{title}\n来源：{source}\n简介：{description}\n标签：{topics}\n"
               )
               payload = {
-                  "model": "gpt-4.1-mini",
-                  "input": [
+                  "model": model,
+                  "messages": [
                       {"role": "system", "content": "你是一个给 AI 日报写项目亮点摘要的中文编辑。"},
                       {"role": "user", "content": prompt},
                   ],
                   "temperature": 0.2,
-                  "max_output_tokens": 120,
+                  "max_tokens": 120,
               }
               headers = {
                   "Authorization": f"Bearer {api_key}",
                   "Content-Type": "application/json",
               }
               try:
-                  data = request_json("https://api.openai.com/v1/responses", payload=payload, headers=headers, timeout=25)
-                  return clean(extract_response_text(data), 80)
+                  data = request_json(f"{base_url}/chat/completions", payload=payload, headers=headers, timeout=25)
+                  return clean(extract_chat_text(data), 80)
               except Exception as exc:  # noqa: BLE001 - fallback keeps notification alive.
-                  print(f"[warn] OpenAI highlight failed for {title}: {exc}")
+                  print(f"[warn] AI highlight failed for {title}: {exc}")
                   return ""
 
           def fallback_highlight(item):
