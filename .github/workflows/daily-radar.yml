@@ -53,6 +53,7 @@ jobs:
       - name: Send WeChat summary
         env:
           SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         run: |
           if [ -z "$SERVERCHAN_SENDKEY" ]; then
@@ -63,55 +64,96 @@ jobs:
           python - <<'PY'
           import json
           import os
+          import re
           import urllib.parse
           import urllib.request
           from pathlib import Path
 
-          def contains(text, words):
-              return any(word in text for word in words)
+          def clean(value, limit=86):
+              value = re.sub(r"\s+", " ", value or "").strip()
+              if len(value) <= limit:
+                  return value
+              return value[: limit - 1].rstrip() + "…"
 
-          def item_reason(item):
+          def github_repo_name(url):
+              match = re.match(r"https://github\.com/([^/]+/[^/#?]+)", url or "")
+              return match.group(1) if match else ""
+
+          def fetch_github_meta(item):
+              repo = github_repo_name(item.get("url", ""))
+              if not repo:
+                  return {}
+              headers = {
+                  "Accept": "application/vnd.github+json",
+                  "User-Agent": "ai-radar-wechat-summary/1.0",
+              }
+              token = os.environ.get("GITHUB_TOKEN")
+              if token:
+                  headers["Authorization"] = f"Bearer {token}"
+              request = urllib.request.Request(f"https://api.github.com/repos/{repo}", headers=headers)
+              try:
+                  with urllib.request.urlopen(request, timeout=12) as response:
+                      data = json.loads(response.read().decode("utf-8"))
+              except Exception as exc:  # noqa: BLE001 - notification should still be sent.
+                  print(f"[warn] GitHub meta failed for {repo}: {exc}")
+                  return {}
+              return {
+                  "description": data.get("description") or "",
+                  "language": data.get("language") or "",
+                  "stars": data.get("stargazers_count") or 0,
+                  "topics": data.get("topics") or [],
+              }
+
+          def enrich(item):
+              if item.get("source") == "GitHub":
+                  item = dict(item)
+                  item["meta"] = fetch_github_meta(item)
+                  return item
+              return item
+
+          def item_insight(item):
               source = item.get("source", "")
-              title = item.get("title", "")
-              text = title.lower()
+              title = item.get("title", "Untitled")
+              meta = item.get("meta") or {}
+              description = clean(item.get("summary") or meta.get("description"), 74)
+              language = meta.get("language")
+              topics = [topic for topic in meta.get("topics", [])[:3] if topic]
 
               if source == "GitHub":
-                  if contains(text, ["code", "coding", "qwen-code", "coder", "dev", "cli"]):
-                      return "AI 编程工具信号，重点看它是否能进入真实开发流程，而不是只停留在 demo。"
-                  if contains(text, ["agent", "agents", "flow", "workflow", "deer"]):
-                      return "agent 工作流信号，重点看任务拆解、执行链路和示例是否清楚。"
-                  if contains(text, ["flower", "flwr", "federated"]):
-                      return "分布式/联邦学习信号，重点看训练协作方式和工程落地难度。"
-                  if contains(text, ["vercel", "sdk", "framework", "app"]):
-                      return "AI 应用开发基础设施信号，重点看生态接入、模板和上手成本。"
-                  if contains(text, ["model", "llm", "rag", "inference"]):
-                      return "模型工程信号，重点看可复现示例、部署路径和使用限制。"
-                  return "近期活跃开源项目，重点看 README、安装路径和最近提交质量。"
+                  if description:
+                      parts = [f"它主打：{description}"]
+                      if language:
+                          parts.append(f"主要语言：{language}")
+                      if topics:
+                          parts.append(f"标签：{', '.join(topics)}")
+                      return "；".join(parts) + "。"
+                  return f"{title} 是今天进入 Top 3 的活跃开源项目，适合先判断它解决的是不是你的真实需求。"
 
               if source == "Hacker News":
-                  return "开发者社区讨论信号，重点看高赞评论里的真实反馈和反对意见。"
+                  return "这是开发者社区讨论信号，价值在评论里的真实使用反馈、质疑和反例。"
               if source == "Hugging Face":
-                  return "模型或 Demo 热度信号，重点看示例、license、可试用性和任务适配度。"
+                  return "这是模型或 Demo 热度信号，价值在可试用性、license 和示例输入输出。"
               if source == "RSS":
-                  return "文章/官方发布信号，重点看它透露的产品、研究或生态方向变化。"
-              return "值得进一步点开核验的 AI 内容信号。"
+                  return description or "这是文章/官方发布信号，价值在判断产品、研究或生态方向变化。"
+              return description or "这是值得进一步点开核验的 AI 内容信号。"
 
           def item_action(item):
               source = item.get("source", "")
-              title = item.get("title", "")
-              text = title.lower()
+              title = item.get("title", "").lower()
+              description = (item.get("summary") or (item.get("meta") or {}).get("description") or "").lower()
+              text = f"{title} {description}"
 
               if source == "GitHub":
-                  if contains(text, ["code", "coding", "qwen-code", "coder", "dev", "cli"]):
+                  if any(word in text for word in ["agent", "workflow", "flow", "automation"]):
+                      return "先看示例任务和执行结果，再判断能不能替代一段现有手工流程。"
+                  if any(word in text for word in ["code", "coding", "coder", "cli", "developer"]):
                       return "先看 Quick Start 和 CLI/API 示例，判断今天能不能直接试跑。"
-                  if contains(text, ["agent", "agents", "flow", "workflow", "deer"]):
-                      return "先看示例任务和执行结果，再判断能否替代一段现有手工流程。"
-                  if contains(text, ["flower", "flwr", "federated"]):
-                      return "先看适用场景和样例训练流程，判断是否值得收藏跟进。"
-                  return "先看 README 的使用场景，再看最近提交，决定试用还是观察。"
+                  if any(word in text for word in ["trading", "finance", "bot"]):
+                      return "先核对风险、回测方式和使用限制，不要只看项目热度。"
+                  return "先看 README 的使用场景和安装路径，再看最近提交，决定试用还是收藏。"
 
               if source == "Hacker News":
-                  return "先读评论区前几条高质量观点，再决定是否进入原文。"
+                  return "先读高赞评论和反对意见，再决定是否进入原文。"
               if source == "Hugging Face":
                   return "先看 demo、license 和示例输入输出，确认是否能复用。"
               if source == "RSS":
@@ -120,7 +162,7 @@ jobs:
 
           sendkey = os.environ["SERVERCHAN_SENDKEY"]
           data = json.loads(Path("data/latest-summary.json").read_text(encoding="utf-8"))
-          top_items = data.get("top_items", [])[:3]
+          top_items = [enrich(item) for item in data.get("top_items", [])[:3]]
 
           lines = [
               "【今日主线】",
@@ -135,7 +177,7 @@ jobs:
               lines.extend([
                   f"{idx}. {title}",
                   f"   来源：{source}｜评分：{score}",
-                  f"   看点：{item_reason(item)}",
+                  f"   看点：{item_insight(item)}",
                   f"   建议：{item_action(item)}",
                   "",
               ])
