@@ -67,13 +67,53 @@ jobs:
           import urllib.request
           from pathlib import Path
 
+          def source_hint(source):
+              if source == "GitHub":
+                  return "开源项目/工具信号，适合看 README、Quick Start 和近期提交。"
+              if source == "Hacker News":
+                  return "开发者讨论信号，适合看争议点和真实反馈。"
+              if source == "Hugging Face":
+                  return "模型或 Demo 信号，适合看示例、license 和可试用性。"
+              if source == "RSS":
+                  return "文章/官方发布信号，适合判断产品或研究方向变化。"
+              return "值得进一步点开核验的 AI 内容信号。"
+
           sendkey = os.environ["SERVERCHAN_SENDKEY"]
           data = json.loads(Path("data/latest-summary.json").read_text(encoding="utf-8"))
-          lines = [data.get("headline", "今日 AI 内容雷达已更新。"), "", "今日值得看："]
-          for idx, item in enumerate(data.get("top_items", [])[:3], 1):
-              lines.append(f"{idx}. {item['title']}（{item['source']}，{item['score']}）")
-          lines += ["", "阅读全文：", data["report_url"]]
-          payload = urllib.parse.urlencode({"title": data["title"], "desp": "\n".join(lines)}).encode("utf-8")
+          top_items = data.get("top_items", [])[:3]
+
+          lines = [
+              "【今日主线】",
+              data.get("headline", "今日 AI 内容雷达已更新。"),
+              "",
+              "【今日值得看】",
+          ]
+          for idx, item in enumerate(top_items, 1):
+              source = item.get("source", "Unknown")
+              score = item.get("score", "-")
+              title = item.get("title", "Untitled")
+              url = item.get("url", "")
+              lines.extend([
+                  f"{idx}. {title}",
+                  f"   来源：{source}｜评分：{score}",
+                  f"   看点：{source_hint(source)}",
+              ])
+              if url:
+                  lines.append(f"   原文：{url}")
+              lines.append("")
+
+          lines.extend([
+              "【怎么读】",
+              "先看 Top 1 判断今日主方向；再扫 Top 2/3，决定是试用、收藏还是观望。",
+              "",
+              "【完整日报】",
+              data["report_url"],
+          ])
+
+          payload = urllib.parse.urlencode({
+              "title": data["title"],
+              "desp": "\n".join(lines),
+          }).encode("utf-8")
           request = urllib.request.Request(
               f"https://sctapi.ftqq.com/{sendkey}.send",
               data=payload,
