@@ -5,22 +5,22 @@
   "report_url": "https://luoluozi996.github.io/ai-radar/ai-project-radar-2026-07-15.html",
   "top_items": [
     {
-      "title": "hexabot-ai/Hexabot",
+      "title": "rullerzhou-afk/clawd-on-desk",
       "source": "GitHub",
-      "url": "https://github.com/hexabot-ai/Hexabot",
+      "url": "https://github.com/rullerzhou-afk/clawd-on-desk",
       "score": 92
     },
     {
-      "title": "unicity-sphere/sphere-sdk",
+      "title": "tphakala/birdnet-go",
       "source": "GitHub",
-      "url": "https://github.com/unicity-sphere/sphere-sdk",
+      "url": "https://github.com/tphakala/birdnet-go",
       "score": 92
     },
     {
-      "title": "ddalcu/mlx-serve",
+      "title": "inference-gateway/adl-cli",
       "source": "GitHub",
-      "url": "https://github.com/ddalcu/mlx-serve",
-      "score": 85
+      "url": "https://github.com/inference-gateway/adl-cli",
+      "score": 78
     }
   ]
 }
