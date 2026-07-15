@@ -75,6 +75,9 @@ jobs:
                   return value
               return value[: limit - 1].rstrip() + "…"
 
+          def repo_short_name(title):
+              return title.split("/")[-1].replace("-", " ").replace("_", " ").strip() or title
+
           def github_repo_name(url):
               match = re.match(r"https://github\.com/([^/]+/[^/#?]+)", url or "")
               return match.group(1) if match else ""
@@ -113,7 +116,9 @@ jobs:
               if any(word in text for word in ["agent", "agents", "orchestration", "workflow", "multi-agent"]):
                   return "多智能体协作与动态工作流"
               if any(word in text for word in ["bird", "bat", "audio", "sound", "soundscape"]):
-                  return "垂直场景里的实时声音分析"
+                  return "实时声音分析与垂直场景落地"
+              if any(word in text for word in ["bi", "business intelligence", "analytics", "dashboard", "data"]):
+                  return "数据分析与 BI 工作流"
               if any(word in text for word in ["code", "coding", "coder", "developer", "cli"]):
                   return "AI 编程与开发提效"
               if any(word in text for word in ["rag", "search", "knowledge", "retrieval"]):
@@ -125,24 +130,29 @@ jobs:
               return "具体工具场景里的 AI 落地"
 
           def github_highlight(title, description):
-              theme = github_theme(title, description)
+              name = repo_short_name(title)
               text = f"{title} {description}".lower()
-              if theme == "量化交易与自动化策略":
-                  return "面向量化/自动交易场景，亮点是把策略开发、回测和执行放进更工程化的框架。"
-              if theme == "多智能体协作与动态工作流":
-                  return "面向多智能体协作，亮点是把 agent 编排和动态工作流做成可复用框架。"
-              if theme == "垂直场景里的实时声音分析":
-                  return "把 AI 用在实时声音分析和生态监测上，是一个很具体的垂直场景落地信号。"
-              if theme == "AI 编程与开发提效":
-                  return "面向 AI 编程/开发提效，亮点是更接近真实开发流程，而不只是演示型工具。"
-              if theme == "知识检索与 RAG 应用":
-                  return "面向知识检索/RAG 场景，亮点是把信息组织、搜索和生成连接到一起。"
-              if theme == "模型工程与 LLM 应用":
-                  return "面向模型工程或 LLM 应用，亮点是提供可试用、可评估或可部署的工程入口。"
-              if theme == "AI 应用开发框架":
-                  return "面向 AI 应用开发，亮点是降低从原型到可用产品的搭建成本。"
-              repo = title.split("/")[-1].replace("-", " ").replace("_", " ")
-              return f"围绕 {repo} 的开源项目，亮点是把 AI 能力落到一个更具体的工具场景。"
+              if any(word in text for word in ["trading", "market", "backtest", "finance", "crypto"]):
+                  return f"{name} 聚焦量化/自动交易，把策略开发、回测和执行链路做成工程化工具。"
+              if any(word in text for word in ["orchestration", "multi-agent"]):
+                  return f"{name} 关注多智能体编排，让多个 agent 能按动态工作流协同完成任务。"
+              if any(word in text for word in ["agent", "agents", "workflow"]):
+                  return f"{name} 关注 agent 工作流，把任务拆解、工具调用和执行过程组织成可复用流程。"
+              if any(word in text for word in ["flower", "federated", "flwr"]):
+                  return f"{name} 聚焦联邦学习/分布式 AI，让模型训练能跨设备或跨组织协作。"
+              if any(word in text for word in ["bird", "bat", "audio", "sound", "soundscape"]):
+                  return f"{name} 把 AI 用在实时声音分析上，面向鸟类、蝙蝠等生态监测场景。"
+              if any(word in text for word in ["business intelligence", "analytics", "dashboard", "data", "bi"]):
+                  return f"{name} 把 AI 接到数据分析场景，帮助团队更快完成查询、看板和业务洞察。"
+              if any(word in text for word in ["code", "coding", "coder", "developer", "cli"]):
+                  return f"{name} 面向 AI 编程/开发提效，重点是把能力接进真实开发流程。"
+              if any(word in text for word in ["rag", "search", "knowledge", "retrieval"]):
+                  return f"{name} 聚焦知识检索/RAG，把搜索、资料组织和生成回答连接起来。"
+              if any(word in text for word in ["model", "llm", "inference", "benchmark"]):
+                  return f"{name} 面向模型工程或 LLM 应用，提供可试用、可评估或可部署的入口。"
+              if any(word in text for word in ["web", "app", "sdk", "framework", "ui"]):
+                  return f"{name} 面向 AI 应用开发，降低从原型到可用产品的搭建成本。"
+              return f"{name} 是一个具体工具型项目，值得看它把 AI 能力落到了哪个实际使用场景。"
 
           def item_highlight(item):
               source = item.get("source", "")
@@ -152,11 +162,11 @@ jobs:
               if source == "GitHub":
                   return github_highlight(title, description)
               if source == "Hacker News":
-                  return "开发者社区正在讨论的话题，亮点是能看到真实反馈、质疑和反例。"
+                  return "开发者社区正在讨论这个话题，价值在真实反馈、质疑和反例。"
               if source == "Hugging Face":
-                  return "近期升温的模型或 Demo，亮点是可以直接看示例、试效果和判断复用价值。"
+                  return "这是近期升温的模型或 Demo，适合直接看示例、试效果和判断复用价值。"
               if source == "RSS":
-                  return clean(description, 58) or "来自官方或高质量博客的更新，亮点是帮助判断产品和研究方向变化。"
+                  return clean(description, 58) or "来自官方或高质量博客的更新，适合判断产品和研究方向变化。"
               return clean(description, 58) or "值得进一步点开核验的 AI 内容信号。"
 
           def mainline(items):
@@ -182,11 +192,9 @@ jobs:
               "【今日值得看】",
           ]
           for idx, item in enumerate(top_items, 1):
-              source = item.get("source", "Unknown")
-              score = item.get("score", "-")
               title = item.get("title", "Untitled")
               lines.extend([
-                  f"{idx}. {title}（{source}｜{score}）",
+                  f"{idx}. {title}",
                   f"   亮点：{item_highlight(item)}",
                   "",
               ])
