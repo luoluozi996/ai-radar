@@ -54,6 +54,7 @@ jobs:
         env:
           SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         shell: bash
         run: |
           if [ -z "$SERVERCHAN_SENDKEY" ]; then
@@ -69,23 +70,29 @@ jobs:
           import urllib.request
           from pathlib import Path
 
-          def clean(value, limit=96):
+          def clean(value, limit=120):
               value = re.sub(r"\s+", " ", value or "").strip()
               if len(value) <= limit:
                   return value
               return value[: limit - 1].rstrip() + "…"
 
-          def repo_short_name(title):
-              return title.split("/")[-1].replace("-", " ").replace("_", " ").strip() or title
-
-          def github_repo_name(url):
+          def repo_name_from_url(url):
               match = re.match(r"https://github\.com/([^/]+/[^/#?]+)", url or "")
               return match.group(1) if match else ""
 
-          def fetch_github_description(item):
-              repo = github_repo_name(item.get("url", ""))
+          def repo_short_name(title):
+              return title.split("/")[-1].replace("-", " ").replace("_", " ").strip() or title
+
+          def request_json(url, payload=None, headers=None, timeout=20):
+              data = json.dumps(payload).encode("utf-8") if payload is not None else None
+              request = urllib.request.Request(url, data=data, headers=headers or {})
+              with urllib.request.urlopen(request, timeout=timeout) as response:
+                  return json.loads(response.read().decode("utf-8"))
+
+          def fetch_github_meta(item):
+              repo = repo_name_from_url(item.get("url", ""))
               if not repo:
-                  return ""
+                  return {}
               headers = {
                   "Accept": "application/vnd.github+json",
                   "User-Agent": "ai-radar-wechat-summary/1.0",
@@ -93,93 +100,88 @@ jobs:
               token = os.environ.get("GITHUB_TOKEN")
               if token:
                   headers["Authorization"] = f"Bearer {token}"
-              request = urllib.request.Request(f"https://api.github.com/repos/{repo}", headers=headers)
               try:
-                  with urllib.request.urlopen(request, timeout=12) as response:
-                      data = json.loads(response.read().decode("utf-8"))
+                  data = request_json(f"https://api.github.com/repos/{repo}", headers=headers, timeout=12)
               except Exception as exc:  # noqa: BLE001 - notification should still be sent.
                   print(f"[warn] GitHub meta failed for {repo}: {exc}")
-                  return ""
-              return data.get("description") or ""
+                  return {}
+              return {
+                  "description": data.get("description") or "",
+                  "homepage": data.get("homepage") or "",
+                  "topics": data.get("topics") or [],
+              }
 
           def enrich(item):
+              item = dict(item)
               if item.get("source") == "GitHub":
-                  item = dict(item)
-                  item["project_description"] = fetch_github_description(item)
-                  return item
+                  item["github_meta"] = fetch_github_meta(item)
               return item
 
-          def github_theme(title, description):
-              text = f"{title} {description}".lower()
-              if any(word in text for word in ["trading", "market", "backtest", "finance", "crypto"]):
-                  return "量化交易与自动化策略"
-              if any(word in text for word in ["agent", "agents", "orchestration", "workflow", "multi-agent"]):
-                  return "多智能体协作与动态工作流"
-              if any(word in text for word in ["bird", "bat", "audio", "sound", "soundscape"]):
-                  return "实时声音分析与垂直场景落地"
-              if any(word in text for word in ["bi", "business intelligence", "analytics", "dashboard", "data"]):
-                  return "数据分析与 BI 工作流"
-              if any(word in text for word in ["code", "coding", "coder", "developer", "cli"]):
-                  return "AI 编程与开发提效"
-              if any(word in text for word in ["rag", "search", "knowledge", "retrieval"]):
-                  return "知识检索与 RAG 应用"
-              if any(word in text for word in ["model", "llm", "inference", "benchmark"]):
-                  return "模型工程与 LLM 应用"
-              if any(word in text for word in ["web", "app", "sdk", "framework", "ui"]):
-                  return "AI 应用开发框架"
-              return "具体工具场景里的 AI 落地"
+          def extract_response_text(data):
+              if data.get("output_text"):
+                  return data["output_text"].strip()
+              parts = []
+              for output in data.get("output", []):
+                  for content in output.get("content", []):
+                      text = content.get("text")
+                      if text:
+                          parts.append(text)
+              return "".join(parts).strip()
 
-          def github_highlight(title, description):
-              name = repo_short_name(title)
-              text = f"{title} {description}".lower()
-              if any(word in text for word in ["trading", "market", "backtest", "finance", "crypto"]):
-                  return f"{name} 聚焦量化/自动交易，把策略开发、回测和执行链路做成工程化工具。"
-              if any(word in text for word in ["orchestration", "multi-agent"]):
-                  return f"{name} 关注多智能体编排，让多个 agent 能按动态工作流协同完成任务。"
-              if any(word in text for word in ["agent", "agents", "workflow"]):
-                  return f"{name} 关注 agent 工作流，把任务拆解、工具调用和执行过程组织成可复用流程。"
-              if any(word in text for word in ["flower", "federated", "flwr"]):
-                  return f"{name} 聚焦联邦学习/分布式 AI，让模型训练能跨设备或跨组织协作。"
-              if any(word in text for word in ["bird", "bat", "audio", "sound", "soundscape"]):
-                  return f"{name} 把 AI 用在实时声音分析上，面向鸟类、蝙蝠等生态监测场景。"
-              if any(word in text for word in ["business intelligence", "analytics", "dashboard", "data", "bi"]):
-                  return f"{name} 把 AI 接到数据分析场景，帮助团队更快完成查询、看板和业务洞察。"
-              if any(word in text for word in ["code", "coding", "coder", "developer", "cli"]):
-                  return f"{name} 面向 AI 编程/开发提效，重点是把能力接进真实开发流程。"
-              if any(word in text for word in ["rag", "search", "knowledge", "retrieval"]):
-                  return f"{name} 聚焦知识检索/RAG，把搜索、资料组织和生成回答连接起来。"
-              if any(word in text for word in ["model", "llm", "inference", "benchmark"]):
-                  return f"{name} 面向模型工程或 LLM 应用，提供可试用、可评估或可部署的入口。"
-              if any(word in text for word in ["web", "app", "sdk", "framework", "ui"]):
-                  return f"{name} 面向 AI 应用开发，降低从原型到可用产品的搭建成本。"
-              return f"{name} 是一个具体工具型项目，值得看它把 AI 能力落到了哪个实际使用场景。"
+          def ai_highlight(item):
+              api_key = os.environ.get("OPENAI_API_KEY")
+              if not api_key:
+                  return ""
+              meta = item.get("github_meta") or {}
+              title = item.get("title", "")
+              source = item.get("source", "")
+              description = meta.get("description") or item.get("summary") or ""
+              topics = ", ".join(meta.get("topics", [])[:5])
+              prompt = (
+                  "请基于下面这个 AI 内容条目的真实信息，写一句中文亮点摘要。"
+                  "要求：只输出一句话，35到55个中文字符；不要写'亮点是'；不要泛泛而谈；"
+                  "必须体现这个项目/内容具体在做什么；不要编造。\n\n"
+                  f"标题：{title}\n来源：{source}\n简介：{description}\n标签：{topics}\n"
+              )
+              payload = {
+                  "model": "gpt-4.1-mini",
+                  "input": [
+                      {"role": "system", "content": "你是一个给 AI 日报写项目亮点摘要的中文编辑。"},
+                      {"role": "user", "content": prompt},
+                  ],
+                  "temperature": 0.2,
+                  "max_output_tokens": 120,
+              }
+              headers = {
+                  "Authorization": f"Bearer {api_key}",
+                  "Content-Type": "application/json",
+              }
+              try:
+                  data = request_json("https://api.openai.com/v1/responses", payload=payload, headers=headers, timeout=25)
+                  return clean(extract_response_text(data), 80)
+              except Exception as exc:  # noqa: BLE001 - fallback keeps notification alive.
+                  print(f"[warn] OpenAI highlight failed for {title}: {exc}")
+                  return ""
 
-          def item_highlight(item):
+          def fallback_highlight(item):
               source = item.get("source", "")
               title = item.get("title", "Untitled")
-              description = item.get("project_description") or item.get("summary") or ""
-
+              meta = item.get("github_meta") or {}
+              description = meta.get("description") or item.get("summary") or ""
+              if description:
+                  return clean(f"{repo_short_name(title)}：{description}", 86)
               if source == "GitHub":
-                  return github_highlight(title, description)
-              if source == "Hacker News":
-                  return "开发者社区正在讨论这个话题，价值在真实反馈、质疑和反例。"
-              if source == "Hugging Face":
-                  return "这是近期升温的模型或 Demo，适合直接看示例、试效果和判断复用价值。"
-              if source == "RSS":
-                  return clean(description, 58) or "来自官方或高质量博客的更新，适合判断产品和研究方向变化。"
-              return clean(description, 58) or "值得进一步点开核验的 AI 内容信号。"
+                  return f"{repo_short_name(title)} 是今日进入榜单的开源项目，建议点开日报查看具体用途。"
+              return clean(item.get("summary", "值得进一步查看的 AI 内容信号。"), 86)
+
+          def item_highlight(item):
+              return ai_highlight(item) or fallback_highlight(item)
 
           def mainline(items):
               if not items:
                   return "今日暂未抓到足够强的 AI 内容信号，完整日报保留候选内容供复核。"
               top = items[0]
-              title = top.get("title", "今日 Top 1")
-              source = top.get("source", "")
-              description = top.get("project_description") or top.get("summary") or ""
-              if source == "GitHub":
-                  theme = github_theme(title, description)
-                  return f"今日最强信号来自 {title}，指向{theme}。"
-              return f"今日最强信号来自 {title}，建议优先看它背后的趋势变化。"
+              return f"今日最强信号来自 {top.get('title', 'Top 1')}，优先看它解决的具体场景。"
 
           sendkey = os.environ["SERVERCHAN_SENDKEY"]
           data = json.loads(Path("data/latest-summary.json").read_text(encoding="utf-8"))
