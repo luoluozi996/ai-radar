@@ -1,0 +1,27 @@
+{
+  "rss": [
+    {
+      "name": "OpenAI News",
+      "url": "https://openai.com/news/rss.xml"
+    },
+    {
+      "name": "Anthropic News",
+      "url": "https://www.anthropic.com/news/rss.xml"
+    },
+    {
+      "name": "Google DeepMind Blog",
+      "url": "https://deepmind.google/discover/blog/rss.xml"
+    },
+    {
+      "name": "Simon Willison",
+      "url": "https://simonwillison.net/atom/everything/"
+    }
+  ],
+  "github_queries": [
+    "AI agent pushed:>{date_minus_1}",
+    "LLM tool pushed:>{date_minus_1}",
+    "topic:artificial-intelligence pushed:>{date_minus_1}",
+    "coding agent pushed:>{date_minus_1}"
+  ],
+  "hacker_news_terms": ["AI", "LLM", "OpenAI", "Claude", "agent", "model", "Hugging Face"]
+}
