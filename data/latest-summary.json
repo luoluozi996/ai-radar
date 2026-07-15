@@ -5,22 +5,22 @@
   "report_url": "https://luoluozi996.github.io/ai-radar/ai-project-radar-2026-07-15.html",
   "top_items": [
     {
-      "title": "reyamira/models",
+      "title": "stablyai/orca",
       "source": "GitHub",
-      "url": "https://github.com/reyamira/models",
-      "score": 85
+      "url": "https://github.com/stablyai/orca",
+      "score": 96
     },
     {
-      "title": "btwld/ack",
+      "title": "flwrlabs/flower",
       "source": "GitHub",
-      "url": "https://github.com/btwld/ack",
-      "score": 78
+      "url": "https://github.com/flwrlabs/flower",
+      "score": 92
     },
     {
-      "title": "zoedolan/Vybn",
+      "title": "lightdash/lightdash",
       "source": "GitHub",
-      "url": "https://github.com/zoedolan/Vybn",
-      "score": 78
+      "url": "https://github.com/lightdash/lightdash",
+      "score": 92
     }
   ]
 }
