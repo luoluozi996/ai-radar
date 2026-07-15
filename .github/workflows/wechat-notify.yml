@@ -1,0 +1,65 @@
+name: WeChat Daily Radar Notification
+
+on:
+  workflow_dispatch:
+    inputs:
+      report_date:
+        description: "Report date, for example 2026-07-15"
+        required: true
+        default: "2026-07-15"
+      report_url:
+        description: "Published report URL"
+        required: true
+        default: "https://luoluozi996.github.io/ai-radar/"
+      headline:
+        description: "One-line daily headline"
+        required: false
+        default: "AI agent 正在从通用助手进入垂直执行系统。"
+  schedule:
+    # Runs at 09:10 Asia/Shanghai every day.
+    - cron: "10 1 * * *"
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build notification content
+        id: content
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            REPORT_DATE="${{ inputs.report_date }}"
+            REPORT_URL="${{ inputs.report_url }}"
+            HEADLINE="${{ inputs.headline }}"
+          else
+            REPORT_DATE="$(TZ=Asia/Shanghai date +%F)"
+            REPORT_URL="https://luoluozi996.github.io/ai-radar/ai-project-radar-${REPORT_DATE}.html"
+            HEADLINE="今日 AI 内容雷达已更新。"
+          fi
+
+          {
+            echo "title=AI 内容雷达 · ${REPORT_DATE}"
+            echo "desp<<EOF"
+            echo "${HEADLINE}"
+            echo ""
+            echo "阅读全文："
+            echo "${REPORT_URL}"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Send ServerChan notification
+        env:
+          SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
+          TITLE: ${{ steps.content.outputs.title }}
+          DESP: ${{ steps.content.outputs.desp }}
+        shell: bash
+        run: |
+          if [ -z "$SERVERCHAN_SENDKEY" ]; then
+            echo "Missing SERVERCHAN_SENDKEY secret. Add it in repository Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+          curl --fail --show-error --silent \
+            --request POST "https://sctapi.ftqq.com/${SERVERCHAN_SENDKEY}.send" \
+            --data-urlencode "title=${TITLE}" \
+            --data-urlencode "desp=${DESP}"
