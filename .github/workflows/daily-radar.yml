@@ -67,16 +67,56 @@ jobs:
           import urllib.request
           from pathlib import Path
 
-          def source_hint(source):
+          def contains(text, words):
+              return any(word in text for word in words)
+
+          def item_reason(item):
+              source = item.get("source", "")
+              title = item.get("title", "")
+              text = title.lower()
+
               if source == "GitHub":
-                  return "开源项目/工具信号，适合看 README、Quick Start 和近期提交。"
+                  if contains(text, ["code", "coding", "qwen-code", "coder", "dev", "cli"]):
+                      return "AI 编程工具信号，重点看它是否能进入真实开发流程，而不是只停留在 demo。"
+                  if contains(text, ["agent", "agents", "flow", "workflow", "deer"]):
+                      return "agent 工作流信号，重点看任务拆解、执行链路和示例是否清楚。"
+                  if contains(text, ["flower", "flwr", "federated"]):
+                      return "分布式/联邦学习信号，重点看训练协作方式和工程落地难度。"
+                  if contains(text, ["vercel", "sdk", "framework", "app"]):
+                      return "AI 应用开发基础设施信号，重点看生态接入、模板和上手成本。"
+                  if contains(text, ["model", "llm", "rag", "inference"]):
+                      return "模型工程信号，重点看可复现示例、部署路径和使用限制。"
+                  return "近期活跃开源项目，重点看 README、安装路径和最近提交质量。"
+
               if source == "Hacker News":
-                  return "开发者讨论信号，适合看争议点和真实反馈。"
+                  return "开发者社区讨论信号，重点看高赞评论里的真实反馈和反对意见。"
               if source == "Hugging Face":
-                  return "模型或 Demo 信号，适合看示例、license 和可试用性。"
+                  return "模型或 Demo 热度信号，重点看示例、license、可试用性和任务适配度。"
               if source == "RSS":
-                  return "文章/官方发布信号，适合判断产品或研究方向变化。"
+                  return "文章/官方发布信号，重点看它透露的产品、研究或生态方向变化。"
               return "值得进一步点开核验的 AI 内容信号。"
+
+          def item_action(item):
+              source = item.get("source", "")
+              title = item.get("title", "")
+              text = title.lower()
+
+              if source == "GitHub":
+                  if contains(text, ["code", "coding", "qwen-code", "coder", "dev", "cli"]):
+                      return "先看 Quick Start 和 CLI/API 示例，判断今天能不能直接试跑。"
+                  if contains(text, ["agent", "agents", "flow", "workflow", "deer"]):
+                      return "先看示例任务和执行结果，再判断能否替代一段现有手工流程。"
+                  if contains(text, ["flower", "flwr", "federated"]):
+                      return "先看适用场景和样例训练流程，判断是否值得收藏跟进。"
+                  return "先看 README 的使用场景，再看最近提交，决定试用还是观察。"
+
+              if source == "Hacker News":
+                  return "先读评论区前几条高质量观点，再决定是否进入原文。"
+              if source == "Hugging Face":
+                  return "先看 demo、license 和示例输入输出，确认是否能复用。"
+              if source == "RSS":
+                  return "先扫摘要和发布时间，再判断是否需要阅读全文。"
+              return "先看完整日报里的雷达图和链接，再决定下一步。"
 
           sendkey = os.environ["SERVERCHAN_SENDKEY"]
           data = json.loads(Path("data/latest-summary.json").read_text(encoding="utf-8"))
@@ -92,19 +132,17 @@ jobs:
               source = item.get("source", "Unknown")
               score = item.get("score", "-")
               title = item.get("title", "Untitled")
-              url = item.get("url", "")
               lines.extend([
                   f"{idx}. {title}",
                   f"   来源：{source}｜评分：{score}",
-                  f"   看点：{source_hint(source)}",
+                  f"   看点：{item_reason(item)}",
+                  f"   建议：{item_action(item)}",
+                  "",
               ])
-              if url:
-                  lines.append(f"   原文：{url}")
-              lines.append("")
 
           lines.extend([
               "【怎么读】",
-              "先看 Top 1 判断今日主方向；再扫 Top 2/3，决定是试用、收藏还是观望。",
+              "微信里先看方向和取舍；具体链接、项目小雷达和排序理由放在完整日报里。",
               "",
               "【完整日报】",
               data["report_url"],
