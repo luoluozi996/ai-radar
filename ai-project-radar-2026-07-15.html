@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2026-07-15 AI 项目雷达</title>
+  <style>
+    :root {
+      --background: #f6f5f0;
+      --foreground: #1f2421;
+      --muted: #6a706b;
+      --line: #d6d8d0;
+      --panel: #fffdf8;
+      --panel-soft: #eef2ec;
+      --accent: #28685b;
+      --accent-soft: #dcebe5;
+      --accent-strong: #16463d;
+      --signal: #c86b4f;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #fbfaf6 0%, var(--background) 100%);
+      color: var(--foreground);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    main { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 36px 0 50px; }
+    .hero { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+    .eyebrow { margin: 0 0 8px; color: var(--accent); font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 12px; font-size: clamp(34px, 6vw, 70px); line-height: 1; }
+    h2 { margin-bottom: 12px; font-size: 26px; }
+    h3 { margin-bottom: 6px; font-size: 15px; }
+    .intro { max-width: 760px; margin-bottom: 0; color: var(--muted); font-size: 18px; line-height: 1.7; }
+    .datebox { color: var(--muted); font-weight: 700; text-align: right; line-height: 1.5; }
+    .radar-section, .list-section { margin-top: 28px; }
+    .project-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+    button, a { font: inherit; }
+    .tab {
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--foreground);
+      padding: 9px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .tab.active { background: var(--accent); border-color: var(--accent); color: white; }
+    .radar-layout { display: grid; grid-template-columns: minmax(320px, 0.9fr) minmax(320px, 1.1fr); gap: 28px; align-items: center; }
+    .radar-visual { min-width: 0; padding: 12px; }
+    .radar-visual svg { display: block; width: 100%; max-width: 540px; margin: 0 auto; }
+    .grid-line { fill: none; stroke: var(--line); stroke-width: 1; }
+    .axis-line { stroke: var(--line); stroke-width: 1; }
+    .axis-label { fill: var(--foreground); font-size: 12px; font-weight: 700; }
+    .axis-value { fill: var(--muted); font-size: 11px; }
+    .radar-shape { fill: rgba(40, 104, 91, 0.22); stroke: var(--accent); stroke-width: 2.5; }
+    .radar-dot { fill: var(--accent-strong); stroke: var(--panel); stroke-width: 2; }
+    .project-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 24px; box-shadow: 0 18px 45px rgba(31, 36, 33, 0.08); }
+    .card-topline { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+    .card-topline span { background: var(--accent-soft); color: var(--accent-strong); border-radius: 999px; padding: 5px 9px; font-size: 13px; font-weight: 700; }
+    .score { color: var(--accent); font-size: 20px; font-weight: 700; }
+    .metrics { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin: 18px 0; }
+    .metrics div { background: var(--panel-soft); border-radius: 8px; padding: 10px 8px; text-align: center; }
+    .metrics dt { color: var(--muted); font-size: 12px; }
+    .metrics dd { margin: 3px 0 0; font-size: 20px; font-weight: 700; }
+    .copy-block { margin-top: 16px; }
+    .copy-block p { margin-bottom: 0; color: var(--muted); line-height: 1.65; }
+    .repo-link { display: inline-flex; margin-top: 22px; align-items: center; justify-content: center; border-radius: 999px; background: var(--accent); color: white; padding: 11px 16px; text-decoration: none; font-weight: 700; }
+    .project-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .project-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; border: 1px solid var(--line); background: rgba(255,255,255,0.72); border-radius: 10px; padding: 14px; text-align: left; cursor: pointer; }
+    .project-row.selected { border-color: var(--accent); background: var(--accent-soft); }
+    .project-row strong, .project-row small { display: block; }
+    .project-row small { margin-top: 4px; color: var(--muted); }
+    .project-row > span:last-child { color: var(--accent); font-size: 24px; font-weight: 700; }
+    .note { margin-top: 24px; color: var(--muted); font-size: 13px; line-height: 1.6; border-top: 1px solid var(--line); padding-top: 16px; }
+    @media (max-width: 820px) {
+      main { width: min(100% - 24px, 720px); padding-top: 24px; }
+      .hero, .radar-layout, .project-list { grid-template-columns: 1fr; }
+      .datebox { text-align: left; }
+      .project-card { padding: 18px; }
+      .metrics { grid-template-columns: repeat(5, minmax(48px, 1fr)); }
+    }
+    @media (max-width: 520px) { .metrics { grid-template-columns: repeat(2, 1fr); } .tab { flex: 1 1 auto; } }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Daily English AI Content Radar</p>
+        <h1>AI 项目雷达</h1>
+        <p class="intro">2026-07-15 版本聚焦近期活跃、README 可核验的 AI agent、AI 编程和工作流基础设施项目。五轴仍用于快速判断：热度、增速、可用、新颖、活跃。</p>
+      </div>
+      <div class="datebox">2026 年 7 月 15 日<br>更新窗口：近 24 小时信号</div>
+    </section>
+
+    <section class="radar-section" aria-label="项目雷达">
+      <div id="project-tabs" class="project-tabs" role="list" aria-label="选择项目"></div>
+      <div class="radar-layout">
+        <div class="radar-visual" aria-label="项目雷达图">
+          <svg viewBox="0 0 300 300" role="img" aria-label="五轴评分雷达图">
+            <g id="grid"></g>
+            <g id="labels"></g>
+            <polygon id="radar-shape" class="radar-shape" points=""></polygon>
+            <g id="dots"></g>
+          </svg>
+        </div>
+        <article class="project-card">
+          <div id="card-topline" class="card-topline"></div>
+          <h2 id="project-name"></h2>
+          <p id="project-score" class="score"></p>
+          <dl id="metrics" class="metrics"></dl>
+          <div class="copy-block"><h3>摘要</h3><p id="summary"></p></div>
+          <div class="copy-block"><h3>项目亮点</h3><p id="highlight"></p></div>
+          <div class="copy-block"><h3>适合谁</h3><p id="audience"></p></div>
+          <div class="copy-block"><h3>为什么选它</h3><p id="reason"></p></div>
+          <a id="repo-link" href="#" target="_blank" rel="noreferrer" class="repo-link">打开原始项目</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="list-section" aria-label="项目列表">
+      <h2>今日项目</h2>
+      <div id="project-list" class="project-list"></div>
+      <p class="note">数据源：GitHub 仓库搜索、项目 README 与仓库元数据。评分是雷达筛选判断，不等同于投资、采购或安全结论。</p>
+    </section>
+  </main>
+  <script>
+    const axes = [
+      { key: "popularity", label: "热度" },
+      { key: "growth", label: "增速" },
+      { key: "usability", label: "可用" },
+      { key: "novelty", label: "新颖" },
+      { key: "activity", label: "活跃" },
+    ];
+    const projects = [
+      { id: "strix", name: "Strix", selection: "High Momentum", score: 89, verified: "README 已核验", metrics: { popularity: 86, growth: 92, usability: 88, novelty: 90, activity: 88 }, summary: "开源 AI 渗透测试工具，用多 agent 执行侦察、漏洞验证、PoC 生成和修复建议，面向开发者与安全团队。", highlight: "它把安全扫描从静态提示推进到动态运行、验证和修复闭环，并明确支持 CLI 与 CI/CD 场景。", audience: "需要把安全测试接进开发流程、希望降低手工渗透测试成本的工程团队。", reason: "README 有完整能力边界、安装前提和使用场景，且近期信号强，属于 AI 安全工具链里的高动量项目。", url: "https://github.com/usestrix/strix" },
+      { id: "claude-mem", name: "Claude-Mem", selection: "Useful Tool", score: 86, verified: "README 已核验", metrics: { popularity: 84, growth: 90, usability: 84, novelty: 86, activity: 88 }, summary: "面向 Claude Code 的持久记忆压缩系统，目标是把跨会话项目经验、偏好和上下文压成可复用记忆。", highlight: "它不是再做一个聊天界面，而是补 AI 编程 agent 的长期上下文能力。", audience: "频繁使用 Claude Code、希望减少重复解释项目背景和个人偏好的开发者。", reason: "README 明确定位为 Claude Code 记忆系统，版本、文档和多语言文档齐全，契合 AI 编程个性化趋势。", url: "https://github.com/thedotmack/claude-mem" },
+      { id: "sim", name: "Sim", selection: "Workflow Builder", score: 84, verified: "README 已核验", metrics: { popularity: 83, growth: 82, usability: 91, novelty: 78, activity: 86 }, summary: "用于构建、部署和管理 AI agents 与 workflows 的工作区，支持可视化、对话式和代码化搭建。", highlight: "把集成、知识库、表格、文件、计划任务和运行监控放在一个 agent 工作区里。", audience: "想把 AI agent 从 demo 推到团队工作流、并需要自托管或云端入口的开发/运营团队。", reason: "README 给出 npx 与 Docker 自托管路径，并列出 1000+ 集成、日志和调度等生产化要素。", url: "https://github.com/simstudioai/sim" },
+      { id: "hermes", name: "Hermes Agent", selection: "Agent Runtime", score: 83, verified: "README 已核验", metrics: { popularity: 80, growth: 84, usability: 82, novelty: 91, activity: 80 }, summary: "Nous Research 的自改进 AI agent，强调技能生成、跨会话记忆、子 agent 并行和多平台消息入口。", highlight: "它把 terminal、Telegram/Discord/Slack 等入口、技能学习和远程运行环境组合成一个长期运行的 agent runtime。", audience: "研究自改进 agent、长期记忆、技能标准和远程执行环境的 builders。", reason: "README 展示了闭环学习、计划任务、子 agent、云端/本地运行等完整 agent 系统特征，差异化明显。", url: "https://github.com/NousResearch/hermes-agent" },
+      { id: "mimo", name: "MiMo-Code", selection: "Coding Agent", score: 81, verified: "README 已核验", metrics: { popularity: 76, growth: 83, usability: 88, novelty: 76, activity: 82 }, summary: "小米 MiMo 的终端原生 AI 编程助手，可读写代码、运行命令、管理 Git，并带持久记忆系统。", highlight: "它把模型、agent 与终端工作流绑定，并提供零配置 MiMo Auto、OAuth 与 OpenAI-compatible provider 入口。", audience: "想尝试新一代 AI coding CLI、或对国产模型/agent 编程生态感兴趣的开发者。", reason: "README 的安装路径、Windows/macOS/Linux 支持和 provider 配置说明清晰，属于值得观察的 AI 编程入口。", url: "https://github.com/XiaomiMiMo/MiMo-Code" },
+      { id: "agent-pulse", name: "Agent Pulse", selection: "Category Map", score: 78, verified: "README 已核验", metrics: { popularity: 68, growth: 82, usability: 84, novelty: 82, activity: 76 }, summary: "面向 AI 行业情报的证据驱动系统，把官方发布、论文、资本动向和政策变化整理成可追溯事件与判断。", highlight: "不是普通新闻聚合，而是强调事实、证据、上下文、影响、判断和下一信号的分层。", audience: "需要持续跟踪 AI 产业变化、并把信息转成决策材料的研究者、投资人和产品负责人。", reason: "README 展示了 live site、证据时间线、source audit 和 daily refresh 机制，适合作为 AI 情报基础设施样本。", url: "https://github.com/barretlee/agent-pulse" },
+    ];
+    const center = 150;
+    const radius = 116;
+    let active = projects[0];
+    function point(index, value) {
+      const angle = -Math.PI / 2 + index * (Math.PI * 2 / axes.length);
+      const r = radius * value / 100;
+      return { x: center + Math.cos(angle) * r, y: center + Math.sin(angle) * r };
+    }
+    function polygon(value) {
+      return axes.map((_, index) => {
+        const p = point(index, value);
+        return `${p.x},${p.y}`;
+      }).join(" ");
+    }
+    function drawBase() {
+      const grid = document.getElementById("grid");
+      const labels = document.getElementById("labels");
+      [25, 50, 75, 100].forEach(value => {
+        const poly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+        poly.setAttribute("points", polygon(value));
+        poly.setAttribute("class", "grid-line");
+        grid.appendChild(poly);
+      });
+      axes.forEach((axis, index) => {
+        const end = point(index, 100);
+        const labelPoint = point(index, 122);
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        line.setAttribute("x1", center);
+        line.setAttribute("y1", center);
+        line.setAttribute("x2", end.x);
+        line.setAttribute("y2", end.y);
+        line.setAttribute("class", "axis-line");
+        grid.appendChild(line);
+        const label = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        label.setAttribute("x", labelPoint.x);
+        label.setAttribute("y", labelPoint.y);
+        label.setAttribute("class", "axis-label");
+        label.setAttribute("text-anchor", Math.abs(labelPoint.x - center) < 8 ? "middle" : labelPoint.x > center ? "start" : "end");
+        label.setAttribute("dominant-baseline", "middle");
+        label.textContent = axis.label;
+        labels.appendChild(label);
+      });
+    }
+    function renderControls() {
+      document.getElementById("project-tabs").innerHTML = projects.map(project => `<button class="tab${project.id === active.id ? " active" : ""}" type="button" data-id="${project.id}">${project.name}</button>`).join("");
+      document.getElementById("project-list").innerHTML = projects.map(project => `<button class="project-row${project.id === active.id ? " selected" : ""}" type="button" data-id="${project.id}"><span><strong>${project.name}</strong><small>${project.selection}</small></span><span>${project.score}</span></button>`).join("");
+      document.querySelectorAll("[data-id]").forEach(button => {
+        button.addEventListener("click", () => {
+          active = projects.find(project => project.id === button.getAttribute("data-id")) || projects[0];
+          update();
+        });
+      });
+    }
+    function update() {
+      renderControls();
+      document.getElementById("radar-shape").setAttribute("points", axes.map((axis, index) => {
+        const p = point(index, active.metrics[axis.key]);
+        return `${p.x},${p.y}`;
+      }).join(" "));
+      document.getElementById("dots").innerHTML = axes.map((axis, index) => {
+        const p = point(index, active.metrics[axis.key]);
+        return `<circle cx="${p.x}" cy="${p.y}" r="4.5" class="radar-dot"></circle>`;
+      }).join("");
+      document.querySelectorAll(".axis-value").forEach(node => node.remove());
+      const labels = document.getElementById("labels");
+      axes.forEach((axis, index) => {
+        const p = point(index, 83);
+        const value = document.createElementNS("http://www.w3.org/2000/svg", "text");
+        value.setAttribute("x", p.x);
+        value.setAttribute("y", p.y);
+        value.setAttribute("class", "axis-value");
+        value.setAttribute("text-anchor", "middle");
+        value.setAttribute("dominant-baseline", "middle");
+        value.textContent = active.metrics[axis.key];
+        labels.appendChild(value);
+      });
+      document.getElementById("card-topline").innerHTML = `<span>${active.selection}</span><span>${active.verified}</span>`;
+      document.getElementById("project-name").textContent = active.name;
+      document.getElementById("project-score").textContent = `总分 ${active.score}`;
+      document.getElementById("metrics").innerHTML = axes.map(axis => `<div><dt>${axis.label}</dt><dd>${active.metrics[axis.key]}</dd></div>`).join("");
+      document.getElementById("summary").textContent = active.summary;
+      document.getElementById("highlight").textContent = active.highlight;
+      document.getElementById("audience").textContent = active.audience;
+      document.getElementById("reason").textContent = active.reason;
+      document.getElementById("repo-link").setAttribute("href", active.url);
+    }
+    drawBase();
+    update();
+  </script>
+</body>
+</html>
