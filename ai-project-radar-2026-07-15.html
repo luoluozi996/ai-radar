@@ -5,52 +5,198 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>2026-07-15 AI 项目雷达</title>
   <meta property="og:title" content="2026-07-15 AI 项目雷达">
-  <meta property="og:description" content="今日主项目 Strix：开源 AI 渗透测试 agent，用动态验证和修复建议把安全扫描接进开发工作流。">
+  <meta property="og:description" content="今日主线：AI agent 正在从通用助手转向安全、工作流、记忆和行业情报等垂直执行系统。">
   <meta property="og:image" content="https://luoluozi996.github.io/ai-radar/assets/2026-07-15-strix-hero.svg">
   <meta property="og:type" content="article">
   <style>
-    :root{--bg:#f6f5f0;--fg:#1f2421;--muted:#6a706b;--line:#d6d8d0;--panel:#fffdf8;--soft:#eef2ec;--accent:#28685b;--accent2:#16463d;--warm:#c86b4f}*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#fbfaf6 0%,var(--bg) 100%);color:var(--fg);font-family:Arial,Helvetica,sans-serif}main{width:min(1120px,calc(100% - 32px));margin:0 auto;padding:32px 0 50px}.hero{display:grid;gap:20px;padding-bottom:24px;border-bottom:1px solid var(--line)}.hero-img{display:block;width:100%;aspect-ratio:1200/630;object-fit:cover;border:1px solid var(--line);border-radius:12px;background:#eef2ec}.hero-copy{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end}.eyebrow{margin:0 0 8px;color:var(--accent);font-weight:700;letter-spacing:.08em;text-transform:uppercase}h1,h2,h3,p{margin-top:0}h1{margin-bottom:12px;font-size:clamp(34px,6vw,70px);line-height:1}h2{margin-bottom:12px;font-size:26px}h3{margin-bottom:6px;font-size:15px}.intro{max-width:760px;margin-bottom:0;color:var(--muted);font-size:18px;line-height:1.7}.datebox{color:var(--muted);font-weight:700;text-align:right;line-height:1.5}.radar-section,.list-section{margin-top:28px}.project-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}button,a{font:inherit}.tab{border:1px solid var(--line);background:var(--panel);color:var(--fg);padding:9px 12px;border-radius:999px;cursor:pointer;font-weight:700}.tab.active{background:var(--accent);border-color:var(--accent);color:white}.radar-layout{display:grid;grid-template-columns:minmax(320px,.9fr) minmax(320px,1.1fr);gap:28px;align-items:center}.radar-visual{min-width:0;padding:12px}.radar-visual svg{display:block;width:100%;max-width:540px;margin:0 auto}.grid-line{fill:none;stroke:var(--line);stroke-width:1}.axis-line{stroke:var(--line);stroke-width:1}.axis-label{fill:var(--fg);font-size:12px;font-weight:700}.axis-value{fill:var(--muted);font-size:11px}.radar-shape{fill:rgba(40,104,91,.22);stroke:var(--accent);stroke-width:2.5}.radar-dot{fill:var(--accent2);stroke:var(--panel);stroke-width:2}.project-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px;box-shadow:0 18px 45px rgba(31,36,33,.08)}.card-topline{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}.card-topline span{background:#dcebe5;color:var(--accent2);border-radius:999px;padding:5px 9px;font-size:13px;font-weight:700}.score{color:var(--accent);font-size:20px;font-weight:700}.metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:18px 0}.metrics div{background:var(--soft);border-radius:8px;padding:10px 8px;text-align:center}.metrics dt{color:var(--muted);font-size:12px}.metrics dd{margin:3px 0 0;font-size:20px;font-weight:700}.copy-block{margin-top:16px}.copy-block p{margin-bottom:0;color:var(--muted);line-height:1.65}.repo-link{display:inline-flex;margin-top:22px;align-items:center;justify-content:center;border-radius:999px;background:var(--accent);color:white;padding:11px 16px;text-decoration:none;font-weight:700}.project-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.project-row{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--line);background:rgba(255,255,255,.72);border-radius:10px;padding:14px;text-align:left;cursor:pointer}.project-row.selected{border-color:var(--accent);background:#dcebe5}.project-row strong,.project-row small{display:block}.project-row small{margin-top:4px;color:var(--muted)}.project-row>span:last-child{color:var(--accent);font-size:24px;font-weight:700}.note{margin-top:24px;color:var(--muted);font-size:13px;line-height:1.6;border-top:1px solid var(--line);padding-top:16px}@media(max-width:820px){main{width:min(100% - 24px,720px);padding-top:24px}.hero-copy,.radar-layout,.project-list{grid-template-columns:1fr}.datebox{text-align:left}.project-card{padding:18px}.metrics{grid-template-columns:repeat(5,minmax(48px,1fr))}}@media(max-width:520px){.metrics{grid-template-columns:repeat(2,1fr)}.tab{flex:1 1 auto}}
+    :root {
+      --bg: #f6f5f0;
+      --paper: #fffdf8;
+      --ink: #1f2421;
+      --muted: #68706b;
+      --line: #d7d9d1;
+      --soft: #eef2ec;
+      --green: #28685b;
+      --green-dark: #16463d;
+      --warm: #c86b4f;
+      --amber: #d4a72c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #fbfaf6 0%, var(--bg) 100%);
+      color: var(--ink);
+      font: 16px/1.62 Arial, Helvetica, sans-serif;
+    }
+    main { width: min(1120px, calc(100% - 32px)); margin: 0 auto; padding: 34px 0 56px; }
+    a { color: inherit; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin: 0 0 12px; font-size: clamp(36px, 6vw, 72px); line-height: 0.98; letter-spacing: 0; }
+    h2 { margin-bottom: 14px; font-size: 26px; line-height: 1.18; }
+    h3 { margin-bottom: 8px; font-size: 17px; }
+    .eyebrow { margin: 0 0 9px; color: var(--green); font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; }
+    .hero { display: grid; grid-template-columns: 1fr auto; gap: 28px; align-items: end; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+    .lead { max-width: 780px; margin: 0; color: var(--muted); font-size: 18px; }
+    .datebox { color: var(--muted); font-weight: 700; text-align: right; line-height: 1.55; }
+    section { margin-top: 28px; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 12px; }
+    .section-head p { margin: 0; max-width: 600px; color: var(--muted); }
+    .takeaways { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+    .takeaway { border: 1px solid var(--line); background: var(--paper); border-radius: 10px; padding: 16px; }
+    .takeaway b { display: block; margin-bottom: 7px; color: var(--green-dark); }
+    .takeaway p { margin: 0; color: var(--muted); }
+    .featured { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 18px; align-items: stretch; }
+    .feature-card, .side-card, .project-card, .trend-card { border: 1px solid var(--line); background: var(--paper); border-radius: 10px; }
+    .feature-card { padding: 24px; }
+    .side-card { padding: 18px; }
+    .label-row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+    .pill { display: inline-flex; align-items: center; border-radius: 999px; padding: 5px 9px; background: #dcebe5; color: var(--green-dark); font-size: 13px; font-weight: 800; }
+    .pill.warm { background: #f4e1da; color: #8a3d2d; }
+    .pill.gray { background: var(--soft); color: var(--muted); }
+    .feature-title { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 10px; }
+    .feature-title h2 { margin: 0; font-size: 34px; }
+    .score { color: var(--green); font-size: 32px; font-weight: 900; }
+    .why-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 18px; }
+    .why { border-left: 3px solid var(--green); padding-left: 12px; }
+    .why b { display: block; margin-bottom: 4px; }
+    .why p { margin: 0; color: var(--muted); }
+    .metric-list { display: grid; gap: 8px; margin: 0; }
+    .metric { display: grid; grid-template-columns: 54px 1fr 36px; gap: 8px; align-items: center; }
+    .bar { height: 8px; background: var(--soft); border-radius: 999px; overflow: hidden; }
+    .bar i { display: block; height: 100%; background: var(--green); border-radius: inherit; }
+    .metric span, .metric strong { font-size: 13px; }
+    .metric span { color: var(--muted); }
+    .action { margin-top: 18px; padding: 14px; border-radius: 8px; background: #f7f2e7; border: 1px solid #eadbb7; }
+    .action b { color: #745714; }
+    .action p { margin: 4px 0 0; color: var(--muted); }
+    .group-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .project-card { padding: 18px; }
+    .project-card header { display: flex; align-items: start; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+    .project-card h3 { margin: 0; font-size: 21px; }
+    .project-card p { color: var(--muted); }
+    .decision { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+    .decision div { background: var(--soft); border-radius: 8px; padding: 10px; }
+    .decision b { display: block; margin-bottom: 3px; font-size: 13px; }
+    .decision span { color: var(--muted); font-size: 14px; }
+    .link { display: inline-flex; margin-top: 14px; color: var(--green-dark); font-weight: 800; text-decoration: none; }
+    .trend-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .trend-card { padding: 18px; }
+    .trend-card p, .note { color: var(--muted); }
+    .note { margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13px; }
+    @media (max-width: 900px) {
+      .hero, .featured, .takeaways, .group-grid, .trend-grid { grid-template-columns: 1fr; }
+      .datebox { text-align: left; }
+      .why-grid, .decision { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
   <main>
     <section class="hero">
-      <img class="hero-img" src="./assets/2026-07-15-strix-hero.svg" alt="2026-07-15 AI 项目雷达 Strix 主题头图">
-      <div class="hero-copy">
-        <div>
-          <p class="eyebrow">Daily English AI Content Radar</p>
-          <h1>AI 项目雷达</h1>
-          <p class="intro">2026-07-15 版本聚焦近期活跃、README 可核验的 AI agent、AI 编程和工作流基础设施项目。五轴仍用于快速判断：热度、增速、可用、新颖、活跃。</p>
-        </div>
-        <div class="datebox">2026 年 7 月 15 日<br>更新窗口：近 24 小时信号</div>
+      <div>
+        <p class="eyebrow">Daily English AI Content Radar</p>
+        <h1>AI 项目雷达</h1>
+        <p class="lead">今天不做“项目罗列”，而是回答：哪些 AI 项目值得点开、为什么值得、应该试用还是先观察。</p>
+      </div>
+      <div class="datebox">2026 年 7 月 15 日<br>更新窗口：近 24 小时信号<br>README/仓库元数据已核验</div>
+    </section>
+
+    <section aria-label="今日结论">
+      <div class="section-head">
+        <h2>今日结论</h2>
+        <p>主线很清楚：AI agent 正在从通用聊天/代码助手，进入安全测试、工作流编排、长期记忆和行业情报这些更具体的执行系统。</p>
+      </div>
+      <div class="takeaways">
+        <article class="takeaway"><b>最值得点开</b><p>Strix。它把 AI agent 放进安全测试闭环，而不是只做静态提示或报告包装。</p></article>
+        <article class="takeaway"><b>最适合试用</b><p>Sim。自托管入口清楚，适合作为 agent workflow builder 的产品样本。</p></article>
+        <article class="takeaway"><b>最值得收藏</b><p>Claude-Mem。长期记忆会持续成为 AI 编程工具的基础能力。</p></article>
+        <article class="takeaway"><b>先观察</b><p>Hermes Agent 和 MiMo-Code。方向有意思，但要看真实使用体验和生态跟进。</p></article>
       </div>
     </section>
-    <section class="radar-section" aria-label="项目雷达">
-      <div id="project-tabs" class="project-tabs" role="list" aria-label="选择项目"></div>
-      <div class="radar-layout">
-        <div class="radar-visual" aria-label="项目雷达图"><svg viewBox="0 0 300 300" role="img" aria-label="五轴评分雷达图"><g id="grid"></g><g id="labels"></g><polygon id="radar-shape" class="radar-shape" points=""></polygon><g id="dots"></g></svg></div>
-        <article class="project-card"><div id="card-topline" class="card-topline"></div><h2 id="project-name"></h2><p id="project-score" class="score"></p><dl id="metrics" class="metrics"></dl><div class="copy-block"><h3>摘要</h3><p id="summary"></p></div><div class="copy-block"><h3>项目亮点</h3><p id="highlight"></p></div><div class="copy-block"><h3>适合谁</h3><p id="audience"></p></div><div class="copy-block"><h3>为什么选它</h3><p id="reason"></p></div><a id="repo-link" href="#" target="_blank" rel="noreferrer" class="repo-link">打开原始项目</a></article>
+
+    <section aria-label="今日主项目">
+      <div class="section-head">
+        <h2>今日主项目</h2>
+        <p>主项目不一定是 star 最高，而是今天最能代表趋势变化、并且值得读者深入点开的项目。</p>
+      </div>
+      <div class="featured">
+        <article class="feature-card">
+          <div class="label-row"><span class="pill">High Momentum</span><span class="pill">README 已核验</span><span class="pill warm">行动：适合试用</span></div>
+          <div class="feature-title"><h2>Strix</h2><div class="score">89</div></div>
+          <p>开源 AI 渗透测试工具，用多 agent 执行侦察、漏洞验证、PoC 生成和修复建议，面向开发者与安全团队。</p>
+          <div class="why-grid">
+            <div class="why"><b>为什么重要</b><p>安全测试是 AI agent 很自然的落点：目标明确、流程多步、结果需要验证。</p></div>
+            <div class="why"><b>项目亮点</b><p>README 明确写到动态运行、真实 PoC 验证、自动修复和 CI/CD 接入。</p></div>
+            <div class="why"><b>适合谁</b><p>需要把应用安全测试前移到开发流程里的工程团队和安全团队。</p></div>
+            <div class="why"><b>风险</b><p>安全工具不能只看 demo，真实效果还要在代码库、权限边界和误报率上验证。</p></div>
+          </div>
+          <a class="link" href="https://github.com/usestrix/strix" target="_blank" rel="noreferrer">打开 Strix →</a>
+        </article>
+        <aside class="side-card" aria-label="Strix 五轴评分">
+          <h3>五轴判断</h3>
+          <div class="metric-list">
+            <div class="metric"><span>热度</span><div class="bar"><i style="width:86%"></i></div><strong>86</strong></div>
+            <div class="metric"><span>增速</span><div class="bar"><i style="width:92%"></i></div><strong>92</strong></div>
+            <div class="metric"><span>可用</span><div class="bar"><i style="width:88%"></i></div><strong>88</strong></div>
+            <div class="metric"><span>新颖</span><div class="bar"><i style="width:90%"></i></div><strong>90</strong></div>
+            <div class="metric"><span>活跃</span><div class="bar"><i style="width:88%"></i></div><strong>88</strong></div>
+          </div>
+          <div class="action"><b>阅读建议</b><p>先看 Quick Start 和 CI/CD 集成，再判断它是否能进入真实开发流程。</p></div>
+        </aside>
       </div>
     </section>
-    <section class="list-section" aria-label="项目列表"><h2>今日项目</h2><div id="project-list" class="project-list"></div><p class="note">数据源：GitHub 仓库搜索、项目 README 与仓库元数据。评分是雷达筛选判断，不等同于投资、采购或安全结论。</p></section>
+
+    <section aria-label="分组项目清单">
+      <div class="section-head">
+        <h2>分组清单</h2>
+        <p>这里按“读者该怎么处理它”来分组，而不是只按分数排序。</p>
+      </div>
+      <div class="group-grid">
+        <article class="project-card">
+          <header><div><span class="pill">实用工具</span><h3>Claude-Mem</h3></div><strong>86</strong></header>
+          <p>面向 Claude Code 的持久记忆压缩系统，把跨会话项目经验、偏好和上下文压成可复用记忆。</p>
+          <div class="decision"><div><b>行动建议</b><span>收藏并试跑；适合重度 AI 编程用户。</span></div><div><b>风险</b><span>价值取决于你是否已有大量 Claude Code 工作历史。</span></div></div>
+          <a class="link" href="https://github.com/thedotmack/claude-mem" target="_blank" rel="noreferrer">打开项目 →</a>
+        </article>
+        <article class="project-card">
+          <header><div><span class="pill">工作流基础设施</span><h3>Sim</h3></div><strong>84</strong></header>
+          <p>用于构建、部署和管理 AI agents 与 workflows 的工作区，支持可视化、对话式和代码化搭建。</p>
+          <div class="decision"><div><b>行动建议</b><span>适合试用；重点看自托管、集成和运行监控。</span></div><div><b>风险</b><span>同类工具多，要看长期差异化和团队采用成本。</span></div></div>
+          <a class="link" href="https://github.com/simstudioai/sim" target="_blank" rel="noreferrer">打开项目 →</a>
+        </article>
+        <article class="project-card">
+          <header><div><span class="pill">Agent Runtime</span><h3>Hermes Agent</h3></div><strong>83</strong></header>
+          <p>Nous Research 的自改进 AI agent，强调技能生成、跨会话记忆、子 agent 并行和多平台消息入口。</p>
+          <div class="decision"><div><b>行动建议</b><span>适合深入研究 agent runtime 设计。</span></div><div><b>风险</b><span>系统野心大，真实稳定性和学习闭环效果需要验证。</span></div></div>
+          <a class="link" href="https://github.com/NousResearch/hermes-agent" target="_blank" rel="noreferrer">打开项目 →</a>
+        </article>
+        <article class="project-card">
+          <header><div><span class="pill">Coding Agent</span><h3>MiMo-Code</h3></div><strong>81</strong></header>
+          <p>小米 MiMo 的终端原生 AI 编程助手，可读写代码、运行命令、管理 Git，并带持久记忆系统。</p>
+          <div class="decision"><div><b>行动建议</b><span>适合观察国产模型进入 AI 编程 CLI 的路线。</span></div><div><b>风险</b><span>要看模型体验、生态适配和跨项目稳定性。</span></div></div>
+          <a class="link" href="https://github.com/XiaomiMiMo/MiMo-Code" target="_blank" rel="noreferrer">打开项目 →</a>
+        </article>
+        <article class="project-card">
+          <header><div><span class="pill">行业情报</span><h3>Agent Pulse</h3></div><strong>78</strong></header>
+          <p>证据驱动的 AI 行业情报系统，把官方发布、论文、资本动向和政策变化整理成可追溯事件与判断。</p>
+          <div class="decision"><div><b>行动建议</b><span>适合收藏为 AI 情报产品结构参考。</span></div><div><b>风险</b><span>不是通用工具，价值更偏研究与信息架构。</span></div></div>
+          <a class="link" href="https://github.com/barretlee/agent-pulse" target="_blank" rel="noreferrer">打开项目 →</a>
+        </article>
+      </div>
+    </section>
+
+    <section aria-label="趋势与观察点">
+      <div class="section-head">
+        <h2>今日趋势</h2>
+        <p>真正值得跟踪的不是某个项目的一天热度，而是这些项目背后的产品方向。</p>
+      </div>
+      <div class="trend-grid">
+        <article class="trend-card"><h3>Agent 正在垂直化</h3><p>安全、情报、工作流、编程记忆都比“通用助手”更容易形成明确价值闭环。</p></article>
+        <article class="trend-card"><h3>README 变成可信度入口</h3><p>Quick Start、部署方式、CI/CD、数据来源和限制说明，比一句宏大口号更值得看。</p></article>
+        <article class="trend-card"><h3>明日观察点</h3><p>继续看哪些项目能从 demo 走向可复现流程，尤其是带运行日志、验证结果和团队协作能力的项目。</p></article>
+      </div>
+      <p class="note">数据源：GitHub 仓库搜索、项目 README 与仓库元数据。评分用于辅助筛选，不等同于投资、采购、安全或合规建议。</p>
+    </section>
   </main>
-  <script>
-    const axes=[{key:"popularity",label:"热度"},{key:"growth",label:"增速"},{key:"usability",label:"可用"},{key:"novelty",label:"新颖"},{key:"activity",label:"活跃"}];
-    const projects=[
-      {id:"strix",name:"Strix",selection:"High Momentum",score:89,verified:"README 已核验",metrics:{popularity:86,growth:92,usability:88,novelty:90,activity:88},summary:"开源 AI 渗透测试工具，用多 agent 执行侦察、漏洞验证、PoC 生成和修复建议，面向开发者与安全团队。",highlight:"它把安全扫描从静态提示推进到动态运行、验证和修复闭环，并明确支持 CLI 与 CI/CD 场景。",audience:"需要把安全测试接进开发流程、希望降低手工渗透测试成本的工程团队。",reason:"README 有完整能力边界、安装前提和使用场景，且近期信号强，属于 AI 安全工具链里的高动量项目。",url:"https://github.com/usestrix/strix"},
-      {id:"claude-mem",name:"Claude-Mem",selection:"Useful Tool",score:86,verified:"README 已核验",metrics:{popularity:84,growth:90,usability:84,novelty:86,activity:88},summary:"面向 Claude Code 的持久记忆压缩系统，目标是把跨会话项目经验、偏好和上下文压成可复用记忆。",highlight:"它不是再做一个聊天界面，而是补 AI 编程 agent 的长期上下文能力。",audience:"频繁使用 Claude Code、希望减少重复解释项目背景和个人偏好的开发者。",reason:"README 明确定位为 Claude Code 记忆系统，版本、文档和多语言文档齐全，契合 AI 编程个性化趋势。",url:"https://github.com/thedotmack/claude-mem"},
-      {id:"sim",name:"Sim",selection:"Workflow Builder",score:84,verified:"README 已核验",metrics:{popularity:83,growth:82,usability:91,novelty:78,activity:86},summary:"用于构建、部署和管理 AI agents 与 workflows 的工作区，支持可视化、对话式和代码化搭建。",highlight:"把集成、知识库、表格、文件、计划任务和运行监控放在一个 agent 工作区里。",audience:"想把 AI agent 从 demo 推到团队工作流、并需要自托管或云端入口的开发/运营团队。",reason:"README 给出 npx 与 Docker 自托管路径，并列出 1000+ 集成、日志和调度等生产化要素。",url:"https://github.com/simstudioai/sim"},
-      {id:"hermes",name:"Hermes Agent",selection:"Agent Runtime",score:83,verified:"README 已核验",metrics:{popularity:80,growth:84,usability:82,novelty:91,activity:80},summary:"Nous Research 的自改进 AI agent，强调技能生成、跨会话记忆、子 agent 并行和多平台消息入口。",highlight:"它把 terminal、Telegram/Discord/Slack 等入口、技能学习和远程运行环境组合成一个长期运行的 agent runtime。",audience:"研究自改进 agent、长期记忆、技能标准和远程执行环境的 builders。",reason:"README 展示了闭环学习、计划任务、子 agent、云端/本地运行等完整 agent 系统特征，差异化明显。",url:"https://github.com/NousResearch/hermes-agent"},
-      {id:"mimo",name:"MiMo-Code",selection:"Coding Agent",score:81,verified:"README 已核验",metrics:{popularity:76,growth:83,usability:88,novelty:76,activity:82},summary:"小米 MiMo 的终端原生 AI 编程助手，可读写代码、运行命令、管理 Git，并带持久记忆系统。",highlight:"它把模型、agent 与终端工作流绑定，并提供零配置 MiMo Auto、OAuth 与 OpenAI-compatible provider 入口。",audience:"想尝试新一代 AI coding CLI、或对国产模型/agent 编程生态感兴趣的开发者。",reason:"README 的安装路径、Windows/macOS/Linux 支持和 provider 配置说明清晰，属于值得观察的 AI 编程入口。",url:"https://github.com/XiaomiMiMo/MiMo-Code"},
-      {id:"agent-pulse",name:"Agent Pulse",selection:"Category Map",score:78,verified:"README 已核验",metrics:{popularity:68,growth:82,usability:84,novelty:82,activity:76},summary:"面向 AI 行业情报的证据驱动系统，把官方发布、论文、资本动向和政策变化整理成可追溯事件与判断。",highlight:"不是普通新闻聚合，而是强调事实、证据、上下文、影响、判断和下一信号的分层。",audience:"需要持续跟踪 AI 产业变化、并把信息转成决策材料的研究者、投资人和产品负责人。",reason:"README 展示了 live site、证据时间线、source audit 和 daily refresh 机制，适合作为 AI 情报基础设施样本。",url:"https://github.com/barretlee/agent-pulse"}
-    ];
-    const center=150,radius=116;let active=projects[0];
-    function point(i,v){const a=-Math.PI/2+i*(Math.PI*2/axes.length),r=radius*v/100;return{x:center+Math.cos(a)*r,y:center+Math.sin(a)*r}}
-    function polygon(v){return axes.map((_,i)=>{const p=point(i,v);return `${p.x},${p.y}`}).join(" ")}
-    function drawBase(){const grid=document.getElementById("grid"),labels=document.getElementById("labels");[25,50,75,100].forEach(v=>{const poly=document.createElementNS("http://www.w3.org/2000/svg","polygon");poly.setAttribute("points",polygon(v));poly.setAttribute("class","grid-line");grid.appendChild(poly)});axes.forEach((axis,i)=>{const end=point(i,100),lp=point(i,122),line=document.createElementNS("http://www.w3.org/2000/svg","line");line.setAttribute("x1",center);line.setAttribute("y1",center);line.setAttribute("x2",end.x);line.setAttribute("y2",end.y);line.setAttribute("class","axis-line");grid.appendChild(line);const label=document.createElementNS("http://www.w3.org/2000/svg","text");label.setAttribute("x",lp.x);label.setAttribute("y",lp.y);label.setAttribute("class","axis-label");label.setAttribute("text-anchor",Math.abs(lp.x-center)<8?"middle":lp.x>center?"start":"end");label.setAttribute("dominant-baseline","middle");label.textContent=axis.label;labels.appendChild(label)})}
-    function renderControls(){document.getElementById("project-tabs").innerHTML=projects.map(p=>`<button class="tab${p.id===active.id?" active":""}" type="button" data-id="${p.id}">${p.name}</button>`).join("");document.getElementById("project-list").innerHTML=projects.map(p=>`<button class="project-row${p.id===active.id?" selected":""}" type="button" data-id="${p.id}"><span><strong>${p.name}</strong><small>${p.selection}</small></span><span>${p.score}</span></button>`).join("");document.querySelectorAll("[data-id]").forEach(b=>b.addEventListener("click",()=>{active=projects.find(p=>p.id===b.getAttribute("data-id"))||projects[0];update()}))}
-    function update(){renderControls();document.getElementById("radar-shape").setAttribute("points",axes.map((axis,i)=>{const p=point(i,active.metrics[axis.key]);return `${p.x},${p.y}`}).join(" "));document.getElementById("dots").innerHTML=axes.map((axis,i)=>{const p=point(i,active.metrics[axis.key]);return `<circle cx="${p.x}" cy="${p.y}" r="4.5" class="radar-dot"></circle>`}).join("");document.querySelectorAll(".axis-value").forEach(n=>n.remove());const labels=document.getElementById("labels");axes.forEach((axis,i)=>{const p=point(i,83),value=document.createElementNS("http://www.w3.org/2000/svg","text");value.setAttribute("x",p.x);value.setAttribute("y",p.y);value.setAttribute("class","axis-value");value.setAttribute("text-anchor","middle");value.setAttribute("dominant-baseline","middle");value.textContent=active.metrics[axis.key];labels.appendChild(value)});document.getElementById("card-topline").innerHTML=`<span>${active.selection}</span><span>${active.verified}</span>`;document.getElementById("project-name").textContent=active.name;document.getElementById("project-score").textContent=`总分 ${active.score}`;document.getElementById("metrics").innerHTML=axes.map(axis=>`<div><dt>${axis.label}</dt><dd>${active.metrics[axis.key]}</dd></div>`).join("");for(const id of ["summary","highlight","audience","reason"])document.getElementById(id).textContent=active[id];document.getElementById("repo-link").setAttribute("href",active.url)}
-    drawBase();update();
-  </script>
 </body>
 </html>
