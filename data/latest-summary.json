@@ -5,22 +5,22 @@
   "report_url": "https://luoluozi996.github.io/ai-radar/ai-project-radar-2026-07-15.html",
   "top_items": [
     {
-      "title": "stablyai/orca",
+      "title": "hexabot-ai/Hexabot",
       "source": "GitHub",
-      "url": "https://github.com/stablyai/orca",
-      "score": 96
-    },
-    {
-      "title": "flwrlabs/flower",
-      "source": "GitHub",
-      "url": "https://github.com/flwrlabs/flower",
+      "url": "https://github.com/hexabot-ai/Hexabot",
       "score": 92
     },
     {
-      "title": "lightdash/lightdash",
+      "title": "unicity-sphere/sphere-sdk",
       "source": "GitHub",
-      "url": "https://github.com/lightdash/lightdash",
+      "url": "https://github.com/unicity-sphere/sphere-sdk",
       "score": 92
+    },
+    {
+      "title": "ddalcu/mlx-serve",
+      "source": "GitHub",
+      "url": "https://github.com/ddalcu/mlx-serve",
+      "score": 85
     }
   ]
 }
