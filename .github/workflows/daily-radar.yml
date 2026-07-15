@@ -1,0 +1,81 @@
+name: Generate Daily AI Radar
+
+on:
+  workflow_dispatch:
+    inputs:
+      report_date:
+        description: "Report date, for example 2026-07-16. Leave empty for today in Asia/Shanghai."
+        required: false
+        default: ""
+  schedule:
+    # Runs at 08:30 Asia/Shanghai every day.
+    - cron: "30 0 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate report
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          if [ -n "${{ inputs.report_date }}" ]; then
+            python scripts/generate_daily_radar.py --date "${{ inputs.report_date }}"
+          else
+            python scripts/generate_daily_radar.py
+          fi
+
+      - name: Commit generated report
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "No generated changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html ai-project-radar-*.html data/latest-summary.json
+          git commit -m "publish: generate daily AI radar"
+          git push
+
+      - name: Send WeChat summary
+        env:
+          SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
+        shell: bash
+        run: |
+          if [ -z "$SERVERCHAN_SENDKEY" ]; then
+            echo "SERVERCHAN_SENDKEY is not set; skip WeChat notification."
+            exit 0
+          fi
+
+          python - <<'PY' > /tmp/wechat_payload.env
+          import json
+          from pathlib import Path
+          data = json.loads(Path('data/latest-summary.json').read_text(encoding='utf-8'))
+          lines = [data.get('headline', '今日 AI 内容雷达已更新。'), '', '今日值得看：']
+          for idx, item in enumerate(data.get('top_items', [])[:3], 1):
+              lines.append(f"{idx}. {item['title']}（{item['source']}，{item['score']}）")
+          lines += ['', '阅读全文：', data['report_url']]
+          print('TITLE=' + data['title'])
+          print('DESP<<EOF')
+          print('\n'.join(lines))
+          print('EOF')
+          PY
+
+          source /tmp/wechat_payload.env
+          curl --fail --show-error --silent \
+            --request POST "https://sctapi.ftqq.com/${SERVERCHAN_SENDKEY}.send" \
+            --data-urlencode "title=${TITLE}" \
+            --data-urlencode "desp=${DESP}"
