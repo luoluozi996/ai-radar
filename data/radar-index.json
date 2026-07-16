@@ -10,8 +10,7 @@
         {"label": "项目与工具", "url": "../projects/2026-07-16.html", "tags": ["agents", "tools", "github"]},
         {"label": "关键事件", "url": "../news/2026-07-16.html", "tags": ["tools", "workflow", "privacy", "pricing"]},
         {"label": "模型与研究", "url": "../models/2026-07-16.html", "tags": ["models", "research", "benchmarks"]},
-        {"label": "观点讨论", "url": "../voices/2026-07-16.html", "tags": ["bloggers", "newsletter", "community", "voices"]},
-        {"label": "今日执行", "url": "../actions/2026-07-16.html", "tags": ["execution", "actions", "workflow"]}
+        {"label": "观点讨论", "url": "../voices/2026-07-16.html", "tags": ["bloggers", "newsletter", "community", "voices"]}
       ]
     }
   ]
