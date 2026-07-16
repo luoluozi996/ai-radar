@@ -1,0 +1,124 @@
+.model-summary {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.model-summary article,
+.signal-card,
+.research-card,
+.archive-grid article {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  padding: 17px;
+}
+.model-summary b,
+.signal-card b,
+.research-card b,
+.archive-grid b {
+  color: var(--deep);
+}
+.model-summary p,
+.signal-card p,
+.research-card p,
+.archive-grid span {
+  color: var(--muted);
+}
+.signal-list {
+  display: grid;
+  gap: 14px;
+}
+.signal-card {
+  display: grid;
+  gap: 10px;
+}
+.signal-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: start;
+}
+.signal-head span {
+  color: var(--rust);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.signal-head b {
+  font-size: 22px;
+  text-align: right;
+}
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.research-card {
+  display: grid;
+  gap: 10px;
+}
+.research-card h3,
+.research-card p {
+  margin-bottom: 0;
+}
+.field-table {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--paper);
+}
+.field-table span {
+  padding: 13px;
+  border-right: 1px solid var(--line);
+  color: var(--deep);
+  font-weight: 800;
+}
+.field-table span:last-child {
+  border-right: 0;
+}
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+.archive-grid article {
+  display: grid;
+  gap: 8px;
+}
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.tag-cloud a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--deep);
+  padding: 9px 12px;
+  text-decoration: none;
+}
+@media (max-width: 900px) {
+  .model-summary,
+  .research-grid,
+  .archive-grid,
+  .field-table {
+    grid-template-columns: 1fr;
+  }
+  .field-table span {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .field-table span:last-child {
+    border-bottom: 0;
+  }
+  .signal-head {
+    display: grid;
+  }
+  .signal-head b {
+    text-align: left;
+  }
+}
