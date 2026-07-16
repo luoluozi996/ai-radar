@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>今日执行 · 2026-07-16</title>
   <link rel="stylesheet" href="../assets/radar-v2.css">
+  <style>
+    .execution-focus{display:grid;grid-template-columns:1.2fr .8fr;gap:12px}
+    .focus-card,.execution-card,.copy-block,.follow-grid article{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:18px}
+    .focus-card.muted{background:#f1ecdf}
+    .focus-card h2,.focus-card p{margin-bottom:0}
+    .execution-steps{display:grid;gap:10px;margin:0;padding:0;list-style:none}
+    .execution-steps li{display:grid;grid-template-columns:110px minmax(0,1fr);gap:14px;border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:14px}
+    .execution-steps span{color:var(--green);font-weight:900}
+    .execution-steps b,.execution-card b,.follow-grid b{color:var(--deep)}
+    .execution-steps p,.execution-card p,.follow-grid span{margin:0;color:var(--muted)}
+    .execution-grid,.follow-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .execution-card,.follow-grid article{display:grid;gap:10px}
+    .execution-card h3{font-size:22px;margin-bottom:0}
+    .copy-block{background:#111f1c;color:#e8f3ee;overflow-x:auto}
+    .copy-block pre{margin:0;white-space:pre-wrap;font-family:Consolas,"Courier New",monospace;line-height:1.62}
+    @media (max-width:900px){.execution-focus,.execution-grid,.follow-grid,.execution-steps li{grid-template-columns:1fr}}
+  </style>
 </head>
 <body>
   <main class="shell">
