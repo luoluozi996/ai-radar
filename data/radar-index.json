@@ -1,0 +1,18 @@
+{
+  "generated_at": "2026-07-16",
+  "reports": [
+    {
+      "date": "2026-07-16",
+      "title": "AI Radar Daily",
+      "summary": "Agent 产品进入安全、工作流、工程自动化场景；AI 治理、开权重模型和 Agent benchmark 成为新增观察重点。",
+      "sections": [
+        {"label": "今日总览", "url": "../index.html", "tags": ["overview", "daily"]},
+        {"label": "项目与工具", "url": "../projects/2026-07-16.html", "tags": ["agents", "tools", "github"]},
+        {"label": "关键事件", "url": "../news/2026-07-16.html", "tags": ["policy", "safety", "labs"]},
+        {"label": "模型与研究", "url": "../models/2026-07-16.html", "tags": ["models", "research", "benchmarks"]},
+        {"label": "观点讨论", "url": "../voices/2026-07-16.html", "tags": ["voices", "governance", "work"]},
+        {"label": "行动清单", "url": "../actions/2026-07-16.html", "tags": ["actions", "workflow"]}
+      ]
+    }
+  ]
+}
