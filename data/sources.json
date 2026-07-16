@@ -1,27 +1,39 @@
 {
+  "version": "2026-07-16-v2",
+  "principle": "优先收普通人可感知、可试用、可学习、可转化为行动的 AI 信号；宏观政策和行业融资只在会影响日常工具、价格、账号、版权、工作方式时进入日报。",
   "rss": [
-    {
-      "name": "OpenAI News",
-      "url": "https://openai.com/news/rss.xml"
-    },
-    {
-      "name": "Anthropic News",
-      "url": "https://www.anthropic.com/news/rss.xml"
-    },
-    {
-      "name": "Google DeepMind Blog",
-      "url": "https://deepmind.google/discover/blog/rss.xml"
-    },
-    {
-      "name": "Simon Willison",
-      "url": "https://simonwillison.net/atom/everything/"
-    }
+    {"name": "OpenAI News", "url": "https://openai.com/news/rss.xml", "section": "key_events", "tier": 1, "why": "ChatGPT、API、模型和产品入口的官方更新，直接影响普通用户和开发者。"},
+    {"name": "GitHub Changelog", "url": "https://github.blog/changelog/feed/", "section": "key_events", "tier": 1, "why": "GitHub、Copilot、Actions、代码工作流变化会直接影响开发者。"},
+    {"name": "Simon Willison", "url": "https://simonwillison.net/atom/everything/", "section": "voices", "tier": 1, "why": "独立开发者视角，长期关注 LLM 工程、Agent 安全、prompt injection 和工具调用边界。"},
+    {"name": "One Useful Thing", "url": "https://www.oneusefulthing.org/feed", "section": "voices", "tier": 1, "why": "Ethan Mollick 更偏普通人、教育和工作方式，适合提炼可执行观点。"},
+    {"name": "Latent Space", "url": "https://www.latent.space/feed", "section": "voices", "tier": 1, "why": "开发者生态、模型发布、AI 工程实践和创业者视角。"},
+    {"name": "Import AI", "url": "https://jack-clark.net/feed/", "section": "voices", "tier": 2, "why": "长期 AI 政策、能力趋势和研究生态观察，适合作为背景判断。"},
+    {"name": "Google DeepMind Blog", "url": "https://deepmind.google/discover/blog/rss.xml", "section": "models_research", "tier": 2, "why": "模型、研究和安全框架的官方信号；只选能影响使用或判断的条目。"}
   ],
-  "github_queries": [
-    "AI agent pushed:>{date_minus_1}",
-    "LLM tool pushed:>{date_minus_1}",
-    "topic:artificial-intelligence pushed:>{date_minus_1}",
-    "coding agent pushed:>{date_minus_1}"
-  ],
-  "hacker_news_terms": ["AI", "LLM", "OpenAI", "Claude", "agent", "model", "Hugging Face"]
+  "manual_watchlist": {
+    "ordinary_user_events": [
+      {"name": "ChatGPT Release Notes", "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes", "watch_for": "新功能、价格、账号限制、移动端、语音、文件、记忆、工作区。"},
+      {"name": "Claude / Anthropic News", "url": "https://www.anthropic.com/news", "watch_for": "Claude 功能、Artifacts、Computer Use、企业/个人套餐、模型变更。"},
+      {"name": "Gemini Updates", "url": "https://blog.google/products/gemini/", "watch_for": "Gemini App、Workspace、Android、浏览器和搜索集成。"},
+      {"name": "Cursor Changelog", "url": "https://cursor.com/changelog", "watch_for": "AI 编程工具更新、定价、模型后端、团队工作流。"},
+      {"name": "Perplexity Blog", "url": "https://www.perplexity.ai/hub/blog", "watch_for": "搜索、研究、浏览器、知识工作流更新。"},
+      {"name": "Product Hunt AI", "url": "https://www.producthunt.com/topics/artificial-intelligence", "watch_for": "普通人可试的新 AI 产品，不收纯营销页。"}
+    ],
+    "blogger_voices": [
+      {"name": "Andrej Karpathy", "url": "https://x.com/karpathy", "angle": "AI 学习、软件 3.0、Agent 和工程直觉。"},
+      {"name": "Ben Thompson / Stratechery", "url": "https://stratechery.com/", "angle": "平台、商业模式、AI 产业结构。"},
+      {"name": "宝玉", "url": "https://baoyu.io/", "angle": "中文 AI 应用、产品观察、开发者实践。"},
+      {"name": "歸藏", "url": "https://x.com/op7418", "angle": "国内外 AI 工具体验、产品使用案例、工作流。"},
+      {"name": "增长黑客AI周报 / 范冰", "url": "https://zengzhang.ai/", "angle": "AI 商业案例、职业影响、普通人使用 AI 的变化。"},
+      {"name": "晚点 LatePost", "url": "https://www.latepost.com/", "angle": "中文科技公司、产品战略和产业变化。"},
+      {"name": "机器之心", "url": "https://www.jiqizhixin.com/", "angle": "中文模型、论文和产业新闻补充。"}
+    ]
+  },
+  "github_queries": ["AI agent pushed:>{date_minus_1}", "LLM tool pushed:>{date_minus_1}", "topic:artificial-intelligence pushed:>{date_minus_1}", "coding agent pushed:>{date_minus_1}", "AI workflow pushed:>{date_minus_1}", "AI app pushed:>{date_minus_1}"],
+  "hacker_news_terms": ["AI", "LLM", "OpenAI", "Claude", "ChatGPT", "agent", "Cursor", "GitHub Copilot", "Perplexity", "Hugging Face"],
+  "selection_rules": {
+    "key_events": ["优先选择会影响普通人使用 AI 工具的产品更新、价格变化、账号权限、隐私/版权风险、工作流变化。", "宏观监管、融资、实验室伦理只有在能落到普通人影响时才收。", "每条必须回答：这会不会影响我用 AI 工作、学习、创作或赚钱？"],
+    "voices": ["优先独立博主、Newsletter、真实用户社区讨论；媒体评论只做补充。", "每条必须回答：作者是谁、他说了什么、为什么值得看、我能怎么用。", "不收只有情绪没有方法的争议帖。"],
+    "models_research": ["优先可试、可复现、可解释任务价值的模型和研究。", "每条必须记录 demo/API/权重/license/benchmark 限制。"]
+  }
 }
