@@ -1,91 +1,10 @@
 <!doctype html>
-<html lang="zh-CN">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>观点讨论 · 2026-07-16</title>
-  <link rel="stylesheet" href="../assets/radar-v2.css">
-  <link rel="stylesheet" href="../assets/radar-v2-phase2.css">
-</head>
-<body>
-  <main class="shell">
-    <div class="topline"></div>
-    <nav class="nav" aria-label="日报栏目">
-      <a href="../index.html">今日总览</a>
-      <a href="../projects/2026-07-16.html">项目与工具</a>
-      <a href="../news/2026-07-16.html">关键事件</a>
-      <a href="../models/2026-07-16.html">模型与研究</a>
-      <a class="active" href="./2026-07-16.html">观点讨论</a>
-      <a href="../actions/2026-07-16.html">行动清单</a>
-    </nav>
-
-    <section class="hero compact">
-      <div class="hero-copy">
-        <p class="eyebrow">Voices</p>
-        <h1>观点讨论</h1>
-        <p class="lead">这一页不搬运热帖，而是记录“值得带走的判断框架”。今天的讨论围绕 AI 安全治理、Agent 工作方式和社会反弹。</p>
-      </div>
-      <aside class="date-card">
-        <div><strong>4 个观点</strong><span>观点页可以收近期高质量材料，不强行限定 24 小时。</span></div>
-        <small>Argument · Tension · Takeaway</small>
-      </aside>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <h2>今日观点雷达</h2>
-        <p>每条都按“主张 / 争议 / 对你有什么用”整理，适合后续变成写作选题。</p>
-      </div>
-      <div class="voice-grid">
-        <article class="voice-card">
-          <span class="kicker">Safety Governance</span>
-          <h3>Hassabis：frontier AI 需要类似金融业的发布前监管</h3>
-          <p><b>主张：</b>AGI 可能只有几年窗口期，行业需要一个由专家组成、能测试模型并在必要时放缓发布的全球性机构。</p>
-          <p><b>争议：</b>谁来主导、如何覆盖开源模型、是否会让大公司获得监管优势，都会成为核心争论。</p>
-          <p><b>可带走：</b>以后看模型发布，不只问“能力强不强”，还要问“发布前经过什么风险测试”。</p>
-          <a href="https://www.theverge.com/tech/965270/google-deepmind-demis-hassabis-global-ai-watchdog">来源：The Verge</a>
-        </article>
-
-        <article class="voice-card">
-          <span class="kicker">Agent Work</span>
-          <h3>Codex 使用研究：Agentic AI 正在改变工作组织方式</h3>
-          <p><b>主张：</b>一项基于 Codex 使用数据的研究认为，Agentic AI 的采用正在从开发者扩展到组织内部更多岗位，并出现并发管理多个 agent 的工作方式。</p>
-          <p><b>争议：</b>生产率提升和岗位重组会同时发生，真正难的是任务边界、监督责任和技能再分配。</p>
-          <p><b>可带走：</b>项目页里的 OpenHands/Sim 不只是工具，它们代表“人如何管理多个 AI 执行体”的新界面。</p>
-          <a href="https://arxiv.org/abs/2606.26959">来源：arXiv</a>
-        </article>
-
-        <article class="voice-card">
-          <span class="kicker">AI Safety Culture</span>
-          <h3>Daniela Amodei：必须同时承认 AI 的光明面和黑暗面</h3>
-          <p><b>主张：</b>Anthropic 管理层强调 AI 既有生命科学、医疗和生产力潜力，也有生物安全、误导信息、就业和环境风险。</p>
-          <p><b>争议：</b>公益公司、商业增长、国家安全和企业客户之间的平衡，并不会因为“安全叙事”自动解决。</p>
-          <p><b>可带走：</b>评估 AI 公司时，要看它如何把价值观落进产品策略、客户选择和使用政策。</p>
-          <a href="https://www.lemonde.fr/en/economy/article/2026/07/02/anthropic-president-daniela-amodei-we-must-embrace-both-the-positive-side-and-the-dark-side-of-ai_6755092_19.html">来源：Le Monde</a>
-        </article>
-
-        <article class="voice-card">
-          <span class="kicker">Public Backlash</span>
-          <h3>旧金山“Stop the AI Race”抗议显示 AI 反弹进入城市层面</h3>
-          <p><b>主张：</b>抗议者把模型竞赛、就业、租金、环境和风险治理放在同一张图里，要求暂停或放缓强 AI 训练。</p>
-          <p><b>争议：</b>暂停是否可执行、是否会转移到其他国家或地下训练，以及如何区分合理监管和技术恐慌。</p>
-          <p><b>可带走：</b>AI 产品叙事不能只讲效率，还要面对城市、能源、劳动力和公共信任的成本。</p>
-          <a href="https://www.sfchronicle.com/tech/article/san-francisco-ai-protest-22340835.php">来源：San Francisco Chronicle</a>
-        </article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-head">
-        <h2>长期关注名单</h2>
-        <p>这些不是当天新闻，但适合作为观点页的固定白名单和主题锚点。</p>
-      </div>
-      <div class="watch-list">
-        <article><b>Simon Willison</b><span>Agent 安全、prompt injection、工具调用边界。</span><a href="https://simonwillison.net/">博客</a></article>
-        <article><b>Latent Space</b><span>开发者生态、模型发布、AI 工程实践。</span><a href="https://www.latent.space/">Newsletter</a></article>
-        <article><b>Hacker News / Reddit</b><span>适合观察开发者实际反馈，但必须过滤情绪噪音。</span><a href="https://news.ycombinator.com/">HN</a></article>
-      </div>
-    </section>
-  </main>
-</body>
-</html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>观点讨论 · 2026-07-16</title><link rel="stylesheet" href="../assets/radar-v2.css"><link rel="stylesheet" href="../assets/radar-v2-phase2.css"></head>
+<body><main class="shell"><div class="topline"></div><nav class="nav" aria-label="日报栏目"><a href="../index.html">今日总览</a><a href="../projects/2026-07-16.html">项目与工具</a><a href="../news/2026-07-16.html">关键事件</a><a href="../models/2026-07-16.html">模型与研究</a><a class="active" href="./2026-07-16.html">观点讨论</a><a href="../actions/2026-07-16.html">行动清单</a></nav>
+<section class="hero compact"><div class="hero-copy"><p class="eyebrow">Voices</p><h1>观点讨论</h1><p class="lead">这一页改成“博主与社区的 AI 判断”：优先独立博主、Newsletter、真实用户讨论和中文创作者，不再以媒体评论为主。</p></div><aside class="date-card"><div><strong>博主优先</strong><span>先看人怎么判断，再看媒体怎么报道。</span></div><small>Blogger · Newsletter · Community</small></aside></section>
+<section class="section"><div class="section-head"><h2>观点来源白名单</h2><p>每条观点都按“作者是谁 / 他说了什么 / 为什么值得看 / 你能怎么用”整理。</p></div><div class="voice-grid">
+<article class="voice-card"><span class="kicker">Independent Builder</span><h3>Simon Willison</h3><p><b>看什么：</b>LLM 工程、Agent 安全、prompt injection、工具调用边界、真实 demo。</p><p><b>为什么值得看：</b>他经常把复杂 AI 能力拆成开发者可复现的例子，不只是评论趋势。</p><p><b>怎么用：</b>适合放进“开发者实践”和“风险提醒”，尤其是 Agent 工具调用安全。</p><a href="https://simonwillison.net/">来源：Simon Willison</a></article>
+<article class="voice-card"><span class="kicker">Work & Education</span><h3>Ethan Mollick / One Useful Thing</h3><p><b>看什么：</b>普通人、教师、学生、知识工作者如何使用 AI，AI 如何改变学习和工作组织。</p><p><b>为什么值得看：</b>他的内容更接近非工程用户，适合把“AI 能力”翻译成“今天怎么用”。</p><p><b>怎么用：</b>适合放进关键事件页的普通人影响判断，以及行动清单。</p><a href="https://www.oneusefulthing.org/">来源：One Useful Thing</a></article>
+<article class="voice-card"><span class="kicker">Developer Ecosystem</span><h3>Latent Space</h3><p><b>看什么：</b>模型发布、AI 工程、开发者生态、创业者访谈、Agent 产品实践。</p><p><b>为什么值得看：</b>它更像开发者圈的深度 Newsletter，适合补足官方公告之外的使用语境。</p><p><b>怎么用：</b>适合提炼模型页、项目页和观点页之间的连接。</p><a href="https://www.latent.space/">来源：Latent Space</a></article>
+<article class="voice-card"><span class="kicker">Chinese Voices</span><h3>中文博主与 Newsletter</h3><p><b>看什么：</b>增长黑客AI周报、宝玉、歸藏、晚点、机器之心等中文内容里的工具体验、产品判断和案例。</p><p><b>为什么值得看：</b>它们更贴近中文用户的工具使用、职业变化、国内产品和本地语境。</p><p><b>怎么用：</b>适合补足普通人案例、中文产品和职业影响，不要只看海外媒体。</p><a href="../data/sources.json">查看来源配置</a></article>
+</div></section><section class="section"><div class="section-head"><h2>长期关注名单</h2><p>固定来源先分成三类，后续每日只从白名单里挑最有行动价值的观点。</p></div><div class="watch-list"><article><b>独立博主</b><span>Simon Willison、Ethan Mollick、Andrej Karpathy、Ben Thompson。</span><a href="../data/sources.json">配置</a></article><article><b>Newsletter</b><span>Latent Space、Import AI、增长黑客AI周报。</span><a href="../data/sources.json">配置</a></article><article><b>社区讨论</b><span>HN、Reddit、X、即刻/公众号评论区，但必须过滤情绪噪音。</span><a href="https://news.ycombinator.com/">HN</a></article></div></section></main></body></html>
