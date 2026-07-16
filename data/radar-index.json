@@ -4,7 +4,7 @@
     {
       "date": "2026-07-16",
       "title": "AI Radar Daily",
-      "summary": "Agent 产品进入安全、工作流、工程自动化场景；来源策略调整为普通人可感知事件、博主观点、模型研究和可行动工具。",
+      "summary": "总览页负责主题判断和阅读路径；栏目按可用工具、关键事件、模型研究、观点讨论四类判断组织。",
       "sections": [
         {"label": "今日总览", "url": "../index.html", "tags": ["overview", "daily"]},
         {"label": "项目与工具", "url": "../projects/2026-07-16.html", "tags": ["agents", "tools", "github"]},
