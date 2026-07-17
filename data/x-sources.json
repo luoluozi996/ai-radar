@@ -1,0 +1,40 @@
+{
+  "updated_at": "2026-07-17",
+  "positioning": "X 帖子观察是观点页的优先来源层，用来捕捉 AI 产品、模型、agent、开发者工作流和中文 AI 实践的一线反馈。",
+  "output_rule": {
+    "page": "outputs/x/YYYY-MM-DD.html",
+    "generate_when": "当天至少抓到 5 条可稳定访问、可解释、可链接的高质量 X 帖子或 thread。",
+    "fallback": "如果 X 访问失败或质量不足，不硬生成页面，在完成报告中说明原因，并用 HN/Reddit/GitHub Discussions 等社区源补足观点页。"
+  },
+  "target_count": "每日优先 5-6 条高质量 X 帖子或 thread。",
+  "priority_accounts": [
+    {"name": "Andrej Karpathy", "url": "https://x.com/karpathy", "watch_for": "AI 学习、软件 3.0、agent、工程直觉。"},
+    {"name": "歸藏 / op7418", "url": "https://x.com/op7418", "watch_for": "国内外 AI 工具体验、产品使用案例、工作流。"},
+    {"name": "宝玉", "url": "https://x.com/dotey", "watch_for": "中文 AI 应用、开发者实践、产品观察。"},
+    {"name": "Simon Willison", "url": "https://x.com/simonw", "watch_for": "LLM 工程、prompt injection、工具调用边界。"},
+    {"name": "Ethan Mollick", "url": "https://x.com/emollick", "watch_for": "普通人、教育、知识工作中的 AI 使用。"},
+    {"name": "swyx / Latent Space", "url": "https://x.com/swyx", "watch_for": "AI engineering、模型生态、开发者工作流。"},
+    {"name": "OpenAI", "url": "https://x.com/OpenAI", "watch_for": "产品发布、研究、API、Codex/ChatGPT 更新。"},
+    {"name": "Anthropic", "url": "https://x.com/AnthropicAI", "watch_for": "Claude、agent、安全、研究发布。"},
+    {"name": "Google DeepMind", "url": "https://x.com/GoogleDeepMind", "watch_for": "模型、研究、安全与产品化信号。"},
+    {"name": "Hugging Face", "url": "https://x.com/huggingface", "watch_for": "开源模型、Spaces、社区发布。"},
+    {"name": "GitHub", "url": "https://x.com/github", "watch_for": "Copilot、开发者工作流、GitHub 平台更新。"},
+    {"name": "Cursor", "url": "https://x.com/cursor_ai", "watch_for": "AI 编程 IDE、agent、团队工作流。"},
+    {"name": "Perplexity", "url": "https://x.com/perplexity_ai", "watch_for": "搜索、研究、浏览器、知识工作流。"}
+  ],
+  "search_queries": [
+    "AI agent lang:en min_faves:100",
+    "LLM agent workflow lang:en min_faves:100",
+    "Claude Code OR Codex OR Cursor lang:en min_faves:50",
+    "LocalLLaMA OR open weights lang:en min_faves:50",
+    "AI 工具 OR AI 工作流 lang:zh min_faves:20",
+    "Agent 工作流 OR Claude Code OR Cursor lang:zh min_faves:20"
+  ],
+  "quality_bar": [
+    "必须有可打开的 X 原帖链接或稳定镜像/引用页。",
+    "优先 thread、实测、截图配合文字说明、使用反馈、失败复盘、迁移经验。",
+    "必须能说明：作者是谁、帖子说了什么、为什么值得看、争议点或限制、你能怎么用。",
+    "过滤纯情绪、喊单、品牌站队、转发抽奖、截图搬运、无上下文爆料、无法核验的爆款帖。",
+    "不要长引用 X 内容；只摘要，最多短句引用。"
+  ]
+}
