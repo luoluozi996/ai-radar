@@ -1,6 +1,6 @@
 {
-  "version": "2026-07-16-v2",
-  "principle": "优先收普通人可感知、可试用、可学习、可转化为行动的 AI 信号；宏观政策和行业融资只在会影响日常工具、价格、账号、版权、工作方式时进入日报。",
+  "version": "2026-07-17-community-voices",
+  "principle": "优先收普通人可感知、可试用、可学习、可转化为行动的 AI 信号；观点页必须主动抓取高质量社区讨论，并用稳定作者/Newsletter 补充判断。",
   "rss": [
     {"name": "OpenAI News", "url": "https://openai.com/news/rss.xml", "section": "key_events", "tier": 1, "why": "ChatGPT、API、模型和产品入口的官方更新，直接影响普通用户和开发者。"},
     {"name": "GitHub Changelog", "url": "https://github.blog/changelog/feed/", "section": "key_events", "tier": 1, "why": "GitHub、Copilot、Actions、代码工作流变化会直接影响开发者。"},
@@ -33,7 +33,25 @@
   "hacker_news_terms": ["AI", "LLM", "OpenAI", "Claude", "ChatGPT", "agent", "Cursor", "GitHub Copilot", "Perplexity", "Hugging Face"],
   "selection_rules": {
     "key_events": ["优先选择会影响普通人使用 AI 工具的产品更新、价格变化、账号权限、隐私/版权风险、工作流变化。", "宏观监管、融资、实验室伦理只有在能落到普通人影响时才收。", "每条必须回答：这会不会影响我用 AI 工作、学习、创作或赚钱？"],
-    "voices": ["优先独立博主、Newsletter、真实用户社区讨论；媒体评论只做补充。", "每条必须回答：作者是谁、他说了什么、为什么值得看、我能怎么用。", "不收只有情绪没有方法的争议帖。"],
+    "voices": ["观点页每天优先争取 2-4 条来自 Hacker News、Reddit、GitHub Discussions/Issues、Lobsters、LessWrong、Hugging Face Community 的高质量社区讨论。", "每条必须回答：来源在哪里、讨论对象是什么、核心共识/分歧是什么、为什么值得看、普通人或开发者能怎么用。", "稳定作者和 Newsletter 仍然重要，但不要完全替代社区真实使用反馈。", "不收只有情绪、品牌站队、标题党、截图、无原始链接、无法核验的热帖。"],
     "models_research": ["优先可试、可复现、可解释任务价值的模型和研究。", "每条必须记录 demo/API/权重/license/benchmark 限制。"]
-  }
+  },
+  "community_discussions": [
+    {"name": "Hacker News", "url": "https://hn.algolia.com/?q=AI%20OR%20LLM%20OR%20agent", "section": "voices", "tier": 1, "watch_for": "开发者对 AI 产品、模型、agent、工具链的真实使用反馈和反对意见。"},
+    {"name": "Reddit r/LocalLLaMA", "url": "https://www.reddit.com/r/LocalLLaMA/", "section": "voices", "tier": 1, "watch_for": "本地模型、开权重模型、推理成本、量化、部署体验。"},
+    {"name": "Reddit r/MachineLearning", "url": "https://www.reddit.com/r/MachineLearning/", "section": "voices", "tier": 2, "watch_for": "论文、研究复现、benchmark 争议和研究社区反馈。"},
+    {"name": "Reddit r/ChatGPTCoding", "url": "https://www.reddit.com/r/ChatGPTCoding/", "section": "voices", "tier": 1, "watch_for": "coding agent、IDE、debug、代码生成工作流的真实体验。"},
+    {"name": "Reddit r/ClaudeAI", "url": "https://www.reddit.com/r/ClaudeAI/", "section": "voices", "tier": 2, "watch_for": "Claude、Artifacts、agent 工具使用中的体验和限制。"},
+    {"name": "GitHub Discussions / Issues", "url": "https://github.com/search?q=AI+agent&type=discussions", "section": "voices", "tier": 1, "watch_for": "项目用户在 issue/discussion 里的 bug、需求、迁移经验和安全顾虑。"},
+    {"name": "Lobsters AI", "url": "https://lobste.rs/t/ai", "section": "voices", "tier": 2, "watch_for": "高信噪比工程讨论，尤其是架构、安全和开发体验。"},
+    {"name": "LessWrong / Alignment Forum", "url": "https://www.lesswrong.com/tag/ai", "section": "voices", "tier": 2, "watch_for": "AI 安全、agent 风险、评测和长期影响的高质量讨论。"},
+    {"name": "Hugging Face Community", "url": "https://huggingface.co/posts", "section": "voices", "tier": 2, "watch_for": "模型发布后的社区反馈、demo、spaces、部署与模型卡讨论。"}
+  ],
+  "community_discussion_quality_bar": [
+    "必须有稳定链接：帖子、评论页、issue、discussion、论文、repo 或官方公告。",
+    "优先真实使用反馈：使用过程、收益、失败点、迁移成本、替代方案。",
+    "优先技术细节：复现实验、benchmark、成本、速度、质量、安全边界、部署条件。",
+    "热度只能做参考，不能只因 upvote/评论数入选。",
+    "过滤纯情绪、品牌站队、截图搬运、无原始来源、标题党、无法验证的二手信息。"
+  ]
 }
