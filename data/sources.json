@@ -33,7 +33,7 @@
   "hacker_news_terms": ["AI", "LLM", "OpenAI", "Claude", "ChatGPT", "agent", "Cursor", "GitHub Copilot", "Perplexity", "Hugging Face"],
   "selection_rules": {
     "key_events": ["优先选择会影响普通人使用 AI 工具的产品更新、价格变化、账号权限、隐私/版权风险、工作流变化。", "宏观监管、融资、实验室伦理只有在能落到普通人影响时才收。", "每条必须回答：这会不会影响我用 AI 工作、学习、创作或赚钱？"],
-    "voices": ["观点页每天优先争取 2-4 条来自 Hacker News、Reddit、GitHub Discussions/Issues、Lobsters、LessWrong、Hugging Face Community 的高质量社区讨论。", "每条必须回答：来源在哪里、讨论对象是什么、核心共识/分歧是什么、为什么值得看、普通人或开发者能怎么用。", "稳定作者和 Newsletter 仍然重要，但不要完全替代社区真实使用反馈。", "不收只有情绪、品牌站队、标题党、截图、无原始链接、无法核验的热帖。"],
+    "voices": ["观点页每天优先争取 5-6 条来自 Hacker News、Reddit、GitHub Discussions/Issues、Lobsters、LessWrong、Hugging Face Community 的高质量社区讨论。", "每条必须回答：来源在哪里、讨论对象是什么、核心共识/分歧是什么、为什么值得看、普通人或开发者能怎么用。", "稳定作者和 Newsletter 仍然重要，但不要完全替代社区真实使用反馈。", "不收只有情绪、品牌站队、标题党、截图、无原始链接、无法核验的热帖。"],
     "models_research": ["优先可试、可复现、可解释任务价值的模型和研究。", "每条必须记录 demo/API/权重/license/benchmark 限制。"]
   },
   "community_discussions": [
