@@ -1,15 +1,15 @@
 {
-  "updated_at": "2026-07-16",
+  "updated_at": "2026-07-17",
   "positioning": {
     "key_events": "普通人可感知的 AI 变化",
-    "voices": "博主与社区的 AI 判断",
+    "voices": "博主、Newsletter 与高质量社区讨论中的 AI 判断",
     "models_research": "能解释能力边界的模型与研究",
     "projects": "值得试用或收藏的工具与开源项目"
   },
   "priority_order": [
     "直接影响日常使用的产品更新",
+    "高质量社区真实使用反馈和争议",
     "独立博主和 Newsletter 的高质量判断",
-    "社区真实使用反馈和争议",
     "可试用模型、论文与 benchmark",
     "开源项目与工作流工具",
     "宏观政策、融资、实验室伦理"
@@ -22,7 +22,26 @@
   ],
   "daily_output_requirements": {
     "key_events": "每条写清楚：发生了什么、普通人为什么要关心、今天能做什么。",
-    "voices": "每条写清楚：作者/来源、核心观点、争议点、可执行启发。",
-    "actions": "至少 3 条可以在 15 分钟内完成的动作。"
-  }
+    "voices": "每条写清楚：社区/作者来源、讨论对象、核心观点、争议点、可执行启发；每日尽量 2-4 条来自高质量社区讨论。",
+    "actions": "至少 3 条可以在 15 分钟内完成的动作。",
+    "community_temperature": "观点页可增加“小型社区温度计”：今天社区在争什么、共识是什么、哪些问题还没答案。"
+  },
+  "community_discussion_sources": [
+    {"name": "Hacker News", "url": "https://hn.algolia.com/?q=AI%20OR%20LLM%20OR%20agent", "section": "voices", "tier": 1, "watch_for": "开发者对 AI 产品、模型、agent、工具链的真实使用反馈和反对意见。"},
+    {"name": "Reddit r/LocalLLaMA", "url": "https://www.reddit.com/r/LocalLLaMA/", "section": "voices", "tier": 1, "watch_for": "本地模型、开权重模型、推理成本、量化、部署体验。"},
+    {"name": "Reddit r/MachineLearning", "url": "https://www.reddit.com/r/MachineLearning/", "section": "voices", "tier": 2, "watch_for": "论文、研究复现、benchmark 争议和研究社区反馈。"},
+    {"name": "Reddit r/ChatGPTCoding", "url": "https://www.reddit.com/r/ChatGPTCoding/", "section": "voices", "tier": 1, "watch_for": "coding agent、IDE、debug、代码生成工作流的真实体验。"},
+    {"name": "Reddit r/ClaudeAI", "url": "https://www.reddit.com/r/ClaudeAI/", "section": "voices", "tier": 2, "watch_for": "Claude、Artifacts、agent 工具使用中的体验和限制。"},
+    {"name": "GitHub Discussions / Issues", "url": "https://github.com/search?q=AI+agent&type=discussions", "section": "voices", "tier": 1, "watch_for": "项目用户在 issue/discussion 里的 bug、需求、迁移经验和安全顾虑。"},
+    {"name": "Lobsters AI", "url": "https://lobste.rs/t/ai", "section": "voices", "tier": 2, "watch_for": "高信噪比工程讨论，尤其是架构、安全和开发体验。"},
+    {"name": "LessWrong / Alignment Forum", "url": "https://www.lesswrong.com/tag/ai", "section": "voices", "tier": 2, "watch_for": "AI 安全、agent 风险、评测和长期影响的高质量讨论。"},
+    {"name": "Hugging Face Community", "url": "https://huggingface.co/posts", "section": "voices", "tier": 2, "watch_for": "模型发布后的社区反馈、demo、spaces、部署与模型卡讨论。"}
+  ],
+  "community_discussion_quality_bar": [
+    "必须有稳定链接：帖子、评论页、issue、discussion、论文、repo 或官方公告。",
+    "优先真实使用反馈：使用过程、收益、失败点、迁移成本、替代方案。",
+    "优先技术细节：复现实验、benchmark、成本、速度、质量、安全边界、部署条件。",
+    "热度只能做参考，不能只因 upvote/评论数入选。",
+    "过滤纯情绪、品牌站队、截图搬运、无原始来源、标题党、无法验证的二手信息。"
+  ]
 }
