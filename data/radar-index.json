@@ -1,30 +1,31 @@
 {
-  "generated_at": "2026-07-17",
+  "generated_at": "2026-07-18",
   "reports": [
     {
-      "date": "2026-07-17",
-      "title": "AI Radar Daily",
-      "summary": "新版自动化验证版：总览页负责主题判断和阅读路径；栏目按可用工具、关键事件、模型研究、观点讨论和 X 帖子观察组织。",
+      "date": "2026-07-18",
+      "title": "AI Content Radar",
+      "summary": "Agents need permission, observability, and collaboration rules. X API degraded; no X page was generated.",
       "sections": [
-        {"label": "今日总览", "url": "../index.html", "tags": ["overview", "daily"]},
-        {"label": "项目与工具", "url": "../projects/2026-07-17.html", "tags": ["agents", "tools", "github"]},
-        {"label": "关键事件", "url": "../news/2026-07-17.html", "tags": ["tools", "workflow", "security"]},
-        {"label": "模型与研究", "url": "../models/2026-07-17.html", "tags": ["models", "research", "benchmarks"]},
-        {"label": "观点讨论", "url": "../voices/2026-07-17.html", "tags": ["bloggers", "newsletter", "community", "voices"]},
-        {"label": "X 帖子观察", "url": "../x/2026-07-17.html", "tags": ["x", "posts", "voices", "community"]}
+        {"label":"Today Overview","url":"../index.html","tags":["overview","daily"]},
+        {"label":"Projects and Tools","url":"../projects/2026-07-18.html","tags":["agents","tools","github"]},
+        {"label":"Key Events","url":"../news/2026-07-18.html","tags":["workflow","privacy","migration"]},
+        {"label":"Models and Research","url":"../models/2026-07-18.html","tags":["models","research","evaluation"]},
+        {"label":"Voices","url":"../voices/2026-07-18.html","tags":["community","voices","x-fallback"]}
       ]
     },
     {
-      "date": "2026-07-16",
-      "title": "AI Radar Daily",
-      "summary": "总览页负责主题判断和阅读路径；栏目按可用工具、关键事件、模型研究、观点讨论四类判断组织。",
-      "sections": [
-        {"label": "今日总览", "url": "../index.html", "tags": ["overview", "daily"]},
-        {"label": "项目与工具", "url": "../projects/2026-07-16.html", "tags": ["agents", "tools", "github"]},
-        {"label": "关键事件", "url": "../news/2026-07-16.html", "tags": ["tools", "workflow", "privacy", "pricing"]},
-        {"label": "模型与研究", "url": "../models/2026-07-16.html", "tags": ["models", "research", "benchmarks"]},
-        {"label": "观点讨论", "url": "../voices/2026-07-16.html", "tags": ["bloggers", "newsletter", "community", "voices"]}
+      "date":"2026-07-17",
+      "title":"AI Content Radar",
+      "summary":"Multi-section daily report validation.",
+      "sections":[
+        {"label":"Today Overview","url":"../index.html","tags":["overview"]},
+        {"label":"Projects and Tools","url":"../projects/2026-07-17.html","tags":["tools"]},
+        {"label":"Key Events","url":"../news/2026-07-17.html","tags":["news"]},
+        {"label":"Models and Research","url":"../models/2026-07-17.html","tags":["models"]},
+        {"label":"Voices","url":"../voices/2026-07-17.html","tags":["voices"]},
+        {"label":"X Posts Watch","url":"../x/2026-07-17.html","tags":["x"]}
       ]
     }
   ]
 }
+
