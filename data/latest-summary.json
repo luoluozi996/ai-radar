@@ -1,25 +1,25 @@
 {
-  "date": "2026-07-18",
-  "title": "AI 内容雷达 · 2026-07-18",
+  "date": "2026-07-19",
+  "title": "AI 内容雷达 · 2026-07-19",
   "headline": "今日 AI 内容雷达已更新：多平台自动生成版。",
-  "report_url": "https://luoluozi996.github.io/ai-radar/ai-project-radar-2026-07-18.html",
+  "report_url": "https://luoluozi996.github.io/ai-radar/ai-project-radar-2026-07-19.html",
   "top_items": [
     {
-      "title": "Simon-He95/markstream-vue",
+      "title": "ccfddl/ccf-deadlines",
       "source": "GitHub",
-      "url": "https://github.com/Simon-He95/markstream-vue",
+      "url": "https://github.com/ccfddl/ccf-deadlines",
       "score": 92
     },
     {
-      "title": "bex-co/bex",
+      "title": "gameworkerkim/vibe-investing",
       "source": "GitHub",
-      "url": "https://github.com/bex-co/bex",
+      "url": "https://github.com/gameworkerkim/vibe-investing",
       "score": 85
     },
     {
-      "title": "zhnt/loushang",
+      "title": "VIAME/VIAME",
       "source": "GitHub",
-      "url": "https://github.com/zhnt/loushang",
+      "url": "https://github.com/VIAME/VIAME",
       "score": 85
     }
   ]
