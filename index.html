@@ -7,19 +7,111 @@
   <meta name="description" content="自动化 AI 信息雷达：聚合 GitHub、X、HN、RSS、论文与模型社区信号，生成多栏目日报并发布到 GitHub Pages。">
   <link rel="stylesheet" href="./assets/radar-v2.css">
   <style>
-    .home-hero{display:grid;grid-template-columns:minmax(0,1.35fr)320px;gap:18px}.cover{min-height:390px;background:linear-gradient(135deg,#0f433a,#245f96);color:#f8fbf8}.cover .eyebrow,.cover .lead{color:#dbeee8}.cover .button{background:#f8fbf8;color:#0f433a}.cover .button.ghost{background:transparent;color:#f8fbf8;border-color:rgba(255,255,255,.42)}.metric-stack{display:grid;gap:12px}.metric{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:18px}.metric strong{display:block;color:var(--deep);font-size:28px}.report-grid,.pipeline{display:grid;gap:14px}.report-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.pipeline{grid-template-columns:repeat(6,minmax(0,1fr))}.report-card,.pipeline div{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:18px}.report-card{min-height:210px;display:grid;align-content:space-between;text-decoration:none;color:var(--ink)}.report-card:hover{border-color:var(--green)}.report-card b{font-size:20px}.pipeline{counter-reset:step}.pipeline b:before{counter-increment:step;content:counter(step,decimal-leading-zero) " ";color:var(--green)}.security-note{background:#f1ecdf;border:1px solid var(--line);border-radius:8px;padding:18px}@media(max-width:1000px){.home-hero,.report-grid,.pipeline{grid-template-columns:1fr}.cover{min-height:340px}}
+    .home-hero{display:grid;grid-template-columns:minmax(0,1.35fr)320px;gap:18px}
+    .cover{min-height:390px;background:linear-gradient(135deg,#0f433a,#245f96);color:#f8fbf8}
+    .cover .eyebrow,.cover .lead{color:#dbeee8}
+    .cover .button{background:#f8fbf8;color:#0f433a}
+    .cover .button.ghost{background:transparent;color:#f8fbf8;border-color:rgba(255,255,255,.42)}
+    .metric-stack{display:grid;gap:12px}
+    .metric{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:18px}
+    .metric strong{display:block;color:var(--deep);font-size:28px}
+    .report-grid,.capability-grid{display:grid;gap:14px}
+    .report-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .capability-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .report-card,.capability-card{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:18px}
+    .report-card{min-height:210px;display:grid;align-content:space-between;text-decoration:none;color:var(--ink)}
+    .report-card:hover{border-color:var(--green)}
+    .report-card b,.capability-card b{font-size:20px}
+    .capability-card p{margin-bottom:0;color:var(--muted)}
+    .portfolio-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    @media(max-width:1000px){.home-hero,.report-grid,.capability-grid,.portfolio-grid{grid-template-columns:1fr}.cover{min-height:340px}}
   </style>
 </head>
 <body>
   <main class="shell">
     <div class="topline"></div>
-    <nav class="nav" aria-label="站点导航"><a class="active" href="./index.html">项目主页</a><a href="./methodology.html">方法论</a><a href="./projects/2026-07-20.html">项目与工具</a><a href="./news/2026-07-20.html">关键事件</a><a href="./models/2026-07-20.html">模型与研究</a><a href="./voices/2026-07-20.html">观点讨论</a><a href="./archive/index.html">历史归档</a></nav>
-    <section class="home-hero"><article class="hero-copy cover"><p class="eyebrow">AI Content Radar</p><h1>自动化 AI 内容日报</h1><p class="lead">一个面向个人学习与行业观察的信息雷达：从 GitHub、X、HN、RSS、论文与模型社区抓取公开信号，筛选出项目、事件、模型与观点，并发布为可归档、可分享、可复盘的多栏目日报。</p><div class="hero-actions"><a class="button" href="./projects/2026-07-20.html">查看最新日报</a><a class="button ghost" href="./methodology.html">了解筛选方法</a><a class="button ghost" href="./archive/index.html">浏览历史归档</a></div></article><aside class="metric-stack"><div class="metric"><strong>09:00</strong><span>每日自动更新，生成网页与归档入口。</span></div><div class="metric"><strong>5+</strong><span>栏目覆盖项目、新闻、模型、观点、X 帖子观察。</span></div><div class="metric"><strong>多源</strong><span>GitHub、X API、HN、RSS、Hugging Face、论文与官方博客。</span></div><div class="metric"><strong>可展示</strong><span>GitHub Pages 发布，Notion 留档，微信推送提醒。</span></div></aside></section>
-    <section class="section"><div class="section-head"><h2>最新一期：2026-07-20</h2><p>日报从单张项目雷达升级为多个栏目，按“今天应该看什么、判断什么、试什么”组织。</p></div><div class="report-grid"><a class="report-card" href="./projects/2026-07-20.html"><span class="kicker">Projects</span><b>项目与工具</b><p>筛选可运行、可试用、文档清晰的 AI 项目。</p><em>进入栏目</em></a><a class="report-card" href="./news/2026-07-20.html"><span class="kicker">Events</span><b>关键事件</b><p>跟踪产品入口、生态、成本与权限变化。</p><em>进入栏目</em></a><a class="report-card" href="./models/2026-07-20.html"><span class="kicker">Models</span><b>模型与研究</b><p>关注模型能力、部署方式、评测与研究证据。</p><em>进入栏目</em></a><a class="report-card" href="./voices/2026-07-20.html"><span class="kicker">Voices</span><b>观点讨论</b><p>收集社区讨论、博主实测和可复用判断。</p><em>进入栏目</em></a></div></section>
-    <section class="section"><div class="section-head"><h2>系统流程</h2><p>这个项目的重点不是堆信息，而是把抓取、去重、筛选、发布和通知做成稳定闭环。</p></div><div class="pipeline"><div><b>抓取</b><p>按时间窗口读取公开信号。</p></div><div><b>清洗</b><p>过滤重复、低质量或弱来源内容。</p></div><div><b>评分</b><p>结合新鲜度、可信度和实用性排序。</p></div><div><b>归类</b><p>拆分项目、事件、模型、观点和 X 观察。</p></div><div><b>发布</b><p>生成静态 HTML 并更新 GitHub Pages。</p></div><div><b>同步</b><p>Notion 去重写入并发送微信推送。</p></div></div></section>
-    <section class="section grid-2"><article class="brief"><span class="kicker">Portfolio Value</span><h2>为什么适合放进简历</h2><p>它展示的是一个完整的小型内容产品：数据源接入、自动化任务、网页生成、质量控制、密钥脱敏、GitHub Pages 发布、Notion 同步和用户通知。</p></article><article class="brief"><span class="kicker">Methodology</span><h2>判断标准可解释</h2><p>新增方法论页，说明数据来源、筛选门槛、评分维度、自动化流程和隐私边界，让项目从“展示页面”变成“可复盘的信息产品”。</p><p><a href="./methodology.html">查看方法论与数据源</a></p></article><article class="brief"><span class="kicker">X Watch</span><h2>社区讨论补强</h2><p>已接入 X API。原始抓取结果只保存在本地缓存，不随网页发布；公开页面只展示筛选后的摘要条目。</p><p><a href="./x/2026-07-17.html">查看 X 帖子观察样例</a></p></article></section>
-    <section class="section security-note"><h2>安全与隐私</h2><p>所有密钥保存在本地环境文件中，发布页面不会包含 Server 酱 SendKey、X Bearer Token 或原始 API 响应。</p></section>
-    <footer class="footer">AI Content Radar · GitHub Pages 自动发布 · <a href="./archive/index.html">历史归档</a> · <a href="https://github.com/luoluozi996/ai-radar">Repository</a></footer>
+    <nav class="nav" aria-label="站点导航">
+      <a class="active" href="./index.html">项目主页</a>
+      <a href="./methodology.html">方法论</a>
+      <a href="./projects/2026-07-20.html">项目与工具</a>
+      <a href="./news/2026-07-20.html">关键事件</a>
+      <a href="./models/2026-07-20.html">模型与研究</a>
+      <a href="./voices/2026-07-20.html">观点讨论</a>
+      <a href="./archive/index.html">历史归档</a>
+    </nav>
+
+    <section class="home-hero">
+      <article class="hero-copy cover">
+        <p class="eyebrow">AI Content Radar</p>
+        <h1>自动化 AI 内容日报</h1>
+        <p class="lead">一个面向个人学习与行业观察的信息雷达：从 GitHub、X、HN、RSS、论文与模型社区抓取公开信号，筛选出项目、事件、模型与观点，并发布为可归档、可分享、可复盘的多栏目日报。</p>
+        <div class="hero-actions">
+          <a class="button" href="./projects/2026-07-20.html">查看最新日报</a>
+          <a class="button ghost" href="./methodology.html">了解筛选方法</a>
+          <a class="button ghost" href="./archive/index.html">浏览历史归档</a>
+        </div>
+      </article>
+      <aside class="metric-stack">
+        <div class="metric"><strong>09:00</strong><span>每日自动更新，生成网页与归档入口。</span></div>
+        <div class="metric"><strong>5+</strong><span>栏目覆盖项目、新闻、模型、观点、X 帖子观察。</span></div>
+        <div class="metric"><strong>多源</strong><span>GitHub、X API、HN、RSS、Hugging Face、论文与官方博客。</span></div>
+        <div class="metric"><strong>可展示</strong><span>GitHub Pages 发布，Notion 留档，微信推送提醒。</span></div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>最新一期：2026-07-20</h2>
+        <p>日报从单张项目雷达升级为多个栏目，按“今天应该看什么、判断什么、试什么”组织。</p>
+      </div>
+      <div class="report-grid">
+        <a class="report-card" href="./projects/2026-07-20.html"><span class="kicker">Projects</span><b>项目与工具</b><p>筛选可运行、可试用、文档清晰的 AI 项目。</p><em>进入栏目</em></a>
+        <a class="report-card" href="./news/2026-07-20.html"><span class="kicker">Events</span><b>关键事件</b><p>跟踪产品入口、生态、成本与权限变化。</p><em>进入栏目</em></a>
+        <a class="report-card" href="./models/2026-07-20.html"><span class="kicker">Models</span><b>模型与研究</b><p>关注模型能力、部署方式、评测与研究证据。</p><em>进入栏目</em></a>
+        <a class="report-card" href="./voices/2026-07-20.html"><span class="kicker">Voices</span><b>观点讨论</b><p>收集社区讨论、博主实测和可复用判断。</p><em>进入栏目</em></a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>产品能力概览</h2>
+        <p>首页只保留能力层面的展示；完整流程、评分规则和安全边界放在方法论页。</p>
+      </div>
+      <div class="capability-grid">
+        <article class="capability-card"><span class="kicker">Collect</span><b>多源信号抓取</b><p>覆盖项目、新闻、模型、论文和社区讨论，不依赖单一信息源。</p></article>
+        <article class="capability-card"><span class="kicker">Curate</span><b>质量筛选</b><p>按来源可追溯、普通人相关性、实用价值和证据质量筛掉噪音。</p></article>
+        <article class="capability-card"><span class="kicker">Publish</span><b>多栏目发布</b><p>把内容拆成项目、事件、模型、观点和 X 观察，便于快速阅读。</p></article>
+        <article class="capability-card"><span class="kicker">Archive</span><b>同步与归档</b><p>发布到 GitHub Pages，同时保留 Notion 记录和微信提醒。</p></article>
+      </div>
+    </section>
+
+    <section class="section portfolio-grid">
+      <article class="brief">
+        <span class="kicker">Portfolio Value</span>
+        <h2>为什么适合放进简历</h2>
+        <p>它展示的是一个完整的小型内容产品：数据源接入、自动化任务、网页生成、质量控制、密钥脱敏、GitHub Pages 发布、Notion 同步和用户通知。</p>
+      </article>
+      <article class="brief">
+        <span class="kicker">Methodology</span>
+        <h2>判断标准可解释</h2>
+        <p>方法论页专门说明数据来源、筛选门槛、评分维度、自动化流程和隐私边界，让项目从“展示页面”变成“可复盘的信息产品”。</p>
+        <p><a href="./methodology.html">查看方法论与数据源</a></p>
+      </article>
+      <article class="brief">
+        <span class="kicker">X Watch</span>
+        <h2>社区讨论补强</h2>
+        <p>已接入 X API。原始抓取结果只保存在本地缓存，不随网页发布；公开页面只展示筛选后的摘要条目。</p>
+        <p><a href="./x/2026-07-17.html">查看 X 帖子观察样例</a></p>
+      </article>
+      <article class="brief">
+        <span class="kicker">Privacy</span>
+        <h2>公开内容有边界</h2>
+        <p>公开站点只展示整理后的摘要、判断理由和来源链接；密钥、原始响应和本地缓存不进入网页。</p>
+        <p><a href="./methodology.html">查看发布边界</a></p>
+      </article>
+    </section>
+
+    <footer class="footer">AI Content Radar · GitHub Pages 自动发布 · <a href="./methodology.html">方法论</a> · <a href="./archive/index.html">历史归档</a> · <a href="https://github.com/luoluozi996/ai-radar">Repository</a></footer>
   </main>
 </body>
 </html>
