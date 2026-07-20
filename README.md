@@ -14,6 +14,7 @@ Live site: https://luoluozi996.github.io/ai-radar/
 ## Current Sections
 
 - Project homepage: https://luoluozi996.github.io/ai-radar/
+- Methodology and sources: https://luoluozi996.github.io/ai-radar/methodology.html
 - Latest projects and tools: https://luoluozi996.github.io/ai-radar/projects/2026-07-20.html
 - Latest key events: https://luoluozi996.github.io/ai-radar/news/2026-07-20.html
 - Latest models and research: https://luoluozi996.github.io/ai-radar/models/2026-07-20.html
@@ -32,6 +33,18 @@ The pipeline is designed to combine multiple public signals:
 - Model and paper sources such as Hugging Face, arXiv, and project documentation
 
 Raw API responses and secrets are not published. Public pages only include curated, summarized, and source-linked entries.
+
+## Selection Methodology
+
+Items are selected by a practical editorial filter rather than raw popularity:
+
+- Source traceability: original links, official docs, papers, READMEs, demos, or stable discussion URLs are preferred.
+- User relevance: each item should explain who it affects and why it matters to ordinary AI users, builders, or learners.
+- Evidence quality: hands-on posts, reproducible demos, technical docs, and multi-source confirmation are ranked above vague announcements.
+- Practical value: the brief favors items that can change what to try, what to learn, what to avoid, or what to monitor.
+- Noise control: duplicated hype, weakly sourced reposts, and purely promotional content are filtered or down-ranked.
+
+Full methodology page: https://luoluozi996.github.io/ai-radar/methodology.html
 
 ## Workflow
 
@@ -58,6 +71,7 @@ Raw API responses and secrets are not published. Public pages only include curat
 ```text
 .
 +-- index.html                 # Project homepage
++-- methodology.html           # Source, scoring, filtering, and safety explanation
 +-- projects/                  # Daily project and tool reports
 +-- news/                      # Daily key event reports
 +-- models/                    # Daily model and research reports
