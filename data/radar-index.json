@@ -6,7 +6,7 @@
       "title": "AI Content Radar",
       "summary": "Agent adoption is moving to controllable loops: budgets, permissions, execution records, and acceptance gates. X fetch was skipped because the local Python runtime is unavailable.",
       "sections": [
-        {"label": "今日总览", "url": "../index.html", "tags": ["overview", "daily"]},
+        {"label": "今日总览", "url": "../daily/2026-07-20.html", "tags": ["overview", "daily"]},
         {"label": "项目与工具", "url": "../projects/2026-07-20.html", "tags": ["agents", "tools", "github"]},
         {"label": "关键事件", "url": "../news/2026-07-20.html", "tags": ["workflow", "cost", "byok"]},
         {"label": "模型与研究", "url": "../models/2026-07-20.html", "tags": ["models", "research", "evaluation"]},
