@@ -1,1 +1,76 @@
-{"generated_at":"2026-07-20","reports":[{"date":"2026-07-20","title":"AI Content Radar","summary":"Agent adoption is moving to controllable loops: budgets, permissions, execution records, and acceptance gates. X fetch was skipped because the local Python runtime is unavailable.","sections":[{"label":"今日总览","url":"../index.html","tags":["overview","daily"]},{"label":"项目与工具","url":"../projects/2026-07-20.html","tags":["agents","tools","github"]},{"label":"关键事件","url":"../news/2026-07-20.html","tags":["workflow","cost","byok"]},{"label":"模型与研究","url":"../models/2026-07-20.html","tags":["models","research","evaluation"]},{"label":"观点讨论","url":"../voices/2026-07-20.html","tags":["community","voices","x-runtime-degraded"]}]},{"date":"2026-07-18","title":"AI Content Radar","summary":"Agents need permission, observability, and collaboration rules.","sections":[{"label":"Today Overview","url":"../index.html","tags":["overview"]}]}]}
+{
+  "generated_at": "2026-07-20",
+  "reports": [
+    {
+      "date": "2026-07-20",
+      "title": "AI Content Radar",
+      "summary": "Agent adoption is moving to controllable loops: budgets, permissions, execution records, and acceptance gates. X fetch was skipped because the local Python runtime is unavailable.",
+      "sections": [
+        {"label": "今日总览", "url": "../index.html", "tags": ["overview", "daily"]},
+        {"label": "项目与工具", "url": "../projects/2026-07-20.html", "tags": ["agents", "tools", "github"]},
+        {"label": "关键事件", "url": "../news/2026-07-20.html", "tags": ["workflow", "cost", "byok"]},
+        {"label": "模型与研究", "url": "../models/2026-07-20.html", "tags": ["models", "research", "evaluation"]},
+        {"label": "观点讨论", "url": "../voices/2026-07-20.html", "tags": ["community", "voices", "x-runtime-degraded"]}
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "title": "AI Content Radar",
+      "summary": "Agents need permission, observability, and collaboration rules. X API degraded; no X page was generated.",
+      "sections": [
+        {"label": "项目与工具", "url": "../projects/2026-07-18.html", "tags": ["agents", "tools", "github"]},
+        {"label": "关键事件", "url": "../news/2026-07-18.html", "tags": ["workflow", "privacy", "migration"]},
+        {"label": "模型与研究", "url": "../models/2026-07-18.html", "tags": ["models", "research", "evaluation"]},
+        {"label": "观点讨论", "url": "../voices/2026-07-18.html", "tags": ["community", "voices", "x-fallback"]}
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "title": "AI Content Radar",
+      "summary": "Multi-section daily report validation with an X watch page.",
+      "sections": [
+        {"label": "项目与工具", "url": "../projects/2026-07-17.html", "tags": ["tools"]},
+        {"label": "关键事件", "url": "../news/2026-07-17.html", "tags": ["news"]},
+        {"label": "模型与研究", "url": "../models/2026-07-17.html", "tags": ["models"]},
+        {"label": "观点讨论", "url": "../voices/2026-07-17.html", "tags": ["voices"]},
+        {"label": "X 帖子观察", "url": "../x/2026-07-17.html", "tags": ["x", "posts"]}
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "title": "AI Content Radar",
+      "summary": "First complete multi-section daily report, including projects, events, models, and voices.",
+      "sections": [
+        {"label": "项目与工具", "url": "../projects/2026-07-16.html", "tags": ["projects", "tools"]},
+        {"label": "关键事件", "url": "../news/2026-07-16.html", "tags": ["news", "events"]},
+        {"label": "模型与研究", "url": "../models/2026-07-16.html", "tags": ["models", "research"]},
+        {"label": "观点讨论", "url": "../voices/2026-07-16.html", "tags": ["voices", "community"]},
+        {"label": "旧版入口", "url": "../ai-project-radar-2026-07-16.html", "tags": ["legacy", "redirect"]}
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "title": "AI Project Radar",
+      "summary": "Legacy single-page project radar.",
+      "sections": [
+        {"label": "历史日报", "url": "../ai-project-radar-2026-07-15.html", "tags": ["legacy", "project-radar"]}
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "title": "AI Project Radar",
+      "summary": "Legacy single-page project radar.",
+      "sections": [
+        {"label": "历史日报", "url": "../ai-project-radar-2026-07-14.html", "tags": ["legacy", "project-radar"]}
+      ]
+    },
+    {
+      "date": "2026-07-13",
+      "title": "AI Project Radar",
+      "summary": "Initial legacy single-page project radar.",
+      "sections": [
+        {"label": "历史日报", "url": "../ai-project-radar-2026-07-13.html", "tags": ["legacy", "project-radar"]}
+      ]
+    }
+  ]
+}
