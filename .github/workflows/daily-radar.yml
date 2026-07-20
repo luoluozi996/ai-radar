@@ -37,6 +37,20 @@ jobs:
             python scripts/generate_daily_radar.py
           fi
 
+      - name: Preserve project homepage
+        shell: bash
+        run: |
+          if [ -n "${{ inputs.report_date }}" ]; then
+            report_date="${{ inputs.report_date }}"
+          else
+            report_date="$(TZ=Asia/Shanghai date +%F)"
+          fi
+          mkdir -p daily
+          if [ -f index.html ]; then
+            cp index.html "daily/${report_date}.html"
+            git checkout -- index.html
+          fi
+
       - name: Commit generated report
         shell: bash
         run: |
@@ -46,7 +60,7 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html ai-project-radar-*.html data/latest-summary.json
+          git add ai-project-radar-*.html daily/*.html data/latest-summary.json
           git commit -m "publish: generate daily AI radar"
           git push
 
@@ -105,7 +119,7 @@ jobs:
                   headers["Authorization"] = f"Bearer {token}"
               try:
                   data = request_json(f"https://api.github.com/repos/{repo}", headers=headers, timeout=12)
-              except Exception as exc:  # noqa: BLE001 - notification should still be sent.
+              except Exception as exc:
                   print(f"[warn] GitHub meta failed for {repo}: {exc}")
                   return {}
               return {
@@ -152,7 +166,7 @@ jobs:
               topics = ", ".join(meta.get("topics", [])[:5])
               prompt = (
                   "请基于下面这个 AI 内容条目的真实信息，写一句中文亮点摘要。"
-                  "要求：只输出一句话，35到55个中文字符；不要写'亮点是'；不要泛泛而谈；"
+                  "要求：只输出一句话；25到55个中文字符；不要写‘亮点是’；不要泛泛而谈；"
                   "必须体现这个项目/内容具体在做什么；不要编造。\n\n"
                   f"标题：{title}\n来源：{source}\n简介：{description}\n标签：{topics}\n"
               )
@@ -172,7 +186,7 @@ jobs:
               try:
                   data = request_json(f"{base_url}/chat/completions", payload=payload, headers=headers, timeout=25)
                   return clean(extract_chat_text(data), 80)
-              except Exception as exc:  # noqa: BLE001 - fallback keeps notification alive.
+              except Exception as exc:
                   print(f"[warn] AI highlight failed for {title}: {exc}")
                   return ""
 
