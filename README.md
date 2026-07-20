@@ -1,66 +1,80 @@
-# AI 内容日报 · AI Radar
+# AI Content Radar
 
-每日自动化 AI 内容聚合与简报生成工具。自动抓取多源内容，调用 AI 生成摘要、雷达评分与双语简报，帮助 AI 从业者高效获取当日关键信息。
+AI Content Radar is an automated AI intelligence briefing project. It collects public signals from developer communities, AI product updates, model/research sources, and social discussion, then turns them into a structured daily report published on GitHub Pages.
 
-## 它能做什么
+Live site: https://luoluozi996.github.io/ai-radar/
 
-- **多源内容聚合**：支持 RSS、X(Twitter)、邮件简报等多种输入源，可扩展配置
-- **AI 摘要生成**：调用大语言模型自动生成中文摘要与关键要点，并翻译为英文版本
-- **雷达评分系统**：从 Impact、Novelty、Relevance 三个维度对内容进行加权评分，排序筛选高价值信息
-- **多渠道分发**：支持输出为 Markdown、HTML 邮件，可扩展适配其他分发渠道
+## What It Does
 
-## 快速开始
+- Publishes a daily multi-page AI brief covering projects, tools, key events, model updates, research signals, and community discussion.
+- Prioritizes actionable items over raw popularity by checking source quality, freshness, documentation, demos, and practical relevance.
+- Keeps a public archive so each daily report remains reachable from a stable GitHub Pages entry point.
+- Syncs selected entries to Notion with duplicate-key checks, and sends a WeChat notification after each run.
 
-### 环境要求
-- Python 3.9+
-- 任意大语言模型 API（OpenAI / DeepSeek / Gemini 均可）
-  
-## 安装与运行
+## Current Sections
 
-1. 克隆仓库
+- Project homepage: https://luoluozi996.github.io/ai-radar/
+- Latest projects and tools: https://luoluozi996.github.io/ai-radar/projects/2026-07-20.html
+- Latest key events: https://luoluozi996.github.io/ai-radar/news/2026-07-20.html
+- Latest models and research: https://luoluozi996.github.io/ai-radar/models/2026-07-20.html
+- Latest voices and discussion: https://luoluozi996.github.io/ai-radar/voices/2026-07-20.html
+- Historical archive: https://luoluozi996.github.io/ai-radar/archive/
+- X Watch sample: https://luoluozi996.github.io/ai-radar/x/2026-07-17.html
 
-```bash
-git clone https://github.com/你的用户名/ai-radar.git
-cd ai-radar
+## Data Sources
 
-pip install -r requirements.txt
+The pipeline is designed to combine multiple public signals:
 
-cp .env.example .env
-# 编辑 .env 文件，填入你的 API Key
+- GitHub repositories and README verification
+- X API posts from selected AI builders, researchers, and product voices
+- Hacker News and community discussions
+- RSS feeds and official product blogs
+- Model and paper sources such as Hugging Face, arXiv, and project documentation
 
-python main.py
-```
+Raw API responses and secrets are not published. Public pages only include curated, summarized, and source-linked entries.
 
-### 项目结构
+## Workflow
+
+1. Fetch public signals from configured sources.
+2. Normalize and deduplicate items.
+3. Filter low-quality, duplicated, or weakly sourced content.
+4. Score items by freshness, evidence, practical value, and relevance.
+5. Render static HTML pages for each daily section.
+6. Publish to GitHub Pages and update the archive index.
+7. Upsert Notion records by duplicate key.
+8. Send a ServerChan WeChat notification with secret-safe logging.
+
+## Engineering Highlights
+
+- Static GitHub Pages output for reliable sharing and low maintenance.
+- Multi-section report structure instead of a single flat list.
+- Secret-safe local configuration for X API and ServerChan credentials.
+- Local-only raw X cache, with filtered summaries published publicly.
+- Duplicate-aware Notion synchronization to avoid repeated database rows.
+- Automation memory log for run history, publish status, and push status.
+
+## Repository Structure
 
 ```text
-ai-radar/
-├── src/
-│   ├── collector/       # 数据采集模块
-│   ├── processor/       # AI 处理与摘要生成
-│   └── publisher/       # 内容输出与分发
-├── config/              # 配置文件（数据源、API、评分权重）
-├── output/              # 生成内容输出目录
-├── main.py              # 程序入口
-├── requirements.txt     # 项目依赖
-└── README.md
+.
++-- index.html                 # Project homepage
++-- projects/                  # Daily project and tool reports
++-- news/                      # Daily key event reports
++-- models/                    # Daily model and research reports
++-- voices/                    # Daily community and opinion reports
++-- x/                         # Curated X Watch pages
++-- archive/                   # Historical report index
++-- assets/                    # Shared CSS and page assets
+`-- data/                      # Public index data only
 ```
 
-## 当前使用的模型
+## Resume Summary
 
-可根据配置灵活替换，目前已测试兼容：
+Built an automated AI intelligence pipeline that collects multi-source public signals, filters and ranks high-value items, generates a multi-page daily report, publishes it to GitHub Pages, syncs selected records to Notion, and sends WeChat notifications with secret-safe handling.
 
-- DeepSeek Chat
-- Gemini 3 Flash
-- OpenAI GPT-5
+## Roadmap
 
-## 后续计划
-
-- 支持更多数据源（YouTube 频道、ArXiv 论文）
-- 增加多语言版本（日语、西班牙语）
-- 部署为在线服务（Web 界面/API）
-- 增加用户自定义评分设置
-
-## 致谢
-
-本项目受个人学习与求职转型驱动，旨在验证 AI 工作流从数据采集到内容分发的端到端落地能力。
+- Improve source weighting for high-quality X and community discussion.
+- Add a stronger public methodology page for scoring and filtering rules.
+- Add lightweight analytics for report coverage and source diversity.
+- Improve visual polish for report pages while keeping them fast and readable.
