@@ -10,16 +10,6 @@
 - **雷达评分系统**：从 Impact、Novelty、Relevance 三个维度对内容进行加权评分，排序筛选高价值信息
 - **多渠道分发**：支持输出为 Markdown、HTML 邮件，可扩展适配其他分发渠道
 
-## 项目结构
-ai-radar/
-├── src/
-│ ├── collector/ # 数据采集模块
-│ ├── processor/ # AI 处理与摘要生成
-│ └── publisher/ # 内容输出与分发
-├── config/ # 配置文件（数据源、API、评分权重）
-├── output/ # 生成内容输出目录
-└── README.md
-
 ## 快速开始
 
 ### 环境要求
