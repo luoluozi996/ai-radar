@@ -23,8 +23,7 @@
     .report-card:hover{border-color:var(--green)}
     .report-card b,.capability-card b{font-size:20px}
     .capability-card p{margin-bottom:0;color:var(--muted)}
-    .portfolio-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    @media(max-width:1000px){.home-hero,.report-grid,.capability-grid,.portfolio-grid{grid-template-columns:1fr}.cover{min-height:340px}}
+    @media(max-width:1000px){.home-hero,.report-grid,.capability-grid{grid-template-columns:1fr}.cover{min-height:340px}}
   </style>
 </head>
 <body>
@@ -83,32 +82,6 @@
         <article class="capability-card"><span class="kicker">Publish</span><b>多栏目发布</b><p>把内容拆成项目、事件、模型、观点和 X 观察，便于快速阅读。</p></article>
         <article class="capability-card"><span class="kicker">Archive</span><b>同步与归档</b><p>发布到 GitHub Pages，同时保留 Notion 记录和微信提醒。</p></article>
       </div>
-    </section>
-
-    <section class="section portfolio-grid">
-      <article class="brief">
-        <span class="kicker">Portfolio Value</span>
-        <h2>为什么适合放进简历</h2>
-        <p>它展示的是一个完整的小型内容产品：数据源接入、自动化任务、网页生成、质量控制、密钥脱敏、GitHub Pages 发布、Notion 同步和用户通知。</p>
-      </article>
-      <article class="brief">
-        <span class="kicker">Methodology</span>
-        <h2>判断标准可解释</h2>
-        <p>方法论页专门说明数据来源、筛选门槛、评分维度、自动化流程和隐私边界，让项目从“展示页面”变成“可复盘的信息产品”。</p>
-        <p><a href="./methodology.html">查看方法论与数据源</a></p>
-      </article>
-      <article class="brief">
-        <span class="kicker">X Watch</span>
-        <h2>社区讨论补强</h2>
-        <p>已接入 X API。原始抓取结果只保存在本地缓存，不随网页发布；公开页面只展示筛选后的摘要条目。</p>
-        <p><a href="./x/2026-07-17.html">查看 X 帖子观察样例</a></p>
-      </article>
-      <article class="brief">
-        <span class="kicker">Privacy</span>
-        <h2>公开内容有边界</h2>
-        <p>公开站点只展示整理后的摘要、判断理由和来源链接；密钥、原始响应和本地缓存不进入网页。</p>
-        <p><a href="./methodology.html">查看发布边界</a></p>
-      </article>
     </section>
 
     <footer class="footer">AI Content Radar · GitHub Pages 自动发布 · <a href="./methodology.html">方法论</a> · <a href="./archive/index.html">历史归档</a> · <a href="https://github.com/luoluozi996/ai-radar">Repository</a></footer>
