@@ -82,10 +82,6 @@ Full methodology page: https://luoluozi996.github.io/ai-radar/methodology.html
 `-- data/                      # Public index data only
 ```
 
-## Resume Summary
-
-Built an automated AI intelligence pipeline that collects multi-source public signals, filters and ranks high-value items, generates a multi-page daily report, publishes it to GitHub Pages, syncs selected records to Notion, and sends WeChat notifications with secret-safe handling.
-
 ## Roadmap
 
 - Improve source weighting for high-quality X and community discussion.
