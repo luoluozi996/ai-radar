@@ -1,25 +1,25 @@
 {
-  "date": "2026-07-19",
-  "title": "AI 内容雷达 · 2026-07-19",
+  "date": "2026-07-20",
+  "title": "AI 内容雷达 · 2026-07-20",
   "headline": "今日 AI 内容雷达已更新：多平台自动生成版。",
-  "report_url": "https://luoluozi996.github.io/ai-radar/ai-project-radar-2026-07-19.html",
+  "report_url": "https://luoluozi996.github.io/ai-radar/ai-project-radar-2026-07-20.html",
   "top_items": [
     {
-      "title": "ccfddl/ccf-deadlines",
+      "title": "nautechsystems/nautilus_trader",
       "source": "GitHub",
-      "url": "https://github.com/ccfddl/ccf-deadlines",
+      "url": "https://github.com/nautechsystems/nautilus_trader",
+      "score": 96
+    },
+    {
+      "title": "rpamis/comet",
+      "source": "GitHub",
+      "url": "https://github.com/rpamis/comet",
       "score": 92
     },
     {
-      "title": "gameworkerkim/vibe-investing",
+      "title": "Ikalus1988/MisakaNet",
       "source": "GitHub",
-      "url": "https://github.com/gameworkerkim/vibe-investing",
-      "score": 85
-    },
-    {
-      "title": "VIAME/VIAME",
-      "source": "GitHub",
-      "url": "https://github.com/VIAME/VIAME",
+      "url": "https://github.com/Ikalus1988/MisakaNet",
       "score": 85
     }
   ]
