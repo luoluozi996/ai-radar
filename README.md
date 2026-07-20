@@ -15,10 +15,12 @@
 - Python 3.9+
 - 任意大语言模型 API（OpenAI / DeepSeek / Gemini 均可）
   
-### 安装与运行
+## 安装与运行
+
 1. 克隆仓库
+
 ```bash
-git clone https://github.com/[你的用户名]/ai-radar.git
+git clone https://github.com/你的用户名/ai-radar.git
 cd ai-radar
 
 pip install -r requirements.txt
@@ -27,33 +29,38 @@ cp .env.example .env
 # 编辑 .env 文件，填入你的 API Key
 
 python main.py
+```
 
 ### 项目结构
 
-```
+```text
 ai-radar/
 ├── src/
-│   ├── collector/      # 数据采集模块
-│   ├── processor/      # AI 处理与摘要生成
-│   └── publisher/      # 内容输出与分发
-├── config/             # 配置文件（数据源、API、评分权重）
-├── output/             # 生成内容输出目录
-├── main.py             # 程序入口
-├── requirements.txt    # 项目依赖
+│   ├── collector/       # 数据采集模块
+│   ├── processor/       # AI 处理与摘要生成
+│   └── publisher/       # 内容输出与分发
+├── config/              # 配置文件（数据源、API、评分权重）
+├── output/              # 生成内容输出目录
+├── main.py              # 程序入口
+├── requirements.txt     # 项目依赖
 └── README.md
 ```
 
-# 当前使用的模型
-可根据配置灵活替换，目前已测试兼容：
-DeepSeek Chat
-Gemini 3 Flash
-OpenAI GPT-5
+## 当前使用的模型
 
-# 后续计划
+可根据配置灵活替换，目前已测试兼容：
+
+- DeepSeek Chat
+- Gemini 3 Flash
+- OpenAI GPT-5
+
+## 后续计划
+
 - 支持更多数据源（YouTube 频道、ArXiv 论文）
 - 增加多语言版本（日语、西班牙语）
-- 部署为在线服务（Web 界面/邮件订阅）
-- 增加用户自定义评分权重
+- 部署为在线服务（Web 界面/API）
+- 增加用户自定义评分设置
 
-# 致谢
+## 致谢
+
 本项目受个人学习与求职转型驱动，旨在验证 AI 工作流从数据采集到内容分发的端到端落地能力。
