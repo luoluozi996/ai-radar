@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>方法论与数据源 | AI Content Radar</title>
+  <meta name="description" content="AI Content Radar 的数据来源、筛选标准、评分逻辑、自动化流程与安全边界。">
+  <link rel="stylesheet" href="./assets/radar-v2.css">
+  <style>
+    .method-hero{display:grid;grid-template-columns:minmax(0,1.2fr)360px;gap:18px}.method-hero .date-card{background:linear-gradient(135deg,#0f433a,#245f96)}.source-grid,.rule-grid,.score-grid{display:grid;gap:14px}.source-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.rule-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.score-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.source-card,.rule-card,.score-card,.flow-card{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:18px}.source-card b,.rule-card b,.score-card b{display:block;margin-bottom:8px;color:var(--deep);font-size:18px}.source-card p,.rule-card p,.score-card p,.flow-card p{margin-bottom:0;color:var(--muted)}.flow{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;counter-reset:flow}.flow-card b:before{counter-increment:flow;content:counter(flow,decimal-leading-zero) " ";color:var(--green)}.do-dont{display:grid;grid-template-columns:1fr 1fr;gap:14px}@media(max-width:1000px){.method-hero,.source-grid,.rule-grid,.score-grid,.flow,.do-dont{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="topline"></div>
+    <nav class="nav" aria-label="站点导航"><a href="./index.html">项目主页</a><a class="active" href="./methodology.html">方法论</a><a href="./projects/2026-07-20.html">项目与工具</a><a href="./news/2026-07-20.html">关键事件</a><a href="./models/2026-07-20.html">模型与研究</a><a href="./voices/2026-07-20.html">观点讨论</a><a href="./archive/index.html">历史归档</a></nav>
+    <section class="method-hero"><article class="hero-copy"><p class="eyebrow">Methodology</p><h1>日报如何判断“值得看”</h1><p class="lead">AI Content Radar 不追求把所有新闻都搬进来，而是把公开信号转成可判断、可验证、可行动的信息。这个页面说明数据从哪里来、什么会被过滤、条目如何排序，以及自动发布时如何保护密钥与原始数据。</p></article><aside class="date-card"><strong>核心原则</strong><span>原始来源优先，可验证优先，普通使用者相关性优先；对无法核验、只有营销话术或缺少上下文的内容降权。</span></aside></section>
+    <section class="section"><div class="section-head"><h2>数据来源</h2><p>不同来源承担不同角色：有的验证项目是否真实可用，有的补充社区反馈，有的追踪模型与产品变化。</p></div><div class="source-grid"><article class="source-card"><b>GitHub</b><p>用于发现真实项目、README、demo、许可协议、更新活跃度与使用门槛。</p></article><article class="source-card"><b>X API</b><p>用于捕捉 AI 创作者、研究者、产品团队与高质量社区的实时讨论。</p></article><article class="source-card"><b>HN / 社区讨论</b><p>用于观察开发者反馈、反对意见、实际使用成本与早期争议。</p></article><article class="source-card"><b>RSS / 官方博客</b><p>用于追踪产品发布、平台政策、定价、入口与生态变化。</p></article><article class="source-card"><b>Hugging Face / 模型社区</b><p>用于跟踪模型发布、权重开放、评测结果与部署可行性。</p></article><article class="source-card"><b>论文 / 技术文档</b><p>用于验证研究主张、方法细节和能力边界，避免只引用二手解读。</p></article></div></section>
+    <section class="section"><div class="section-head"><h2>筛选标准</h2><p>每条内容都会先过一层质量门槛，避免日报变成热搜列表。</p></div><div class="rule-grid"><article class="rule-card"><b>必须有可回溯来源</b><p>优先保留官网、README、论文、产品文档、原帖或明确讨论链接；无法追溯来源的内容不进入公开页。</p></article><article class="rule-card"><b>必须能回答“对谁有用”</b><p>入选条目需要说明它影响开发者、AI 使用者、内容创作者、求职者或产品团队中的哪一类人。</p></article><article class="rule-card"><b>降低纯营销噪音</b><p>只有口号、融资、转发热度或模糊愿景，但缺少 demo、证据、用户反馈的内容会被降权。</p></article><article class="rule-card"><b>保留反对意见和使用成本</b><p>社区吐槽、失败案例、限制条件、价格和权限变化也会被纳入，因为它们更接近真实使用体验。</p></article></div></section>
+    <section class="section"><div class="section-head"><h2>评分逻辑</h2><p>评分不是绝对排名，而是帮助日报在有限篇幅里优先展示更值得复盘的信号。</p></div><div class="score-grid"><article class="score-card"><b>新鲜度</b><p>是否发生在最近时间窗口内，是否仍有后续讨论。</p></article><article class="score-card"><b>可信度</b><p>是否来自原始来源、官方信息、作者实测或多方交叉验证。</p></article><article class="score-card"><b>实用性</b><p>是否能转化为试用、学习、决策、避坑或工作流改进。</p></article><article class="score-card"><b>影响面</b><p>是否影响较多普通使用者，而不只是大公司内部叙事。</p></article><article class="score-card"><b>可复盘性</b><p>是否留下清晰链接、步骤、证据或观点，方便之后回看。</p></article></div></section>
+    <section class="section"><div class="section-head"><h2>自动化闭环</h2><p>从抓取到发布的每一步都尽量留下可检查结果，减少手动复制和重复创建。</p></div><div class="flow"><article class="flow-card"><b>抓取</b><p>按日期窗口读取配置化来源。</p></article><article class="flow-card"><b>去重</b><p>用链接、标题、来源和 Duplicate Key 合并重复条目。</p></article><article class="flow-card"><b>筛选</b><p>过滤弱来源、低相关性和无行动价值内容。</p></article><article class="flow-card"><b>生成</b><p>按栏目渲染静态 HTML，并保留归档入口。</p></article><article class="flow-card"><b>同步</b><p>Notion 先查重再更新，避免重复创建日报和项目行。</p></article><article class="flow-card"><b>通知</b><p>发布后发送微信推送，并在记忆文件记录脱敏状态。</p></article></div></section>
+    <section class="section do-dont"><article class="brief primary"><h2>会发布什么</h2><p>公开页面只展示筛选后的标题、摘要、判断理由、适用场景与来源链接。它适合阅读、分享和放进作品集。</p></article><article class="brief"><h2>不会发布什么</h2><p>不会发布 X Bearer Token、Server 酱 SendKey、原始 API 响应、本地缓存文件、私人配置或任何无法确认授权公开的内容。</p></article></section>
+    <footer class="footer">AI Content Radar · <a href="./index.html">项目主页</a> · <a href="./archive/index.html">历史归档</a> · <a href="https://github.com/luoluozi996/ai-radar">Repository</a></footer>
+  </main>
+</body>
+</html>
