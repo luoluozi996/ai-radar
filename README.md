@@ -29,6 +29,8 @@ cp .env.example .env
 python main.py
 
 ### 项目结构
+
+```
 ai-radar/
 ├── src/
 │   ├── collector/      # 数据采集模块
@@ -39,6 +41,7 @@ ai-radar/
 ├── main.py             # 程序入口
 ├── requirements.txt    # 项目依赖
 └── README.md
+```
 
 # 当前使用的模型
 可根据配置灵活替换，目前已测试兼容：
