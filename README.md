@@ -1,2 +1,13 @@
 # ai-radar
-Daily AI project radar with bilingual summaries, radar scores, and source links.
+# AI 内容日报 · AI Radar
+
+每日自动化 AI 内容聚合与简报生成工具。自动抓取多源内容，调用 AI 生成摘要、雷达评分与双语简报，帮助 AI 从业者高效获取当日关键信息。
+
+## 它能做什么
+
+- **多源内容聚合**：支持 RSS、X(Twitter)、邮件简报等多种输入源，可扩展配置
+- **AI 摘要生成**：调用大语言模型自动生成中文摘要与关键要点，并翻译为英文版本
+- **雷达评分系统**：从 Impact、Novelty、Relevance 三个维度对内容进行加权评分，排序筛选高价值信息
+- **多渠道分发**：支持输出为 Markdown、HTML 邮件，可扩展适配其他分发渠道
+
+## 项目结构
