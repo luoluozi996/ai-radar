@@ -12,6 +12,8 @@
   --rust:#526dff;
   --gold:#8bc5ff;
 }
+html{scroll-behavior:smooth}
+#methodology,#archive{scroll-margin-top:22px}
 body{
   background:
     radial-gradient(circle at 90% -10%,rgba(45,156,255,.18),transparent 28rem),
