@@ -4,13 +4,14 @@
     {
       "date": "2026-07-21",
       "title": "AI Content Radar",
-      "summary": "AI tooling is shifting from capability demos to controllable operations: usage visibility, explicit budgets, bounded permissions, and testable execution records. X fetch did not run because the local Python runtime is unavailable.",
+      "summary": "AI tooling is shifting from capability demos to controllable operations: usage visibility, explicit budgets, bounded permissions, and testable execution records. Five selected X posts add research credits, open-weight supply, open-source trust, maintainability, and evaluation context.",
       "sections": [
         {"label": "今日总览", "url": "../daily/2026-07-21.html", "tags": ["overview", "daily"]},
         {"label": "项目与工具", "url": "../projects/2026-07-21.html", "tags": ["agents", "tools", "github"]},
         {"label": "关键事件", "url": "../news/2026-07-21.html", "tags": ["copilot", "cost", "governance"]},
         {"label": "模型与研究", "url": "../models/2026-07-21.html", "tags": ["models", "research", "evaluation"]},
-        {"label": "观点讨论", "url": "../voices/2026-07-21.html", "tags": ["community", "voices", "x-runtime-degraded"]}
+        {"label": "观点讨论", "url": "../voices/2026-07-21.html", "tags": ["community", "voices"]},
+        {"label": "X 帖子观察", "url": "../x/2026-07-21.html", "tags": ["x", "posts", "community"]}
       ]
     },
     {
