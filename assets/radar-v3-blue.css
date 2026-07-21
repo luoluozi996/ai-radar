@@ -48,6 +48,7 @@ a{color:#126ee8}
 .digest,.score-table th{background:#edf6ff}
 .tag-cloud a{border-color:#c5defa;background:#fff;color:#126ee8}
 .cover{background:linear-gradient(135deg,#082659 0%,#0e5bc8 52%,#35a8ff 100%)!important;color:#f8fbff!important;box-shadow:0 22px 48px rgba(10,62,142,.25)}
+.cover h1{color:#ffffff!important;text-shadow:0 2px 18px rgba(0,32,89,.18)}
 .cover .eyebrow,.cover .lead{color:#d9edff!important}.cover .button{background:#fff!important;color:#0b3d91!important}.cover .button.ghost{background:transparent!important;color:#fff!important;border-color:rgba(255,255,255,.56)!important}
 .method-hero .date-card{background:linear-gradient(145deg,#092b62,#1677ff)!important}
 @media(max-width:700px){.shell{width:min(100% - 24px,1160px)}.nav a{padding:8px 11px}.hero-copy,.date-card{border-radius:14px}}
