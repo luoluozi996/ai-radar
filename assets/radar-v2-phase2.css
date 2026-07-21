@@ -9,7 +9,7 @@
   padding: 18px;
 }
 .event-card.priority-high {
-  border-color: rgba(165, 79, 62, .38);
+  border-color: rgba(35, 139, 255, .45);
   box-shadow: inset 4px 0 0 var(--rust);
 }
 .event-meta {

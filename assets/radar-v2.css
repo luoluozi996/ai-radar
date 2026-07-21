@@ -1,20 +1,20 @@
 :root {
-  --bg: #f6f3ec;
-  --paper: #fffdf8;
-  --ink: #1f2525;
-  --muted: #687271;
-  --line: #d8d2c6;
-  --soft: #eee9dd;
-  --green: #176f5d;
-  --deep: #0f433a;
-  --blue: #245f96;
-  --rust: #a54f3e;
-  --gold: #987425;
+  --bg: #f3f8ff;
+  --paper: #ffffff;
+  --ink: #0c2340;
+  --muted: #5d718c;
+  --line: #cfe0f5;
+  --soft: #e9f2ff;
+  --green: #1677ff;
+  --deep: #0d3f7a;
+  --blue: #238bff;
+  --rust: #2a67d7;
+  --gold: #76b7ff;
 }
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  background: linear-gradient(180deg, #fbfaf6 0%, var(--bg) 100%);
+  background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
   color: var(--ink);
   font-family: Arial, "Microsoft YaHei", sans-serif;
 }
@@ -87,7 +87,7 @@ p { line-height: 1.68; }
 .hero-copy { padding: 28px; }
 .date-card {
   background: var(--deep);
-  color: #eff8f4;
+  color: #f7fbff;
   padding: 22px;
   display: grid;
   align-content: space-between;
@@ -143,7 +143,7 @@ h3 { margin-bottom: 8px; font-size: 18px; }
   line-height: 1.05;
   margin-bottom: 10px;
 }
-.date-card span, .date-card small { color: #bdd5cc; }
+.date-card span, .date-card small { color: #c7e1ff; }
 .section { margin-top: 24px; }
 .section-head {
   display: flex;
@@ -167,8 +167,8 @@ h3 { margin-bottom: 8px; font-size: 18px; }
   padding: 17px;
 }
 .brief.primary {
-  border-color: rgba(23, 111, 93, .35);
-  box-shadow: inset 0 0 0 1px rgba(23, 111, 93, .08);
+  border-color: rgba(22, 119, 255, .35);
+  box-shadow: inset 0 0 0 1px rgba(22, 119, 255, .08);
 }
 .brief b, .item b {
   color: var(--deep);
@@ -244,7 +244,7 @@ h3 { margin-bottom: 8px; font-size: 18px; }
   gap: 18px;
   border: 1px solid var(--line);
   border-radius: 8px;
-  background: #f1ecdf;
+  background: #eff6ff;
   padding: 18px;
 }
 .digest h2,
@@ -349,7 +349,7 @@ h3 { margin-bottom: 8px; font-size: 18px; }
   min-height: 150px;
 }
 .score-card span {
-  color: #bdd5cc;
+  color: #c7e1ff;
   font-weight: 700;
 }
 .score-card strong {
@@ -415,7 +415,7 @@ h3 { margin-bottom: 8px; font-size: 18px; }
   padding: 18px;
 }
 .event-card.priority-high {
-  border-color: rgba(165, 79, 62, .38);
+  border-color: rgba(35, 139, 255, .45);
   box-shadow: inset 4px 0 0 var(--rust);
 }
 .event-meta {
@@ -493,7 +493,7 @@ h3 { margin-bottom: 8px; font-size: 18px; }
   vertical-align: top;
 }
 .score-table th {
-  background: #f1ecdf;
+  background: #eff6ff;
   color: var(--deep);
 }
 .score-table tr:last-child td { border-bottom: 0; }
