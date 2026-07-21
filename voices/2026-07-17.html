@@ -1,8 +1,66 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>观点讨论 · 2026-07-17</title><link rel="stylesheet" href="../assets/radar-v2.css"><link rel="stylesheet" href="../assets/radar-v2-phase2.css"></head>
-<body><main class="shell"><div class="topline"></div><nav class="nav" aria-label="日报栏目"><a href="../index.html">今日总览</a><a href="../projects/2026-07-17.html">项目与工具</a><a href="../news/2026-07-17.html">关键事件</a><a href="../models/2026-07-17.html">模型与研究</a><a class="active" href="./2026-07-17.html">观点讨论</a><a href="../x/2026-07-17.html">X 帖子观察</a></nav>
-<section class="hero compact"><div class="hero-copy"><p class="eyebrow">Voices</p><h1>观点讨论</h1><p class="lead">这个栏目回答“可信的人怎么看”。今天的观点主线是：Agent 越会调用工具，越需要把权限、上下文和界面边界说清楚。</p></div><aside class="date-card"><div><strong>3 个视角</strong><span>安全、界面、开发者工作流。</span></div><small>Bloggers · Newsletter · Community · X</small></aside></section>
-<section class="section voice-grid"><article class="voice-card"><span class="kicker">Simon Willison</span><h3>Claude web_fetch 泄露风险说明了工具权限边界</h3><p><b>他说了什么：</b>他记录了如何诱导 Claude 通过 web_fetch 泄露用户敏感内容，以及 Anthropic 后续如何收紧跳转能力。</p><p><b>你能怎么用：</b>不要把“能联网/能抓网页”当作纯便利功能；处理私密资料时要看工具是否能访问外部链接。</p><a href="https://simonwillison.net/">来源</a></article><article class="voice-card"><span class="kicker">Latent Space / AI Engineering</span><h3>模型竞争正在转向可定制和可部署变量</h3><p><b>他说了什么：</b>围绕 Inkling、Codex usage、开权重模型的讨论强调 license、API、部署方式和工程生态。</p><p><b>你能怎么用：</b>看模型新闻时，不要只看名称和分数，要看它是否能进入你的数据和工作流。</p><a href="https://www.latent.space/">来源</a></article><article class="voice-card"><span class="kicker">Developer Community</span><h3>AI 生成 UI 的问题不只是审美，而是结构重复</h3><p><b>他说了什么：</b>围绕 Hallmark 的讨论把“AI slop”拆成布局节奏、主题选择、组件套路和质量门槛。</p><p><b>你能怎么用：</b>如果用 agent 生成前端，给它一个可执行的设计约束，比事后手动修 CSS 更稳定。</p><a href="https://mcpservers.org/agent-skills/nutlope/hallmark">来源</a></article></section>
-<section class="section digest"><div><h2>X 帖子观察已接入</h2><p>本次通过 X API 抓到 8 条候选，筛选出 5 条和 AI 产品、模型边界、工作流直接相关的帖子，另有 3 条作为过滤候选记录。</p></div><a class="button" href="../x/2026-07-17.html">打开 X 帖子观察</a></section>
-<section class="section"><div class="section-head"><h2>长期关注名单</h2><p>新版自动化应继续优先稳定作者，而不是随便抓热帖。</p></div><div class="grid-3"><article class="brief"><b>独立博主</b><p>Simon Willison、Ethan Mollick、Andrej Karpathy、Ben Thompson。</p></article><article class="brief"><b>Newsletter</b><p>Latent Space、Import AI、One Useful Thing、增长黑客AI周报。</p></article><article class="brief"><b>社区讨论</b><p>HN、Reddit、GitHub Discussions、X，但必须过滤情绪噪音。</p></article></div></section>
-</main></body></html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>观点讨论 · 2026-07-17</title>
+  <link rel="stylesheet" href="../assets/radar-v2.css">
+  <link rel="stylesheet" href="../assets/radar-v2-phase2.css">
+<link rel="stylesheet" href="../assets/radar-v3-blue.css"></head>
+<body>
+  <main class="shell">
+    <div class="topline"></div>
+    <nav class="nav" aria-label="日报栏目">
+      <a href="../index.html">今日总览</a>
+      <a href="../projects/2026-07-17.html">项目与工具</a>
+      <a href="../news/2026-07-17.html">关键事件</a>
+      <a href="../models/2026-07-17.html">模型与研究</a>
+      <a class="active" href="./2026-07-17.html">观点讨论</a>
+      <a href="../x/2026-07-17.html">X 帖子观察</a>
+    </nav>
+
+    <section class="hero compact"><div class="hero-copy"><p class="eyebrow">Voices</p><h1>观点讨论</h1><p class="lead">这个栏目回答“可信的人怎么看”。今天的观点主线是：Agent 越会调用工具，越需要把权限、上下文和界面边界说清楚。</p></div><aside class="date-card"><div><strong>3 个视角</strong><span>安全、界面、开发者工作流。</span></div><small>Bloggers · Newsletter · Community</small></aside></section>
+
+    <section class="section voice-grid">
+      <article class="voice-card">
+        <span class="kicker">Simon Willison</span>
+        <h3>Claude web_fetch 泄露风险说明了工具权限边界</h3>
+        <p><b>他说了什么：</b>他记录了如何诱导 Claude 通过 web_fetch 泄露用户敏感内容，以及 Anthropic 后续如何收紧跳转能力。</p>
+        <p><b>你能怎么用：</b>不要把“能联网/能抓网页”当作纯便利功能；处理私密资料时要看工具是否能访问外部链接。</p>
+        <a href="https://simonwillison.net/">来源</a>
+      </article>
+      <article class="voice-card">
+        <span class="kicker">Latent Space / AI Engineering</span>
+        <h3>模型竞争正在转向可定制和可部署变量</h3>
+        <p><b>他说了什么：</b>围绕 Inkling、Codex usage、开权重模型的讨论强调 license、API、部署方式和工程生态。</p>
+        <p><b>你能怎么用：</b>看模型新闻时，不要只看名称和分数，要看它是否能进入你的数据和工作流。</p>
+        <a href="https://www.latent.space/">来源</a>
+      </article>
+      <article class="voice-card">
+        <span class="kicker">Developer Community</span>
+        <h3>AI 生成 UI 的问题不只是审美，而是结构重复</h3>
+        <p><b>他说了什么：</b>围绕 Hallmark 的讨论把“AI slop”拆成布局节奏、主题选择、组件套路和质量门槛。</p>
+        <p><b>你能怎么用：</b>如果用 agent 生成前端，给它一个可执行的设计约束，比事后手动修 CSS 更稳定。</p>
+        <a href="https://mcpservers.org/agent-skills/nutlope/hallmark">来源</a>
+      </article>
+    </section>
+
+    <section class="section digest">
+      <div>
+        <h2>X 帖子观察已接入</h2>
+        <p>本次通过 X API 抓到 8 条候选，筛选出 5 条和 AI 产品、模型边界、工作流直接相关的帖子，另有 3 条作为过滤候选记录。</p>
+      </div>
+      <a class="button" href="../x/2026-07-17.html">打开 X 帖子观察</a>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>长期关注名单</h2><p>新版自动化应继续优先稳定作者，而不是随便抓热帖。</p></div>
+      <div class="grid-3">
+        <article class="brief"><b>独立博主</b><p>Simon Willison、Ethan Mollick、Andrej Karpathy、Ben Thompson。</p></article>
+        <article class="brief"><b>Newsletter</b><p>Latent Space、Import AI、One Useful Thing、增长黑客AI周报。</p></article>
+        <article class="brief"><b>社区讨论</b><p>HN、Reddit、GitHub Discussions，但必须过滤情绪噪音。</p></article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,7 +1,67 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>关键事件 · 2026-07-17</title><link rel="stylesheet" href="../assets/radar-v2.css"><link rel="stylesheet" href="../assets/radar-v2-phase2.css"></head>
-<body><main class="shell"><div class="topline"></div><nav class="nav" aria-label="日报栏目"><a href="../index.html">今日总览</a><a href="../projects/2026-07-17.html">项目与工具</a><a class="active" href="./2026-07-17.html">关键事件</a><a href="../models/2026-07-17.html">模型与研究</a><a href="../voices/2026-07-17.html">观点讨论</a></nav>
-<section class="hero compact"><div class="hero-copy"><p class="eyebrow">Key Events</p><h1>关键事件</h1><p class="lead">这个栏目回答“外部环境发生了什么”。今天重点不是宏观口号，而是 AI agent 进入工作流后的控制、安全和上下文问题。</p></div><aside class="date-card"><div><strong>4 条</strong><span>产品控制面、代码安全、Promptware 风险、依赖冷却。</span></div><small>Practical · Traceable · Actionable</small></aside></section>
-<section class="section event-stack"><article class="event-card"><span class="kicker">Interface</span><h3>OpenAI 推出 Codex Micro agent 控制键盘</h3><p>Axios 报道 OpenAI 与 Work Louder 推出限量 Codex Micro，提供 programmable keys、push-to-talk 和 reasoning 控制旋钮。它的信号不是硬件本身，而是“管理多个 agent”开始需要专门控制界面。</p><a href="https://www.axios.com/2026/07/15/openai-keyboard-codex-agents">来源</a></article><article class="event-card"><span class="kicker">Security</span><h3>GitHub Copilot app 增加 security reviews</h3><p>GitHub Changelog 7 月 14 日列出 Copilot app 的 security reviews。对普通开发者来说，这说明 AI coding 不只在写代码，也在进入审查、安全和合规流程。</p><a href="https://github.blog/changelog/page/2/">来源</a></article><article class="event-card"><span class="kicker">Risk</span><h3>HalluSquatting 暴露 agent 工具链的新攻击面</h3><p>TechRadar 报道研究者展示通过抢注 LLM 幻觉出的资源名来投放恶意 prompt 的攻击方式。可带走的判断：agent 访问外部资源时，命名、fetch、工具权限都要被当成安全边界。</p><a href="https://www.techradar.com/pro/security/top-ai-tools-such-as-openclaw-and-github-copilot-can-be-hijacked-to-create-new-massive-botnets">来源</a></article><article class="event-card"><span class="kicker">Developer Workflow</span><h3>CodeQL 2.26.0 加入 AI prompt injection 检测</h3><p>GitHub Changelog 7 月 10 日提到 CodeQL 2.26.0 增加 Kotlin 2.4.0 支持和 AI prompt injection detection。这类检测会把 AI 安全问题拉进日常 CI/CD。</p><a href="https://github.blog/changelog/page/2/">来源</a></article></section>
-<section class="section"><div class="section-head"><h2>今天的连线</h2><p>这些事件共同指向一件事：Agent 产品越能做事，越需要更清晰的控制权和安全边界。</p></div><div class="grid-3"><article class="brief"><b>能不能被监督</b><p>从 Codex Micro 到 Copilot app，控制面变成产品能力。</p></article><article class="brief"><b>能不能被审计</b><p>安全 review 和 CodeQL 检测把 AI 风险放进工程流程。</p></article><article class="brief"><b>能不能被限制</b><p>Promptware 风险说明工具调用默认开放会带来真实攻击面。</p></article></div></section>
-</main></body></html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>关键事件 · 2026-07-17</title>
+  <link rel="stylesheet" href="../assets/radar-v2.css">
+  <link rel="stylesheet" href="../assets/radar-v2-phase2.css">
+<link rel="stylesheet" href="../assets/radar-v3-blue.css"></head>
+<body>
+  <main class="shell">
+    <div class="topline"></div>
+    <nav class="nav" aria-label="日报栏目">
+      <a href="../index.html">今日总览</a>
+      <a href="../projects/2026-07-17.html">项目与工具</a>
+      <a class="active" href="./2026-07-17.html">关键事件</a>
+      <a href="../models/2026-07-17.html">模型与研究</a>
+      <a href="../voices/2026-07-17.html">观点讨论</a>
+    </nav>
+
+    <section class="hero compact">
+      <div class="hero-copy">
+        <p class="eyebrow">Key Events</p>
+        <h1>关键事件</h1>
+        <p class="lead">这个栏目回答“外部环境发生了什么”。今天重点不是宏观口号，而是 AI agent 进入工作流后的控制、安全和上下文问题。</p>
+      </div>
+      <aside class="date-card"><div><strong>4 条</strong><span>产品控制面、代码安全、Promptware 风险、依赖冷却。</span></div><small>Practical · Traceable · Actionable</small></aside>
+    </section>
+
+    <section class="section event-stack">
+      <article class="event-card">
+        <span class="kicker">Interface</span>
+        <h3>OpenAI 推出 Codex Micro agent 控制键盘</h3>
+        <p>Axios 报道 OpenAI 与 Work Louder 推出限量 Codex Micro，提供 programmable keys、push-to-talk 和 reasoning 控制旋钮。它的信号不是硬件本身，而是“管理多个 agent”开始需要专门控制界面。</p>
+        <a href="https://www.axios.com/2026/07/15/openai-keyboard-codex-agents">来源</a>
+      </article>
+      <article class="event-card">
+        <span class="kicker">Security</span>
+        <h3>GitHub Copilot app 增加 security reviews</h3>
+        <p>GitHub Changelog 7 月 14 日列出 Copilot app 的 security reviews。对普通开发者来说，这说明 AI coding 不只在写代码，也在进入审查、安全和合规流程。</p>
+        <a href="https://github.blog/changelog/page/2/">来源</a>
+      </article>
+      <article class="event-card">
+        <span class="kicker">Risk</span>
+        <h3>HalluSquatting 暴露 agent 工具链的新攻击面</h3>
+        <p>TechRadar 报道研究者展示通过抢注 LLM 幻觉出的资源名来投放恶意 prompt 的攻击方式。可带走的判断：agent 访问外部资源时，命名、fetch、工具权限都要被当成安全边界。</p>
+        <a href="https://www.techradar.com/pro/security/top-ai-tools-such-as-openclaw-and-github-copilot-can-be-hijacked-to-create-new-massive-botnets">来源</a>
+      </article>
+      <article class="event-card">
+        <span class="kicker">Developer Workflow</span>
+        <h3>CodeQL 2.26.0 加入 AI prompt injection 检测</h3>
+        <p>GitHub Changelog 7 月 10 日提到 CodeQL 2.26.0 增加 Kotlin 2.4.0 支持和 AI prompt injection detection。这类检测会把 AI 安全问题拉进日常 CI/CD。</p>
+        <a href="https://github.blog/changelog/page/2/">来源</a>
+      </article>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>今天的连线</h2><p>这些事件共同指向一件事：Agent 产品越能做事，越需要更清晰的控制权和安全边界。</p></div>
+      <div class="grid-3">
+        <article class="brief"><b>能不能被监督</b><p>从 Codex Micro 到 Copilot app，控制面变成产品能力。</p></article>
+        <article class="brief"><b>能不能被审计</b><p>安全 review 和 CodeQL 检测把 AI 风险放进工程流程。</p></article>
+        <article class="brief"><b>能不能被限制</b><p>Promptware 风险说明工具调用默认开放会带来真实攻击面。</p></article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,8 +1,46 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>模型与研究 · 2026-07-17</title><link rel="stylesheet" href="../assets/radar-v2.css"><link rel="stylesheet" href="../assets/radar-v2-phase3.css"></head>
-<body><main class="shell"><div class="topline"></div><nav class="nav" aria-label="日报栏目"><a href="../index.html">今日总览</a><a href="../projects/2026-07-17.html">项目与工具</a><a href="../news/2026-07-17.html">关键事件</a><a class="active" href="./2026-07-17.html">模型与研究</a><a href="../voices/2026-07-17.html">观点讨论</a></nav>
-<section class="hero compact"><div class="hero-copy"><p class="eyebrow">Models & Research</p><h1>模型与研究</h1><p class="lead">这个栏目回答“能力边界在哪里”。今天不追榜单，而看 agent 安全、代码上下文和开源可用性如何影响真实采用。</p></div><aside class="date-card"><div><strong>3 个判断</strong><span>开源可用性、安全检测、图谱上下文。</span></div><small>Capability · License · Risk</small></aside></section>
-<section class="section model-summary"><article><b>Agent 安全进入工程检测</b><p>CodeQL prompt injection detection 说明 AI 安全风险开始被纳入静态分析与 CI。</p></article><article><b>代码上下文从文本走向结构</b><p>Graphify 这类工具把 repo 变成图谱，说明 coding agent 的上下文层正在产品化。</p></article><article><b>可运行模板比概念更有价值</b><p>awesome-llm-apps 继续证明开发者更需要能 clone 的应用结构，而不是泛泛教程。</p></article></section>
-<section class="section signal-list"><div class="section-head"><h2>模型与产品信号</h2><p>把模型看成工作流能力的一部分，而不是孤立榜单。</p></div><article class="signal-card"><div class="signal-head"><span>Security Eval</span><b>Prompt injection 检测正在工具化</b></div><p>GitHub CodeQL 对 AI prompt injection 的检测意味着未来模型/agent 应用会被更常规地扫描。</p><a href="https://github.blog/changelog/page/2/">来源</a></article><article class="signal-card"><div class="signal-head"><span>Code Context</span><b>知识图谱成为 coding agent 的上下文层</b></div><p>Graphify 的 docs 强调本地构图、MCP、可审计路径，这更像 agent 的记忆与索引层。</p><a href="https://graphify.com/docs">来源</a></article><article class="signal-card"><div class="signal-head"><span>Runnable Apps</span><b>可运行模板降低 LLM 应用试错成本</b></div><p>awesome-llm-apps 的 README 把 agent、RAG、MCP、voice 等模式做成目录和 Quick Start。</p><a href="https://github.com/Shubhamsaboo/awesome-llm-apps">来源</a></article></section>
-<section class="section"><div class="section-head"><h2>后续记录字段</h2><p>下一次自动化应继续保留这些字段，避免模型页变成新闻列表。</p></div><div class="grid-3"><article class="brief"><b>能不能试</b><p>是否有 demo、weights、API、install 或可运行仓库。</p></article><article class="brief"><b>能不能控</b><p>license、部署方式、数据边界、权限模型。</p></article><article class="brief"><b>能不能信</b><p>benchmark 限制、证据链、可审计输出。</p></article></div></section>
-</main></body></html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>模型与研究 · 2026-07-17</title>
+  <link rel="stylesheet" href="../assets/radar-v2.css">
+  <link rel="stylesheet" href="../assets/radar-v2-phase3.css">
+<link rel="stylesheet" href="../assets/radar-v3-blue.css"></head>
+<body>
+  <main class="shell">
+    <div class="topline"></div>
+    <nav class="nav" aria-label="日报栏目">
+      <a href="../index.html">今日总览</a>
+      <a href="../projects/2026-07-17.html">项目与工具</a>
+      <a href="../news/2026-07-17.html">关键事件</a>
+      <a class="active" href="./2026-07-17.html">模型与研究</a>
+      <a href="../voices/2026-07-17.html">观点讨论</a>
+    </nav>
+
+    <section class="hero compact"><div class="hero-copy"><p class="eyebrow">Models & Research</p><h1>模型与研究</h1><p class="lead">这个栏目回答“能力边界在哪里”。今天不追榜单，而看 agent 安全、代码上下文和开源可用性如何影响真实采用。</p></div><aside class="date-card"><div><strong>3 个判断</strong><span>开源可用性、安全检测、图谱上下文。</span></div><small>Capability · License · Risk</small></aside></section>
+
+    <section class="section model-summary">
+      <article><b>Agent 安全进入工程检测</b><p>CodeQL prompt injection detection 说明 AI 安全风险开始被纳入静态分析与 CI。</p></article>
+      <article><b>代码上下文从文本走向结构</b><p>Graphify 这类工具把 repo 变成图谱，说明 coding agent 的上下文层正在产品化。</p></article>
+      <article><b>可运行模板比概念更有价值</b><p>awesome-llm-apps 继续证明开发者更需要能 clone 的应用结构，而不是泛泛教程。</p></article>
+    </section>
+
+    <section class="section signal-list">
+      <div class="section-head"><h2>模型与产品信号</h2><p>把模型看成工作流能力的一部分，而不是孤立榜单。</p></div>
+      <article class="signal-card"><div class="signal-head"><span>Security Eval</span><b>Prompt injection 检测正在工具化</b></div><p>GitHub CodeQL 对 AI prompt injection 的检测意味着未来模型/agent 应用会被更常规地扫描。</p><a href="https://github.blog/changelog/page/2/">来源</a></article>
+      <article class="signal-card"><div class="signal-head"><span>Code Context</span><b>知识图谱成为 coding agent 的上下文层</b></div><p>Graphify 的 docs 强调本地构图、MCP、可审计路径，这更像 agent 的记忆与索引层。</p><a href="https://graphify.com/docs">来源</a></article>
+      <article class="signal-card"><div class="signal-head"><span>Runnable Apps</span><b>可运行模板降低 LLM 应用试错成本</b></div><p>awesome-llm-apps 的 README 把 agent、RAG、MCP、voice 等模式做成目录和 Quick Start。</p><a href="https://github.com/Shubhamsaboo/awesome-llm-apps">来源</a></article>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>后续记录字段</h2><p>下一次自动化应继续保留这些字段，避免模型页变成新闻列表。</p></div>
+      <div class="grid-3">
+        <article class="brief"><b>能不能试</b><p>是否有 demo、weights、API、install 或可运行仓库。</p></article>
+        <article class="brief"><b>能不能控</b><p>license、部署方式、数据边界、权限模型。</p></article>
+        <article class="brief"><b>能不能信</b><p>benchmark 限制、证据链、可审计输出。</p></article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

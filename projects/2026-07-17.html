@@ -1,10 +1,98 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>项目与工具 · 2026-07-17</title><link rel="stylesheet" href="../assets/radar-v2.css"></head>
-<body><main class="shell"><div class="topline"></div><nav class="nav" aria-label="日报栏目"><a href="../index.html">今日总览</a><a class="active" href="./2026-07-17.html">项目与工具</a><a href="../news/2026-07-17.html">关键事件</a><a href="../models/2026-07-17.html">模型与研究</a><a href="../voices/2026-07-17.html">观点讨论</a></nav>
-<section class="hero compact"><div class="hero-copy"><p class="eyebrow">Projects & Tools</p><h1>项目与工具</h1><p class="lead">这个栏目回答“今天有什么值得试”。临时验证版复用今天旧任务已核验的三个项目，并按新版栏目页展示。</p></div><aside class="date-card"><div><strong>3 个项目</strong><span>Hallmark、Graphify、awesome-llm-apps。</span></div><small>README/docs checked · High confidence</small></aside></section>
-<section class="section"><div class="section-head"><h2>编辑排序</h2><p>优先选择能直接进入开发者工作流、且 README/docs/demo 可核验的项目。</p></div><div class="rank-list"><a href="#hallmark"><span>01</span><b>Hallmark</b><em>AI 生成 UI 的质量控制 skill</em></a><a href="#graphify"><span>02</span><b>Graphify</b><em>给 coding agent 的代码知识图谱</em></a><a href="#awesome-llm-apps"><span>03</span><b>awesome-llm-apps</b><em>可运行 LLM 应用模板库</em></a></div></section>
-<section class="section project-stack"><article class="project-card" id="hallmark"><div class="project-main"><span class="kicker">High Momentum · Score 86</span><h3>Hallmark</h3><p>一个面向 Claude Code、Cursor、Codex 等 agent 的设计 skill，用结构变化、主题选择和质量门槛减少 AI 生成页面的“模板味”。</p><dl class="facts"><div><dt>为什么重要</dt><dd>它不是组件库，而是把设计判断写进 agent 的行为规则，适合解决 AI 页面同质化。</dd></div><div><dt>适合谁</dt><dd>经常用 coding agent 生成页面、落地页、产品原型的人。</dd></div><div><dt>核验</dt><dd>README/技能说明与安装路径可查；来源包括 Agent Skills Library 与项目说明。</dd></div></dl></div><aside class="score-card"><span>Evaluation</span><strong>86</strong><a href="https://mcpservers.org/agent-skills/nutlope/hallmark">来源</a></aside></article>
-<article class="project-card" id="graphify"><div class="project-main"><span class="kicker">Useful Tool · Score 82</span><h3>Graphify</h3><p>把代码库、文档和 schema 映射成可查询知识图谱，让 AI coding assistant 通过关系路径理解代码，而不是每次重新 grep。</p><dl class="facts"><div><dt>为什么重要</dt><dd>Agent 写代码时最常卡在上下文重建；图谱把调用、导入、定义等关系显式化。</dd></div><div><dt>适合谁</dt><dd>维护中大型代码库、经常问跨文件架构问题的工程团队。</dd></div><div><dt>核验</dt><dd>Graphify docs 描述安装、构图、查询、MCP 接入和本地输出文件。</dd></div></dl></div><aside class="score-card"><span>Evaluation</span><strong>82</strong><a href="https://graphify.com/docs">来源</a></aside></article>
-<article class="project-card" id="awesome-llm-apps"><div class="project-main"><span class="kicker">Category Map · Score 76</span><h3>awesome-llm-apps</h3><p>一个收集可运行 AI Agent、RAG、MCP、语音和多 agent 模板的仓库，价值在于能直接 clone、改造、运行。</p><dl class="facts"><div><dt>为什么重要</dt><dd>它把“我想做一个 LLM 应用”转成可复制的工程起点，而不是只给灵感列表。</dd></div><div><dt>适合谁</dt><dd>想快速学习 AI 应用结构、复用模板、比较不同 agent/RAG 写法的开发者。</dd></div><div><dt>核验</dt><dd>GitHub README 包含 Quick Start、模板目录、license 和示例分类。</dd></div></dl></div><aside class="score-card"><span>Evaluation</span><strong>76</strong><a href="https://github.com/Shubhamsaboo/awesome-llm-apps">来源</a></aside></article></section>
-<section class="section"><h2>评分对照</h2><table class="score-table"><thead><tr><th>项目</th><th>Popularity</th><th>Growth</th><th>Usability</th><th>Differentiation</th><th>Activity</th><th>Confidence</th></tr></thead><tbody><tr><td>Hallmark</td><td>82</td><td>88</td><td>90</td><td>88</td><td>80</td><td>High</td></tr><tr><td>Graphify</td><td>84</td><td>82</td><td>84</td><td>86</td><td>74</td><td>High</td></tr><tr><td>awesome-llm-apps</td><td>92</td><td>70</td><td>78</td><td>68</td><td>70</td><td>High</td></tr></tbody></table></section>
-</main></body></html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>项目与工具 · 2026-07-17</title>
+  <link rel="stylesheet" href="../assets/radar-v2.css">
+<link rel="stylesheet" href="../assets/radar-v3-blue.css"></head>
+<body>
+  <main class="shell">
+    <div class="topline"></div>
+    <nav class="nav" aria-label="日报栏目">
+      <a href="../index.html">今日总览</a>
+      <a class="active" href="./2026-07-17.html">项目与工具</a>
+      <a href="../news/2026-07-17.html">关键事件</a>
+      <a href="../models/2026-07-17.html">模型与研究</a>
+      <a href="../voices/2026-07-17.html">观点讨论</a>
+    </nav>
+
+    <section class="hero compact">
+      <div class="hero-copy">
+        <p class="eyebrow">Projects & Tools</p>
+        <h1>项目与工具</h1>
+        <p class="lead">这个栏目回答“今天有什么值得试”。临时验证版复用今天旧任务已核验的三个项目，并按新版栏目页展示。</p>
+      </div>
+      <aside class="date-card">
+        <div><strong>3 个项目</strong><span>Hallmark、Graphify、awesome-llm-apps。</span></div>
+        <small>README/docs checked · High confidence</small>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><h2>编辑排序</h2><p>优先选择能直接进入开发者工作流、且 README/docs/demo 可核验的项目。</p></div>
+      <div class="rank-list">
+        <a href="#hallmark"><span>01</span><b>Hallmark</b><em>AI 生成 UI 的质量控制 skill</em></a>
+        <a href="#graphify"><span>02</span><b>Graphify</b><em>给 coding agent 的代码知识图谱</em></a>
+        <a href="#awesome-llm-apps"><span>03</span><b>awesome-llm-apps</b><em>可运行 LLM 应用模板库</em></a>
+      </div>
+    </section>
+
+    <section class="section project-stack">
+      <article class="project-card" id="hallmark">
+        <div class="project-main">
+          <span class="kicker">High Momentum · Score 86</span>
+          <h3>Hallmark</h3>
+          <p>一个面向 Claude Code、Cursor、Codex 等 agent 的设计 skill，用结构变化、主题选择和质量门槛减少 AI 生成页面的“模板味”。</p>
+          <dl class="facts">
+            <div><dt>为什么重要</dt><dd>它不是组件库，而是把设计判断写进 agent 的行为规则，适合解决 AI 页面同质化。</dd></div>
+            <div><dt>适合谁</dt><dd>经常用 coding agent 生成页面、落地页、产品原型的人。</dd></div>
+            <div><dt>核验</dt><dd>README/技能说明与安装路径可查；来源包括 Agent Skills Library 与项目说明。</dd></div>
+          </dl>
+        </div>
+        <aside class="score-card"><span>Evaluation</span><strong>86</strong><a href="https://mcpservers.org/agent-skills/nutlope/hallmark">来源</a></aside>
+      </article>
+
+      <article class="project-card" id="graphify">
+        <div class="project-main">
+          <span class="kicker">Useful Tool · Score 82</span>
+          <h3>Graphify</h3>
+          <p>把代码库、文档和 schema 映射成可查询知识图谱，让 AI coding assistant 通过关系路径理解代码，而不是每次重新 grep。</p>
+          <dl class="facts">
+            <div><dt>为什么重要</dt><dd>Agent 写代码时最常卡在上下文重建；图谱把调用、导入、定义等关系显式化。</dd></div>
+            <div><dt>适合谁</dt><dd>维护中大型代码库、经常问跨文件架构问题的工程团队。</dd></div>
+            <div><dt>核验</dt><dd>Graphify docs 描述安装、构图、查询、MCP 接入和本地输出文件。</dd></div>
+          </dl>
+        </div>
+        <aside class="score-card"><span>Evaluation</span><strong>82</strong><a href="https://graphify.com/docs">来源</a></aside>
+      </article>
+
+      <article class="project-card" id="awesome-llm-apps">
+        <div class="project-main">
+          <span class="kicker">Category Map · Score 76</span>
+          <h3>awesome-llm-apps</h3>
+          <p>一个收集可运行 AI Agent、RAG、MCP、语音和多 agent 模板的仓库，价值在于能直接 clone、改造、运行。</p>
+          <dl class="facts">
+            <div><dt>为什么重要</dt><dd>它把“我想做一个 LLM 应用”转成可复制的工程起点，而不是只给灵感列表。</dd></div>
+            <div><dt>适合谁</dt><dd>想快速学习 AI 应用结构、复用模板、比较不同 agent/RAG 写法的开发者。</dd></div>
+            <div><dt>核验</dt><dd>GitHub README 包含 Quick Start、模板目录、license 和示例分类。</dd></div>
+          </dl>
+        </div>
+        <aside class="score-card"><span>Evaluation</span><strong>76</strong><a href="https://github.com/Shubhamsaboo/awesome-llm-apps">来源</a></aside>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>评分对照</h2>
+      <table class="score-table">
+        <thead><tr><th>项目</th><th>Popularity</th><th>Growth</th><th>Usability</th><th>Differentiation</th><th>Activity</th><th>Confidence</th></tr></thead>
+        <tbody>
+          <tr><td>Hallmark</td><td>82</td><td>88</td><td>90</td><td>88</td><td>80</td><td>High</td></tr>
+          <tr><td>Graphify</td><td>84</td><td>82</td><td>84</td><td>86</td><td>74</td><td>High</td></tr>
+          <tr><td>awesome-llm-apps</td><td>92</td><td>70</td><td>78</td><td>68</td><td>70</td><td>High</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

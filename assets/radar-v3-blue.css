@@ -1,0 +1,53 @@
+/* AI Content Radar — blue/white technology visual system */
+:root{
+  --bg:#f4f8ff;
+  --paper:#ffffff;
+  --ink:#0a1f44;
+  --muted:#587092;
+  --line:#d7e6fb;
+  --soft:#eaf3ff;
+  --green:#1677ff;
+  --deep:#0b2e66;
+  --blue:#2d9cff;
+  --rust:#526dff;
+  --gold:#8bc5ff;
+}
+body{
+  background:
+    radial-gradient(circle at 90% -10%,rgba(45,156,255,.18),transparent 28rem),
+    radial-gradient(circle at -10% 35%,rgba(82,109,255,.10),transparent 26rem),
+    var(--bg);
+  color:var(--ink);
+}
+a{color:#126ee8}
+.shell{width:min(1160px,calc(100% - 36px));padding-top:26px}
+.topline{height:4px;margin-bottom:24px;background:linear-gradient(90deg,#0b2e66 0%,#1677ff 46%,#4bb4ff 100%);box-shadow:0 4px 18px rgba(22,119,255,.28)}
+.nav{gap:9px;margin-bottom:24px}
+.nav a{border-color:rgba(102,162,229,.28);background:rgba(255,255,255,.78);color:#315273;padding:9px 14px;box-shadow:0 5px 18px rgba(36,100,178,.06);transition:.18s ease}
+.nav a:hover{border-color:#73b7ff;color:#0e63d4;transform:translateY(-1px)}
+.nav a.active{background:linear-gradient(135deg,#0b3d91,#1677ff);border-color:#1677ff;box-shadow:0 9px 22px rgba(22,119,255,.28)}
+.site-brand{margin-bottom:18px}.site-brand strong{color:#0b2e66}.site-brand small{color:#1677ff}
+.hero-copy,.panel,.item,.brief,.callout,.event-card,.voice-card,.project-card,.verdict,.score-table,.digest,.source-card,.rule-card,.flow-card,.model-summary article,.signal-card,.research-card,.archive-grid article{
+  border-color:rgba(117,169,229,.28);
+  box-shadow:0 12px 30px rgba(27,92,170,.07);
+}
+.hero-copy{border-radius:18px;background:rgba(255,255,255,.92)}
+.hero.compact h1,h1{letter-spacing:-.045em;color:#0b2e66}
+.eyebrow{color:#1677ff}
+.lead,.section-head p,.brief p,.item p,.callout p,.event-card>p,.voice-card p,.project-main p,.quiet{color:var(--muted)}
+.date-card{border:0;border-radius:18px;background:linear-gradient(145deg,#092b62 0%,#0e5bc8 52%,#229dff 100%);box-shadow:0 18px 38px rgba(11,72,156,.24)}
+.date-card span,.date-card small,.score-card span{color:#cce8ff}
+.button{background:linear-gradient(135deg,#0d55bd,#1677ff);box-shadow:0 8px 18px rgba(22,119,255,.22)}
+.button.ghost{border-color:#acd4ff;color:#126ee8;background:#fff}
+.pill{background:#e7f2ff;color:#0d55bd}
+.brief.primary{border-color:#9ecbff;box-shadow:inset 3px 0 0 #1677ff,0 12px 30px rgba(27,92,170,.07)}
+.rank,.score,.item-top .rank,.rank-list span{color:#1677ff}
+.kicker,.signal-head span{color:#357cff}
+.score-card{background:linear-gradient(145deg,#0b2e66,#126ee8);border:0;box-shadow:0 16px 34px rgba(13,86,190,.24)}
+.event-card.priority-high{border-color:#9dccff;box-shadow:inset 4px 0 0 #1677ff,0 12px 30px rgba(27,92,170,.07)}
+.digest,.score-table th{background:#edf6ff}
+.tag-cloud a{border-color:#c5defa;background:#fff;color:#126ee8}
+.cover{background:linear-gradient(135deg,#082659 0%,#0e5bc8 52%,#35a8ff 100%)!important;color:#f8fbff!important;box-shadow:0 22px 48px rgba(10,62,142,.25)}
+.cover .eyebrow,.cover .lead{color:#d9edff!important}.cover .button{background:#fff!important;color:#0b3d91!important}.cover .button.ghost{background:transparent!important;color:#fff!important;border-color:rgba(255,255,255,.56)!important}
+.method-hero .date-card{background:linear-gradient(145deg,#092b62,#1677ff)!important}
+@media(max-width:700px){.shell{width:min(100% - 24px,1160px)}.nav a{padding:8px 11px}.hero-copy,.date-card{border-radius:14px}}
