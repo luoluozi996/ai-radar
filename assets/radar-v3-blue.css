@@ -23,7 +23,6 @@ body{
 }
 a{color:#126ee8}
 .shell{width:min(1160px,calc(100% - 36px));padding-top:26px}
-.topline{height:4px;margin-bottom:24px;background:linear-gradient(90deg,#0b2e66 0%,#1677ff 46%,#4bb4ff 100%);box-shadow:0 4px 18px rgba(22,119,255,.28)}
 .nav{gap:9px;margin-bottom:24px}
 .nav a{border-color:rgba(102,162,229,.28);background:rgba(255,255,255,.78);color:#315273;padding:9px 14px;box-shadow:0 5px 18px rgba(36,100,178,.06);transition:.18s ease}
 .nav a:hover{border-color:#73b7ff;color:#0e63d4;transform:translateY(-1px)}
