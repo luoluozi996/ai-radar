@@ -2,6 +2,18 @@
   "generated_at": "2026-07-20",
   "reports": [
     {
+      "date": "2026-07-21",
+      "title": "AI Content Radar",
+      "summary": "AI tooling is shifting from capability demos to controllable operations: usage visibility, explicit budgets, bounded permissions, and testable execution records. X fetch did not run because the local Python runtime is unavailable.",
+      "sections": [
+        {"label": "今日总览", "url": "../daily/2026-07-21.html", "tags": ["overview", "daily"]},
+        {"label": "项目与工具", "url": "../projects/2026-07-21.html", "tags": ["agents", "tools", "github"]},
+        {"label": "关键事件", "url": "../news/2026-07-21.html", "tags": ["copilot", "cost", "governance"]},
+        {"label": "模型与研究", "url": "../models/2026-07-21.html", "tags": ["models", "research", "evaluation"]},
+        {"label": "观点讨论", "url": "../voices/2026-07-21.html", "tags": ["community", "voices", "x-runtime-degraded"]}
+      ]
+    },
+    {
       "date": "2026-07-20",
       "title": "AI Content Radar",
       "summary": "Agent adoption is moving to controllable loops: budgets, permissions, execution records, and acceptance gates. X fetch was skipped because the local Python runtime is unavailable.",
