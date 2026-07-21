@@ -1,5 +1,13 @@
 # AI Content Radar
 
+## X fetch on Windows
+
+Use the launcher below rather than calling `python` directly. It first tries normal commands, then resolves the Python Install Manager through the Windows App Paths registry; this keeps the scheduled job working when Microsoft Store app-execution aliases are invisible to the automation host.
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/run_x_fetch.ps1 -Date YYYY-MM-DD -MaxAccounts 8 -MaxQueries 2 -Limit 8
+```
+
 AI Content Radar is an automated AI intelligence briefing project. It collects public signals from developer communities, AI product updates, model/research sources, and social discussion, then turns them into a structured daily report published on GitHub Pages.
 
 Live site: https://luoluozi996.github.io/ai-radar/
@@ -81,6 +89,10 @@ Full methodology page: https://luoluozi996.github.io/ai-radar/methodology.html
 +-- assets/                    # Shared CSS and page assets
 `-- data/                      # Public index data only
 ```
+
+## Resume Summary
+
+Built an automated AI intelligence pipeline that collects multi-source public signals, filters and ranks high-value items, generates a multi-page daily report, publishes it to GitHub Pages, syncs selected records to Notion, and sends WeChat notifications with secret-safe handling.
 
 ## Roadmap
 
