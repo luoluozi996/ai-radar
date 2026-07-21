@@ -14,7 +14,8 @@
     .cover .button.ghost{background:transparent;color:#f8fbf8;border-color:rgba(255,255,255,.42)}
     .metric-stack{display:grid;gap:12px}
     .metric{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:18px}
-    .metric strong{display:block;color:var(--deep);font-size:28px}
+    .metric strong{display:block;color:var(--deep);font-size:22px;line-height:1.25}
+    .metric span{display:block;margin-top:6px;line-height:1.55}
     .report-grid,.capability-grid{display:grid;gap:14px}
     .report-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
     .capability-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
@@ -37,20 +38,20 @@
 
     <section class="home-hero">
       <article class="hero-copy cover">
-        <p class="eyebrow">AI Content Radar</p>
-        <h1>自动化 AI 内容日报</h1>
-        <p class="lead">一个面向个人学习与行业观察的信息雷达：从 GitHub、X、HN、RSS、论文与模型社区抓取公开信号，筛选出项目、事件、模型与观点，并发布为可归档、可分享、可复盘的多栏目日报。</p>
+        <p class="eyebrow">TODAY'S AI SIGNALS</p>
+        <h1>每天 5 分钟，<br>看懂真正重要的 AI 变化</h1>
+        <p class="lead">不必追完所有新闻。这里把值得关注的项目、产品变化、模型进展和一手讨论整理成可判断、可行动的每日阅读清单。</p>
         <div class="hero-actions">
-          <a class="button" href="./projects/2026-07-21.html">查看最新日报</a>
-          <a class="button ghost" href="./methodology.html">了解筛选方法</a>
-          <a class="button ghost" href="./archive/index.html">浏览历史归档</a>
+          <a class="button" href="./daily/2026-07-21.html">查看今天的重点</a>
+          <a class="button ghost" href="./projects/2026-07-21.html">发现可用工具</a>
+          <a class="button ghost" href="./methodology.html">了解筛选标准</a>
         </div>
       </article>
-      <aside class="metric-stack">
-        <div class="metric"><strong>09:00</strong><span>每日自动更新，生成网页与归档入口。</span></div>
-        <div class="metric"><strong>5+</strong><span>栏目覆盖项目、新闻、模型、观点、X 帖子观察。</span></div>
-        <div class="metric"><strong>多源</strong><span>GitHub、X API、HN、RSS、Hugging Face、论文与官方博客。</span></div>
-        <div class="metric"><strong>可展示</strong><span>GitHub Pages 发布，Notion 留档，微信推送提醒。</span></div>
+      <aside class="metric-stack" aria-label="你会获得什么">
+        <div class="metric"><strong>今天先看什么</strong><span>一页总览，快速抓住真正值得关注的 AI 信号。</span></div>
+        <div class="metric"><strong>哪些值得试</strong><span>项目与工具说明用途、适合谁，以及需要注意的限制。</span></div>
+        <div class="metric"><strong>哪些会影响你</strong><span>关注产品、模型、成本与工作方式的实际变化。</span></div>
+        <div class="metric"><strong>为什么值得相信</strong><span>每条保留来源、实践意义和不该忽略的边界。</span></div>
       </aside>
     </section>
 
