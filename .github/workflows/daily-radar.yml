@@ -46,8 +46,16 @@ jobs:
             report_date="$(TZ=Asia/Shanghai date +%F)"
           fi
           mkdir -p daily
-          if [ -f index.html ]; then
+          if ! git diff --quiet -- index.html; then
             cp index.html "daily/${report_date}.html"
+            python - <<PY
+          from pathlib import Path
+          path = Path("daily/${report_date}.html")
+          text = path.read_text(encoding="utf-8")
+          text = text.replace('url=./ai-project-radar-', 'url=../ai-project-radar-')
+          text = text.replace('href="./ai-project-radar-', 'href="../ai-project-radar-')
+          path.write_text(text, encoding="utf-8")
+          PY
             git checkout -- index.html
           fi
 
