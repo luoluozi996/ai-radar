@@ -1,10 +1,23 @@
 {
-  "generated_at": "2026-07-20",
+  "generated_at": "2026-07-22",
   "reports": [
+    {
+      "date": "2026-07-22",
+      "title": "AI Content Radar",
+      "summary": "AI is moving from capability demos into real safety boundaries and daily work methods: OpenAI/Hugging Face security disclosure, reward-seeking research, voice-first context capture, and Claude Code prompting practice.",
+      "sections": [
+        {"label": "今日总览", "url": "../daily/2026-07-22.html", "tags": ["overview", "daily"]},
+        {"label": "项目与工具", "url": "../projects/2026-07-22.html", "tags": ["tools", "coding", "workflow"]},
+        {"label": "关键事件", "url": "../news/2026-07-22.html", "tags": ["security", "science", "cost"]},
+        {"label": "模型与研究", "url": "../models/2026-07-22.html", "tags": ["models", "research", "evaluation"]},
+        {"label": "观点讨论", "url": "../voices/2026-07-22.html", "tags": ["community", "voices"]},
+        {"label": "X 帖子观察", "url": "../x/2026-07-22.html", "tags": ["x", "posts", "community"]}
+      ]
+    },
     {
       "date": "2026-07-21",
       "title": "AI Content Radar",
-      "summary": "AI tooling is shifting from capability demos to controllable operations: usage visibility, explicit budgets, bounded permissions, and testable execution records. Five selected X posts add research credits, open-weight supply, open-source trust, maintainability, and evaluation context.",
+      "summary": "AI tooling is shifting from capability demos to controllable operations: usage visibility, explicit budgets, bounded permissions, and testable execution records.",
       "sections": [
         {"label": "今日总览", "url": "../daily/2026-07-21.html", "tags": ["overview", "daily"]},
         {"label": "项目与工具", "url": "../projects/2026-07-21.html", "tags": ["agents", "tools", "github"]},
@@ -17,24 +30,24 @@
     {
       "date": "2026-07-20",
       "title": "AI Content Radar",
-      "summary": "Agent adoption is moving to controllable loops: budgets, permissions, execution records, and acceptance gates. X fetch was skipped because the local Python runtime is unavailable.",
+      "summary": "Agent adoption is moving to controllable loops: budgets, permissions, execution records, and acceptance gates.",
       "sections": [
         {"label": "今日总览", "url": "../daily/2026-07-20.html", "tags": ["overview", "daily"]},
         {"label": "项目与工具", "url": "../projects/2026-07-20.html", "tags": ["agents", "tools", "github"]},
         {"label": "关键事件", "url": "../news/2026-07-20.html", "tags": ["workflow", "cost", "byok"]},
         {"label": "模型与研究", "url": "../models/2026-07-20.html", "tags": ["models", "research", "evaluation"]},
-        {"label": "观点讨论", "url": "../voices/2026-07-20.html", "tags": ["community", "voices", "x-runtime-degraded"]}
+        {"label": "观点讨论", "url": "../voices/2026-07-20.html", "tags": ["community", "voices"]}
       ]
     },
     {
       "date": "2026-07-18",
       "title": "AI Content Radar",
-      "summary": "Agents need permission, observability, and collaboration rules. X API degraded; no X page was generated.",
+      "summary": "Agents need permission, observability, and collaboration rules.",
       "sections": [
         {"label": "项目与工具", "url": "../projects/2026-07-18.html", "tags": ["agents", "tools", "github"]},
         {"label": "关键事件", "url": "../news/2026-07-18.html", "tags": ["workflow", "privacy", "migration"]},
         {"label": "模型与研究", "url": "../models/2026-07-18.html", "tags": ["models", "research", "evaluation"]},
-        {"label": "观点讨论", "url": "../voices/2026-07-18.html", "tags": ["community", "voices", "x-fallback"]}
+        {"label": "观点讨论", "url": "../voices/2026-07-18.html", "tags": ["community", "voices"]}
       ]
     },
     {
@@ -61,29 +74,8 @@
         {"label": "旧版入口", "url": "../ai-project-radar-2026-07-16.html", "tags": ["legacy", "redirect"]}
       ]
     },
-    {
-      "date": "2026-07-15",
-      "title": "AI Project Radar",
-      "summary": "Legacy single-page project radar.",
-      "sections": [
-        {"label": "历史日报", "url": "../ai-project-radar-2026-07-15.html", "tags": ["legacy", "project-radar"]}
-      ]
-    },
-    {
-      "date": "2026-07-14",
-      "title": "AI Project Radar",
-      "summary": "Legacy single-page project radar.",
-      "sections": [
-        {"label": "历史日报", "url": "../ai-project-radar-2026-07-14.html", "tags": ["legacy", "project-radar"]}
-      ]
-    },
-    {
-      "date": "2026-07-13",
-      "title": "AI Project Radar",
-      "summary": "Initial legacy single-page project radar.",
-      "sections": [
-        {"label": "历史日报", "url": "../ai-project-radar-2026-07-13.html", "tags": ["legacy", "project-radar"]}
-      ]
-    }
+    {"date": "2026-07-15", "title": "AI Project Radar", "summary": "Legacy single-page project radar.", "sections": [{"label": "历史日报", "url": "../ai-project-radar-2026-07-15.html", "tags": ["legacy", "project-radar"]}]},
+    {"date": "2026-07-14", "title": "AI Project Radar", "summary": "Legacy single-page project radar.", "sections": [{"label": "历史日报", "url": "../ai-project-radar-2026-07-14.html", "tags": ["legacy", "project-radar"]}]},
+    {"date": "2026-07-13", "title": "AI Project Radar", "summary": "Initial legacy single-page project radar.", "sections": [{"label": "历史日报", "url": "../ai-project-radar-2026-07-13.html", "tags": ["legacy", "project-radar"]}]}
   ]
 }
