@@ -1,81 +1,15 @@
 {
-  "generated_at": "2026-07-22",
+  "generated_at": "2026-07-23",
   "reports": [
-    {
-      "date": "2026-07-22",
-      "title": "AI Content Radar",
-      "summary": "AI is moving from capability demos into real safety boundaries and daily work methods: OpenAI/Hugging Face security disclosure, reward-seeking research, voice-first context capture, and Claude Code prompting practice.",
-      "sections": [
-        {"label": "今日总览", "url": "../daily/2026-07-22.html", "tags": ["overview", "daily"]},
-        {"label": "项目与工具", "url": "../projects/2026-07-22.html", "tags": ["tools", "coding", "workflow"]},
-        {"label": "关键事件", "url": "../news/2026-07-22.html", "tags": ["security", "science", "cost"]},
-        {"label": "模型与研究", "url": "../models/2026-07-22.html", "tags": ["models", "research", "evaluation"]},
-        {"label": "观点讨论", "url": "../voices/2026-07-22.html", "tags": ["community", "voices"]},
-        {"label": "X 帖子观察", "url": "../x/2026-07-22.html", "tags": ["x", "posts", "community"]}
-      ]
-    },
-    {
-      "date": "2026-07-21",
-      "title": "AI Content Radar",
-      "summary": "AI tooling is shifting from capability demos to controllable operations: usage visibility, explicit budgets, bounded permissions, and testable execution records.",
-      "sections": [
-        {"label": "今日总览", "url": "../daily/2026-07-21.html", "tags": ["overview", "daily"]},
-        {"label": "项目与工具", "url": "../projects/2026-07-21.html", "tags": ["agents", "tools", "github"]},
-        {"label": "关键事件", "url": "../news/2026-07-21.html", "tags": ["copilot", "cost", "governance"]},
-        {"label": "模型与研究", "url": "../models/2026-07-21.html", "tags": ["models", "research", "evaluation"]},
-        {"label": "观点讨论", "url": "../voices/2026-07-21.html", "tags": ["community", "voices"]},
-        {"label": "X 帖子观察", "url": "../x/2026-07-21.html", "tags": ["x", "posts", "community"]}
-      ]
-    },
-    {
-      "date": "2026-07-20",
-      "title": "AI Content Radar",
-      "summary": "Agent adoption is moving to controllable loops: budgets, permissions, execution records, and acceptance gates.",
-      "sections": [
-        {"label": "今日总览", "url": "../daily/2026-07-20.html", "tags": ["overview", "daily"]},
-        {"label": "项目与工具", "url": "../projects/2026-07-20.html", "tags": ["agents", "tools", "github"]},
-        {"label": "关键事件", "url": "../news/2026-07-20.html", "tags": ["workflow", "cost", "byok"]},
-        {"label": "模型与研究", "url": "../models/2026-07-20.html", "tags": ["models", "research", "evaluation"]},
-        {"label": "观点讨论", "url": "../voices/2026-07-20.html", "tags": ["community", "voices"]}
-      ]
-    },
-    {
-      "date": "2026-07-18",
-      "title": "AI Content Radar",
-      "summary": "Agents need permission, observability, and collaboration rules.",
-      "sections": [
-        {"label": "项目与工具", "url": "../projects/2026-07-18.html", "tags": ["agents", "tools", "github"]},
-        {"label": "关键事件", "url": "../news/2026-07-18.html", "tags": ["workflow", "privacy", "migration"]},
-        {"label": "模型与研究", "url": "../models/2026-07-18.html", "tags": ["models", "research", "evaluation"]},
-        {"label": "观点讨论", "url": "../voices/2026-07-18.html", "tags": ["community", "voices"]}
-      ]
-    },
-    {
-      "date": "2026-07-17",
-      "title": "AI Content Radar",
-      "summary": "Multi-section daily report validation with an X watch page.",
-      "sections": [
-        {"label": "项目与工具", "url": "../projects/2026-07-17.html", "tags": ["tools"]},
-        {"label": "关键事件", "url": "../news/2026-07-17.html", "tags": ["news"]},
-        {"label": "模型与研究", "url": "../models/2026-07-17.html", "tags": ["models"]},
-        {"label": "观点讨论", "url": "../voices/2026-07-17.html", "tags": ["voices"]},
-        {"label": "X 帖子观察", "url": "../x/2026-07-17.html", "tags": ["x", "posts"]}
-      ]
-    },
-    {
-      "date": "2026-07-16",
-      "title": "AI Content Radar",
-      "summary": "First complete multi-section daily report, including projects, events, models, and voices.",
-      "sections": [
-        {"label": "项目与工具", "url": "../projects/2026-07-16.html", "tags": ["projects", "tools"]},
-        {"label": "关键事件", "url": "../news/2026-07-16.html", "tags": ["news", "events"]},
-        {"label": "模型与研究", "url": "../models/2026-07-16.html", "tags": ["models", "research"]},
-        {"label": "观点讨论", "url": "../voices/2026-07-16.html", "tags": ["voices", "community"]},
-        {"label": "旧版入口", "url": "../ai-project-radar-2026-07-16.html", "tags": ["legacy", "redirect"]}
-      ]
-    },
-    {"date": "2026-07-15", "title": "AI Project Radar", "summary": "Legacy single-page project radar.", "sections": [{"label": "历史日报", "url": "../ai-project-radar-2026-07-15.html", "tags": ["legacy", "project-radar"]}]},
-    {"date": "2026-07-14", "title": "AI Project Radar", "summary": "Legacy single-page project radar.", "sections": [{"label": "历史日报", "url": "../ai-project-radar-2026-07-14.html", "tags": ["legacy", "project-radar"]}]},
-    {"date": "2026-07-13", "title": "AI Project Radar", "summary": "Initial legacy single-page project radar.", "sections": [{"label": "历史日报", "url": "../ai-project-radar-2026-07-13.html", "tags": ["legacy", "project-radar"]}]}
+    {"date":"2026-07-23","title":"AI Content Radar","summary":"Verified-signal-only daily brief; X collection unavailable because Python runtime is missing.","sections":[{"label":"Daily","url":"../daily/2026-07-23.html","tags":["overview","daily"]},{"label":"Projects","url":"../projects/2026-07-23.html","tags":["tools","workflow"]},{"label":"Events","url":"../news/2026-07-23.html","tags":["security","governance"]},{"label":"Models","url":"../models/2026-07-23.html","tags":["research","evaluation"]},{"label":"Voices","url":"../voices/2026-07-23.html","tags":["community","voices"]}]},
+    {"date":"2026-07-22","title":"AI Content Radar","summary":"Safety boundaries, reward-seeking research, and daily AI work methods.","sections":[{"label":"Daily","url":"../daily/2026-07-22.html","tags":["overview","daily"]},{"label":"Projects","url":"../projects/2026-07-22.html","tags":["tools"]},{"label":"Events","url":"../news/2026-07-22.html","tags":["security"]},{"label":"Models","url":"../models/2026-07-22.html","tags":["research"]},{"label":"Voices","url":"../voices/2026-07-22.html","tags":["community"]},{"label":"X Watch","url":"../x/2026-07-22.html","tags":["x"]}]},
+    {"date":"2026-07-21","title":"AI Content Radar","summary":"Controllable AI operations and usage visibility.","sections":[{"label":"Daily","url":"../daily/2026-07-21.html","tags":["daily"]}]},
+    {"date":"2026-07-20","title":"AI Content Radar","summary":"Agent budgets, permissions, and acceptance gates.","sections":[{"label":"Daily","url":"../daily/2026-07-20.html","tags":["daily"]}]},
+    {"date":"2026-07-18","title":"AI Content Radar","summary":"Agent collaboration and control surfaces.","sections":[{"label":"Projects","url":"../projects/2026-07-18.html","tags":["tools"]}]},
+    {"date":"2026-07-17","title":"AI Content Radar","summary":"Multi-section report validation.","sections":[{"label":"Projects","url":"../projects/2026-07-17.html","tags":["tools"]}]},
+    {"date":"2026-07-16","title":"AI Content Radar","summary":"First multi-section daily report.","sections":[{"label":"Projects","url":"../projects/2026-07-16.html","tags":["tools"]}]},
+    {"date":"2026-07-15","title":"AI Project Radar","summary":"Legacy project radar.","sections":[{"label":"Legacy","url":"../ai-project-radar-2026-07-15.html","tags":["legacy"]}]},
+    {"date":"2026-07-14","title":"AI Project Radar","summary":"Legacy project radar.","sections":[{"label":"Legacy","url":"../ai-project-radar-2026-07-14.html","tags":["legacy"]}]},
+    {"date":"2026-07-13","title":"AI Project Radar","summary":"Legacy project radar.","sections":[{"label":"Legacy","url":"../ai-project-radar-2026-07-13.html","tags":["legacy"]}]}
   ]
 }
