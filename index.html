@@ -3,23 +3,100 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>AI Content Radar | 自动化 AI 内容日报</title>
-  <meta name="description" content="自动化 AI 内容雷达：聚合 GitHub、X、HN、RSS、模型社区与官方公告，生成多栏目日报并发布到 GitHub Pages。">
+  <title>AI Content Radar | 鑷姩鍖?AI 鍐呭鏃ユ姤</title>
+  <meta name="description" content="鑷姩鍖?AI 鍐呭闆疯揪锛氳仛鍚?GitHub銆乆銆丠N銆丷SS銆佹ā鍨嬬ぞ鍖轰笌瀹樻柟鍏憡锛岀敓鎴愬鏍忕洰鏃ユ姤骞跺彂甯冨埌 GitHub Pages銆?>
   <link rel="stylesheet" href="./assets/radar-v2.css">
   <link rel="stylesheet" href="./assets/radar-v3-blue.css?v=6382f593">
   <style>
-    .home-hero{display:grid;grid-template-columns:minmax(0,1.35fr)320px;gap:18px}.cover{min-height:390px;background:linear-gradient(135deg,#082659 0%,#0e5bc8 52%,#35a8ff 100%);color:#f8fbff;box-shadow:0 22px 48px rgba(10,62,142,.25)}.cover h1{color:#fff;text-shadow:0 2px 18px rgba(0,32,89,.18)}.cover .eyebrow,.cover .lead{color:#d9edff}.cover .button{background:#fff;color:#0b3d91}.cover .button.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.56)}.metric-stack{display:grid;gap:12px}.metric{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:18px}.metric strong{display:block;color:var(--deep);font-size:22px;line-height:1.25}.metric span{display:block;margin-top:6px;line-height:1.55;color:var(--muted)}.report-grid,.capability-grid{display:grid;gap:14px;grid-template-columns:repeat(4,minmax(0,1fr))}.report-card,.capability-card{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:18px}.report-card{min-height:210px;display:grid;align-content:space-between;text-decoration:none;color:var(--ink)}.report-card:hover{border-color:var(--green)}.report-card b,.capability-card b{font-size:20px}.capability-card p{margin-bottom:0;color:var(--muted)}@media(max-width:1000px){.home-hero,.report-grid,.capability-grid{grid-template-columns:1fr}.cover{min-height:340px}}
+    .home-hero{display:grid;grid-template-columns:minmax(0,1.35fr)320px;gap:18px}
+    .cover{min-height:390px;background:linear-gradient(135deg,#082659 0%,#0e5bc8 52%,#35a8ff 100%);color:#f8fbff;box-shadow:0 22px 48px rgba(10,62,142,.25)}
+    .cover h1{color:#fff;text-shadow:0 2px 18px rgba(0,32,89,.18)}
+    .cover .eyebrow,.cover .lead{color:#d9edff}
+    .cover .button{background:#fff;color:#0b3d91}
+    .cover .button.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.56)}
+    .metric-stack{display:grid;gap:12px}
+    .metric{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:18px}
+    .metric strong{display:block;color:var(--deep);font-size:22px;line-height:1.25}
+    .metric span{display:block;margin-top:6px;line-height:1.55;color:var(--muted)}
+    .report-grid,.capability-grid{display:grid;gap:14px;grid-template-columns:repeat(4,minmax(0,1fr))}
+    .report-card,.capability-card{border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:18px}
+    .report-card{min-height:210px;display:grid;align-content:space-between;text-decoration:none;color:var(--ink)}
+    .report-card:hover{border-color:var(--green)}
+    .report-card b,.capability-card b{font-size:20px}
+    .capability-card p{margin-bottom:0;color:var(--muted)}
+    @media(max-width:1000px){.home-hero,.report-grid,.capability-grid{grid-template-columns:1fr}.cover{min-height:340px}}
   </style>
 </head>
 <body>
   <main class="shell">
-    <a class="site-brand" href="./index.html" aria-label="AI Content Radar 作品主页"><img src="./assets/brand/ll-radar-wave-logo-v3-bright-blue-128.png" alt="AI Content Radar 标识"><span><strong>AI Content Radar</strong><small>@luoluozi</small></span></a>
-    <nav class="nav" aria-label="主导航"><a class="active" href="./index.html">项目主页</a><a href="./methodology.html">方法论</a><a href="./projects/2026-07-22.html">项目与工具</a><a href="./news/2026-07-22.html">关键事件</a><a href="./models/2026-07-22.html">模型与研究</a><a href="./voices/2026-07-22.html">观点讨论</a><a href="./x/2026-07-22.html">X 帖子观察</a><a href="./archive/index.html">历史归档</a></nav>
-    <section class="home-hero"><article class="hero-copy cover"><p class="eyebrow">TODAY'S AI SIGNALS</p><h1>每天 5 分钟，<br>看懂真正重要的 AI 变化</h1><p class="lead">不必追完所有新闻。这里把值得关注的项目、产品变化、模型进展和一手讨论整理成可判断、可行动的每日阅读清单。</p><div class="hero-actions"><a class="button" href="./daily/2026-07-22.html">查看今天的重点</a><a class="button ghost" href="./projects/2026-07-22.html">发现可用工具</a><a class="button ghost" href="./methodology.html">了解筛选标准</a></div></article><aside class="metric-stack" aria-label="你会获得什么"><div class="metric"><strong>今天先看什么</strong><span>一页总览，快速抓住真正值得关注的 AI 信号。</span></div><div class="metric"><strong>哪些值得试</strong><span>项目与工具说明用途、适合谁，以及需要注意的限制。</span></div><div class="metric"><strong>哪些会影响你</strong><span>关注产品、模型、成本、安全与工作方式的实际变化。</span></div><div class="metric"><strong>为什么值得相信</strong><span>每条保留来源、实践意义和不该忽略的边界。</span></div></aside></section>
-    <section class="section"><div class="section-head"><h2>最新一期：2026-07-22</h2><p>今天的主线是 AI 从“能力展示”进入真实风险、日常工作法和可审计流程。</p></div><div class="report-grid"><a class="report-card" href="./projects/2026-07-22.html"><span class="kicker">Projects</span><b>项目与工具</b><p>筛选可运行、可试用、文档清晰的 AI 项目。</p><em>进入栏目</em></a><a class="report-card" href="./news/2026-07-22.html"><span class="kicker">Events</span><b>关键事件</b><p>跟踪产品入口、生态、成本、安全与权限变化。</p><em>进入栏目</em></a><a class="report-card" href="./models/2026-07-22.html"><span class="kicker">Models</span><b>模型与研究</b><p>关注模型能力、评测、风险与研究证据。</p><em>进入栏目</em></a><a class="report-card" href="./voices/2026-07-22.html"><span class="kicker">Voices</span><b>观点讨论</b><p>收集社区讨论、博主实测和可复用判断。</p><em>进入栏目</em></a></div></section>
-    <section class="section"><div class="section-head"><h2>产品能力概览</h2><p>首页只保留能力层面的展示；完整流程、评分规则和安全边界放在方法论页。</p></div><div class="capability-grid"><article class="capability-card"><span class="kicker">Collect</span><b>多源信号抓取</b><p>覆盖项目、新闻、模型、论文和社区讨论，不依赖单一信息源。</p></article><article class="capability-card"><span class="kicker">Curate</span><b>质量筛选</b><p>按来源可追溯、普通人相关性、实用价值和证据质量筛掉噪音。</p></article><article class="capability-card"><span class="kicker">Publish</span><b>多栏目发布</b><p>把内容拆成项目、事件、模型、观点和 X 观察，便于快速阅读。</p></article><article class="capability-card"><span class="kicker">Archive</span><b>同步与归档</b><p>发布到 GitHub Pages，同时保留 Notion 记录和微信提醒。</p></article></div></section>
-    <section class="section home-directory" aria-label="站点入口"><div class="section-head"><h2>如何使用 AI Content Radar</h2><p>主页提供最新信号与站点概览；完整的方法标准和全部历史记录分别保留在独立栏目中。</p></div><div class="grid-2"><article class="item"><span class="kicker">Methodology</span><b>方法论：这份日报如何判断“值得看”</b><p>查看来源优先级、筛选门槛、项目评分、自动化边界与原始数据保护原则。</p><a href="./methodology.html">进入方法论 →</a></article><article class="item"><span class="kicker">Archive</span><b>历史归档：按日期回看每一期日报</b><p>从每日总览进入项目、事件、模型、观点和 X 帖子观察的可追溯记录。</p><a href="./archive/index.html">进入历史归档 →</a></article></div></section>
-    <footer class="footer">AI Content Radar · GitHub Pages 自动发布 · <a href="./methodology.html">方法论</a> · <a href="./archive/index.html">历史归档</a> · <a href="https://github.com/luoluozi996/ai-radar">Repository</a></footer>
+    <a class="site-brand" href="./index.html" aria-label="AI Content Radar 浣滃搧涓婚〉">
+      <img src="./assets/brand/ll-radar-wave-logo-v3-bright-blue-128.png" alt="AI Content Radar 鏍囪瘑">
+      <span><strong>AI Content Radar</strong><small>@luoluozi</small></span>
+    </a>
+    <nav class="nav" aria-label="涓诲鑸?>
+      <a class="active" href="./index.html">椤圭洰涓婚〉</a>
+      <a href="./methodology.html">鏂规硶璁?/a>
+      <a href="./projects/2026-07-23.html">椤圭洰涓庡伐鍏?/a>
+      <a href="./news/2026-07-23.html">鍏抽敭浜嬩欢</a>
+      <a href="./models/2026-07-23.html">妯″瀷涓庣爺绌?/a>
+      <a href="./voices/2026-07-23.html">瑙傜偣璁ㄨ</a>
+      <a href="./archive/index.html">鍘嗗彶褰掓。</a>
+    </nav>
+
+    <section class="home-hero">
+      <article class="hero-copy cover">
+        <p class="eyebrow">TODAY'S AI SIGNALS</p>
+        <h1>姣忓ぉ 5 鍒嗛挓锛?br>鐪嬫噦鐪熸閲嶈鐨?AI 鍙樺寲</h1>
+        <p class="lead">涓嶅繀杩藉畬鎵€鏈夋柊闂汇€傝繖閲屾妸鍊煎緱鍏虫敞鐨勯」鐩€佷骇鍝佸彉鍖栥€佹ā鍨嬭繘灞曞拰涓€鎵嬭璁烘暣鐞嗘垚鍙垽鏂€佸彲琛屽姩鐨勬瘡鏃ラ槄璇绘竻鍗曘€?/p>
+        <div class="hero-actions">
+          <a class="button" href="./daily/2026-07-23.html">鏌ョ湅浠婂ぉ鐨勯噸鐐?/a>
+          <a class="button ghost" href="./projects/2026-07-23.html">鍙戠幇鍙敤宸ュ叿</a>
+          <a class="button ghost" href="./methodology.html">浜嗚В绛涢€夋爣鍑?/a>
+        </div>
+      </article>
+      <aside class="metric-stack" aria-label="浣犱細鑾峰緱浠€涔?>
+        <div class="metric"><strong>浠婂ぉ鍏堢湅浠€涔?/strong><span>涓€椤垫€昏锛屽揩閫熸姄浣忕湡姝ｅ€煎緱鍏虫敞鐨?AI 淇″彿銆?/span></div>
+        <div class="metric"><strong>鍝簺鍊煎緱璇?/strong><span>椤圭洰涓庡伐鍏疯鏄庣敤閫斻€侀€傚悎璋侊紝浠ュ強闇€瑕佹敞鎰忕殑闄愬埗銆?/span></div>
+        <div class="metric"><strong>鍝簺浼氬奖鍝嶄綘</strong><span>鍏虫敞浜у搧銆佹ā鍨嬨€佹垚鏈€佸畨鍏ㄤ笌宸ヤ綔鏂瑰紡鐨勫疄闄呭彉鍖栥€?/span></div>
+        <div class="metric"><strong>涓轰粈涔堝€煎緱鐩镐俊</strong><span>姣忔潯淇濈暀鏉ユ簮銆佸疄璺垫剰涔夊拰涓嶈蹇界暐鐨勮竟鐣屻€?/span></div>
+      </aside>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>鏈€鏂颁竴鏈燂細2026-07-23</h2>
+        <p>浠婂ぉ鐨勪富绾挎槸锛氬湪鏂板鍙牳楠屼俊鍙锋湁闄愭椂锛屼粛浠ュ彲鎺у伐浣滄祦銆佽瘎娴嬭竟鐣屼笌娓呮櫚浠诲姟璇存槑涓轰富绾匡紝涓嶄互浣庡彲淇′俊鎭～鍏呮棩鎶ャ€?/p>
+      </div>
+      <div class="report-grid">
+        <a class="report-card" href="./projects/2026-07-23.html"><span class="kicker">Projects</span><b>椤圭洰涓庡伐鍏?/b><p>绛涢€夊彲杩愯銆佸彲璇曠敤銆佹枃妗ｆ竻鏅扮殑 AI 椤圭洰銆?/p><em>杩涘叆鏍忕洰</em></a>
+        <a class="report-card" href="./news/2026-07-23.html"><span class="kicker">Events</span><b>鍏抽敭浜嬩欢</b><p>璺熻釜浜у搧鍏ュ彛銆佺敓鎬併€佹垚鏈€佸畨鍏ㄤ笌鏉冮檺鍙樺寲銆?/p><em>杩涘叆鏍忕洰</em></a>
+        <a class="report-card" href="./models/2026-07-23.html"><span class="kicker">Models</span><b>妯″瀷涓庣爺绌?/b><p>鍏虫敞妯″瀷鑳藉姏銆佽瘎娴嬨€侀闄╀笌鐮旂┒璇佹嵁銆?/p><em>杩涘叆鏍忕洰</em></a>
+        <a class="report-card" href="./voices/2026-07-23.html"><span class="kicker">Voices</span><b>瑙傜偣璁ㄨ</b><p>鏀堕泦绀惧尯璁ㄨ銆佸崥涓诲疄娴嬪拰鍙鐢ㄥ垽鏂€?/p><em>杩涘叆鏍忕洰</em></a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>浜у搧鑳藉姏姒傝</h2>
+        <p>棣栭〉鍙繚鐣欒兘鍔涘眰闈㈢殑灞曠ず锛涘畬鏁存祦绋嬨€佽瘎鍒嗚鍒欏拰瀹夊叏杈圭晫鏀惧湪鏂规硶璁洪〉銆?/p>
+      </div>
+      <div class="capability-grid">
+        <article class="capability-card"><span class="kicker">Collect</span><b>澶氭簮淇″彿鎶撳彇</b><p>瑕嗙洊椤圭洰銆佹柊闂汇€佹ā鍨嬨€佽鏂囧拰绀惧尯璁ㄨ锛屼笉渚濊禆鍗曚竴淇℃伅婧愩€?/p></article>
+        <article class="capability-card"><span class="kicker">Curate</span><b>璐ㄩ噺绛涢€?/b><p>鎸夋潵婧愬彲杩芥函銆佹櫘閫氫汉鐩稿叧鎬с€佸疄鐢ㄤ环鍊煎拰璇佹嵁璐ㄩ噺绛涙帀鍣煶銆?/p></article>
+        <article class="capability-card"><span class="kicker">Publish</span><b>澶氭爮鐩彂甯?/b><p>鎶婂唴瀹规媶鎴愰」鐩€佷簨浠躲€佹ā鍨嬨€佽鐐瑰拰 X 瑙傚療锛屼究浜庡揩閫熼槄璇汇€?/p></article>
+        <article class="capability-card"><span class="kicker">Archive</span><b>鍚屾涓庡綊妗?/b><p>鍙戝竷鍒?GitHub Pages锛屽悓鏃朵繚鐣?Notion 璁板綍鍜屽井淇℃彁閱掋€?/p></article>
+      </div>
+    </section>
+
+    <section class="section home-directory" aria-label="绔欑偣鍏ュ彛">
+      <div class="section-head"><h2>濡備綍浣跨敤 AI Content Radar</h2><p>涓婚〉鎻愪緵鏈€鏂颁俊鍙蜂笌绔欑偣姒傝锛涘畬鏁寸殑鏂规硶鏍囧噯鍜屽叏閮ㄥ巻鍙茶褰曞垎鍒繚鐣欏湪鐙珛鏍忕洰涓€?/p></div>
+      <div class="grid-2">
+        <article class="item"><span class="kicker">Methodology</span><b>鏂规硶璁猴細杩欎唤鏃ユ姤濡備綍鍒ゆ柇鈥滃€煎緱鐪嬧€?/b><p>鏌ョ湅鏉ユ簮浼樺厛绾с€佺瓫閫夐棬妲涖€侀」鐩瘎鍒嗐€佽嚜鍔ㄥ寲杈圭晫涓庡師濮嬫暟鎹繚鎶ゅ師鍒欍€?/p><a href="./methodology.html">杩涘叆鏂规硶璁?鈫?/a></article>
+        <article class="item"><span class="kicker">Archive</span><b>鍘嗗彶褰掓。锛氭寜鏃ユ湡鍥炵湅姣忎竴鏈熸棩鎶?/b><p>浠庢瘡鏃ユ€昏杩涘叆椤圭洰銆佷簨浠躲€佹ā鍨嬨€佽鐐瑰拰 X 甯栧瓙瑙傚療鐨勫彲杩芥函璁板綍銆?/p><a href="./archive/index.html">杩涘叆鍘嗗彶褰掓。 鈫?/a></article>
+      </div>
+    </section>
+
+    <footer class="footer">AI Content Radar 路 GitHub Pages 鑷姩鍙戝竷 路 <a href="./methodology.html">鏂规硶璁?/a> 路 <a href="./archive/index.html">鍘嗗彶褰掓。</a> 路 <a href="https://github.com/luoluozi996/ai-radar">Repository</a></footer>
   </main>
 </body>
 </html>
