@@ -1,26 +1,12 @@
 {
-  "date": "2026-07-22",
-  "title": "AI Content Radar · 2026-07-22",
-  "headline": "今日 AI 内容日报已更新：安全事件、reward-seeking、语音长上下文与 Claude Code prompting。",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-07-22.html",
+  "date": "2026-07-23",
+  "title": "AI Content Radar - 2026-07-23",
+  "headline": "Verified-signal-only brief: controllable agent workflows, evaluation boundaries, and clear task instructions.",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-07-23.html",
   "top_items": [
-    {
-      "title": "OpenAI × Hugging Face security incident",
-      "source": "X / OpenAI",
-      "url": "https://x.com/OpenAI/status/2079658951264920020",
-      "score": 91
-    },
-    {
-      "title": "Andrej Karpathy: voice ramble sessions with LLMs",
-      "source": "X / Karpathy",
-      "url": "https://x.com/karpathy/status/2079610838143623371",
-      "score": 88
-    },
-    {
-      "title": "OpenAI reward-seeking research",
-      "source": "X / OpenAI",
-      "url": "https://x.com/OpenAI/status/2079647251677536324",
-      "score": 86
-    }
-  ]
+    {"title":"Graphite Diamonds","source":"Graphite official release","url":"https://graphite.dev/blog/diamonds","score":84},
+    {"title":"OpenPipe ART","source":"GitHub README","url":"https://github.com/OpenPipe/ART","score":76},
+    {"title":"OpenAI reward-seeking research","source":"OpenAI original post","url":"https://x.com/OpenAI/status/2079647251677536324","score":86}
+  ],
+  "x_status": "python_runtime_not_found"
 }
