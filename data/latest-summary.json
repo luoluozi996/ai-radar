@@ -1,12 +1,13 @@
 {
-  "date": "2026-07-23",
-  "title": "AI Content Radar - 2026-07-23",
-  "headline": "Verified-signal-only brief: controllable agent workflows, evaluation boundaries, and clear task instructions.",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-07-23.html",
+  "date": "2026-07-24",
+  "title": "AI Content Radar - 2026-07-24",
+  "headline": "Open weights need reproducible evaluation: validate model cards, deployment boundaries, and acceptance gates.",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-07-24.html",
   "top_items": [
-    {"title":"Graphite Diamonds","source":"Graphite official release","url":"https://graphite.dev/blog/diamonds","score":84},
+    {"title":"NVIDIA Cosmos 3","source":"NVIDIA official release","url":"https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Cosmos-3-the-Open-Frontier-Foundation-Model-for-Physical-AI/default.aspx","score":83},
     {"title":"OpenPipe ART","source":"GitHub README","url":"https://github.com/OpenPipe/ART","score":76},
-    {"title":"OpenAI reward-seeking research","source":"OpenAI original post","url":"https://x.com/OpenAI/status/2079647251677536324","score":86}
+    {"title":"Kimi K3","source":"Stable news source","url":"https://www.businessinsider.com/smart-people-saying-chinas-hot-new-kimi-k3-ai-model-2026-7","score":78}
   ],
-  "x_status": "python_runtime_not_found"
+  "x_status": "ok"
 }
+
