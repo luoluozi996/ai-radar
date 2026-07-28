@@ -1,15 +1,5 @@
-{
-  "generated_at": "2026-07-23",
-  "reports": [
-    {"date":"2026-07-23","title":"AI Content Radar","summary":"Verified-signal-only daily brief; X collection unavailable because Python runtime is missing.","sections":[{"label":"Daily","url":"../daily/2026-07-23.html","tags":["overview","daily"]},{"label":"Projects","url":"../projects/2026-07-23.html","tags":["tools","workflow"]},{"label":"Events","url":"../news/2026-07-23.html","tags":["security","governance"]},{"label":"Models","url":"../models/2026-07-23.html","tags":["research","evaluation"]},{"label":"Voices","url":"../voices/2026-07-23.html","tags":["community","voices"]}]},
-    {"date":"2026-07-22","title":"AI Content Radar","summary":"Safety boundaries, reward-seeking research, and daily AI work methods.","sections":[{"label":"Daily","url":"../daily/2026-07-22.html","tags":["overview","daily"]},{"label":"Projects","url":"../projects/2026-07-22.html","tags":["tools"]},{"label":"Events","url":"../news/2026-07-22.html","tags":["security"]},{"label":"Models","url":"../models/2026-07-22.html","tags":["research"]},{"label":"Voices","url":"../voices/2026-07-22.html","tags":["community"]},{"label":"X Watch","url":"../x/2026-07-22.html","tags":["x"]}]},
-    {"date":"2026-07-21","title":"AI Content Radar","summary":"Controllable AI operations and usage visibility.","sections":[{"label":"Daily","url":"../daily/2026-07-21.html","tags":["daily"]}]},
-    {"date":"2026-07-20","title":"AI Content Radar","summary":"Agent budgets, permissions, and acceptance gates.","sections":[{"label":"Daily","url":"../daily/2026-07-20.html","tags":["daily"]}]},
-    {"date":"2026-07-18","title":"AI Content Radar","summary":"Agent collaboration and control surfaces.","sections":[{"label":"Projects","url":"../projects/2026-07-18.html","tags":["tools"]}]},
-    {"date":"2026-07-17","title":"AI Content Radar","summary":"Multi-section report validation.","sections":[{"label":"Projects","url":"../projects/2026-07-17.html","tags":["tools"]}]},
-    {"date":"2026-07-16","title":"AI Content Radar","summary":"First multi-section daily report.","sections":[{"label":"Projects","url":"../projects/2026-07-16.html","tags":["tools"]}]},
-    {"date":"2026-07-15","title":"AI Project Radar","summary":"Legacy project radar.","sections":[{"label":"Legacy","url":"../ai-project-radar-2026-07-15.html","tags":["legacy"]}]},
-    {"date":"2026-07-14","title":"AI Project Radar","summary":"Legacy project radar.","sections":[{"label":"Legacy","url":"../ai-project-radar-2026-07-14.html","tags":["legacy"]}]},
-    {"date":"2026-07-13","title":"AI Project Radar","summary":"Legacy project radar.","sections":[{"label":"Legacy","url":"../ai-project-radar-2026-07-13.html","tags":["legacy"]}]}
-  ]
-}
+Exit code: 0
+Wall time: 1.5 seconds
+Output:
+{"generated_at":"2026-07-28","reports":[{"date":"2026-07-28","title":"AI Content Radar","summary":"鐢熶骇绾?agent 鐨勫叧閿槸鍙獙璇佺殑鏉冮檺銆佽瘎娴嬨€佷汉宸ュ崌绾у拰鍥炴粴闂幆锛沊 鎶撳彇鍥?Python 鏉冮檺琚嫆缁濄€?,"sections":[{"label":"Daily","url":"../daily/2026-07-28.html","tags":["overview","daily"]},{"label":"Projects","url":"../projects/2026-07-28.html","tags":["tools","workflow"]},{"label":"Events","url":"../news/2026-07-28.html","tags":["deployment","governance"]},{"label":"Models","url":"../models/2026-07-28.html","tags":["models","evaluation"]},{"label":"Voices","url":"../voices/2026-07-28.html","tags":["community","voices"]}]},{"date":"2026-07-24","title":"AI Content Radar","summary":"寮€鏀炬潈閲嶉渶瑕佸彲澶嶇幇瀹為獙涓庨儴缃茶竟鐣屾牳楠屻€?,"sections":[{"label":"Daily","url":"../daily/2026-07-24.html","tags":["overview","daily"]}]},{"date":"2026-07-23","title":"AI Content Radar","summary":"鍙拷婧俊鍙锋棩鎶ャ€?,"sections":[{"label":"Daily","url":"../daily/2026-07-23.html","tags":["overview","daily"]}]},{"date":"2026-07-22","title":"AI Content Radar","summary":"瀹夊叏杈圭晫涓?agent 宸ヤ綔鏂规硶銆?,"sections":[{"label":"Daily","url":"../daily/2026-07-22.html","tags":["overview","daily"]}]}]}
+
