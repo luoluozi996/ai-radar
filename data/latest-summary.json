@@ -1,13 +1,5 @@
-{
-  "date": "2026-07-24",
-  "title": "AI Content Radar - 2026-07-24",
-  "headline": "Open weights need reproducible evaluation: validate model cards, deployment boundaries, and acceptance gates.",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-07-24.html",
-  "top_items": [
-    {"title":"NVIDIA Cosmos 3","source":"NVIDIA official release","url":"https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Launches-Cosmos-3-the-Open-Frontier-Foundation-Model-for-Physical-AI/default.aspx","score":83},
-    {"title":"OpenPipe ART","source":"GitHub README","url":"https://github.com/OpenPipe/ART","score":76},
-    {"title":"Kimi K3","source":"Stable news source","url":"https://www.businessinsider.com/smart-people-saying-chinas-hot-new-kimi-k3-ai-model-2026-7","score":78}
-  ],
-  "x_status": "ok"
-}
+Exit code: 0
+Wall time: 1.5 seconds
+Output:
+{"date":"2026-07-28","title":"AI Content Radar - 2026-07-28","headline":"鎶婄敓浜х骇 agent 鎷嗘垚鏉冮檺銆佽瘎娴嬨€佷汉宸ュ崌绾т笌鍙洖婊氱殑鍙獙璇侀棴鐜€?,"report_url":"https://luoluozi996.github.io/ai-radar/daily/2026-07-28.html","top_items":[{"title":"OpenAI Presence","source":"OpenAI 瀹樻柟鍏憡","url":"https://openai.com/index/introducing-openai-presence/","score":84},{"title":"Wyrd AI","source":"GitHub README","url":"https://github.com/acatovic/wyrd-ai","score":72},{"title":"GPT-5.6","source":"OpenAI Research 鍙戝竷椤?,"url":"https://openai.com/research/index/release/","score":79}],"x_status":"python_access_denied"}
 
