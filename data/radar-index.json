@@ -1,5 +1,144 @@
-Exit code: 0
-Wall time: 1.4 seconds
-Output:
-{"generated_at":"2026-07-28","reports":[{"date":"2026-07-28","title":"AI Content Radar","summary":"Production agent controls: permissions, evaluation, human escalation, and rollback. X fetch: python access denied.","sections":[{"label":"Daily","url":"../daily/2026-07-28.html","tags":["overview","daily"]},{"label":"Projects","url":"../projects/2026-07-28.html","tags":["tools","workflow"]},{"label":"Events","url":"../news/2026-07-28.html","tags":["deployment","governance"]},{"label":"Models","url":"../models/2026-07-28.html","tags":["models","evaluation"]},{"label":"Voices","url":"../voices/2026-07-28.html","tags":["community","voices"]}]},{"date":"2026-07-24","title":"AI Content Radar","summary":"Open weights and reproducible evaluation.","sections":[{"label":"Daily","url":"../daily/2026-07-24.html","tags":["overview","daily"]}]},{"date":"2026-07-23","title":"AI Content Radar","summary":"Traceable signal brief.","sections":[{"label":"Daily","url":"../daily/2026-07-23.html","tags":["overview","daily"]}]},{"date":"2026-07-22","title":"AI Content Radar","summary":"Safety boundaries and agent workflows.","sections":[{"label":"Daily","url":"../daily/2026-07-22.html","tags":["overview","daily"]}]}]}
-
+{
+  "generated_at": "2026-08-05",
+  "reports": [
+    {
+      "date": "2026-08-05",
+      "title": "AI Content Radar",
+      "summary": "模型入口迁移与成本治理。X 状态：execution_policy_blocked。",
+      "sections": [
+        {
+          "label": "Daily",
+          "url": "../daily/2026-08-05.html",
+          "tags": [
+            "overview",
+            "daily"
+          ]
+        },
+        {
+          "label": "Projects",
+          "url": "../projects/2026-08-05.html",
+          "tags": [
+            "migration",
+            "tools"
+          ]
+        },
+        {
+          "label": "Events",
+          "url": "../news/2026-08-05.html",
+          "tags": [
+            "billing",
+            "governance"
+          ]
+        },
+        {
+          "label": "Models",
+          "url": "../models/2026-08-05.html",
+          "tags": [
+            "research",
+            "evaluation"
+          ]
+        },
+        {
+          "label": "Voices",
+          "url": "../voices/2026-08-05.html",
+          "tags": [
+            "governance",
+            "adoption"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-02",
+      "title": "AI Content Radar",
+      "summary": "Model-access migration and Copilot cost governance. X status: python_access_denied.",
+      "sections": [
+        {
+          "label": "Daily",
+          "url": "../daily/2026-08-02.html",
+          "tags": [
+            "overview",
+            "daily"
+          ]
+        },
+        {
+          "label": "Projects",
+          "url": "../projects/2026-08-02.html",
+          "tags": [
+            "migration",
+            "tools"
+          ]
+        },
+        {
+          "label": "Events",
+          "url": "../news/2026-08-02.html",
+          "tags": [
+            "billing",
+            "governance"
+          ]
+        },
+        {
+          "label": "Models",
+          "url": "../models/2026-08-02.html",
+          "tags": [
+            "research",
+            "evaluation"
+          ]
+        },
+        {
+          "label": "Voices",
+          "url": "../voices/2026-08-02.html",
+          "tags": [
+            "governance",
+            "adoption"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-01",
+      "title": "AI Content Radar",
+      "summary": "Prior daily report.",
+      "sections": [
+        {
+          "label": "Daily",
+          "url": "../daily/2026-08-01.html",
+          "tags": [
+            "overview",
+            "daily"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "title": "AI Content Radar",
+      "summary": "Reproducible tooling and measurable coding-agent adoption.",
+      "sections": [
+        {
+          "label": "Daily",
+          "url": "../daily/2026-07-29.html",
+          "tags": [
+            "overview",
+            "daily"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "title": "AI Content Radar",
+      "summary": "Production agent controls.",
+      "sections": [
+        {
+          "label": "Daily",
+          "url": "../daily/2026-07-28.html",
+          "tags": [
+            "overview",
+            "daily"
+          ]
+        }
+      ]
+    }
+  ]
+}
