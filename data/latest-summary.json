@@ -1,5 +1,27 @@
-Exit code: 0
-Wall time: 1.4 seconds
-Output:
-{"date":"2026-07-28","title":"AI Content Radar - 2026-07-28","headline":"Production agents need verifiable permissions, evaluation, human escalation, and rollback loops.","report_url":"https://luoluozi996.github.io/ai-radar/daily/2026-07-28.html","top_items":[{"title":"OpenAI Presence","source":"OpenAI official announcement","url":"https://openai.com/index/introducing-openai-presence/","score":84},{"title":"Wyrd AI","source":"GitHub README","url":"https://github.com/acatovic/wyrd-ai","score":72},{"title":"GPT-5.6","source":"OpenAI Research releases","url":"https://openai.com/research/index/release/","score":79}],"x_status":"python_access_denied"}
-
+{
+  "date": "2026-08-05",
+  "title": "AI Content Radar - 2026-08-05",
+  "headline": "先迁移模型入口，再补齐成本、评测与治理闭环。",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-08-05.html",
+  "top_items": [
+    {
+      "title": "Copilot Billing Preview 已退役",
+      "source": "GitHub Changelog",
+      "url": "https://github.blog/changelog/2026-07-07-copilot-billing-preview-app-will-be-retired-on-august-3/",
+      "score": 86
+    },
+    {
+      "title": "GitHub Models 已退役",
+      "source": "GitHub Changelog",
+      "url": "https://github.blog/changelog/2026-07-01-github-models-is-being-fully-retired-on-july-30-2026/",
+      "score": 84
+    },
+    {
+      "title": "Artificial Intelligence Index Report 2026",
+      "source": "arXiv",
+      "url": "https://arxiv.org/abs/2606.15708",
+      "score": 78
+    }
+  ],
+  "x_status": "execution_policy_blocked"
+}
