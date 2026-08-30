@@ -1,13 +1,27 @@
 {
-  "date": "2026-08-09",
-  "title": "AI Content Radar - 2026-08-09",
-  "headline": "把 agent 可见性接进成本、质量与长程任务的治理闭环。",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-08-09.html",
+  "date": "2026-08-30",
+  "title": "AI Content Radar - 2026-08-30",
+  "headline": "Agent 协作走向团队化，评测开始补齐语言覆盖。",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-08-30.html",
   "top_items": [
-    {"title": "Copilot app usage metrics 扩展到报表汇总", "source": "GitHub Changelog", "url": "https://github.blog/changelog/2026-07-28-github-copilot-app-usage-metrics-now-expand-across-report-rollups/", "score": 85},
-    {"title": "Copilot Billing Preview 已退役", "source": "GitHub Changelog", "url": "https://github.blog/changelog/2026-07-07-copilot-billing-preview-app-will-be-retired-on-august-3/", "score": 83},
-    {"title": "Can AI agents conduct open-ended AI research?", "source": "arXiv", "url": "https://arxiv.org/abs/2607.27191", "score": 80}
+    {
+      "score": 90,
+      "source": "GitHub Changelog",
+      "url": "https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app/",
+      "title": "Agent Plugins 1.0"
+    },
+    {
+      "score": 88,
+      "source": "GitHub Changelog",
+      "url": "https://github.blog/changelog/2026-08-21-shared-agentic-work-with-github-copilot-in-microsoft-teams/",
+      "title": "Shared agentic work with GitHub Copilot in Microsoft Teams"
+    },
+    {
+      "score": 86,
+      "source": "Hugging Face",
+      "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
+      "title": "The Open ASR Leaderboard Adds Its First Global South Language"
+    }
   ],
   "x_status": "python_access_denied"
 }
-
