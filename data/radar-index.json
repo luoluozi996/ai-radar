@@ -1,22 +1,260 @@
 {
-  "generated_at": "2026-08-09",
+  "generated_at": "2026-08-30",
   "reports": [
+    {
+      "date": "2026-08-30",
+      "title": "AI Content Radar",
+      "summary": "Agent 插件化、团队协作入口与语音评测覆盖。X 抓取状态：python_access_denied。",
+      "sections": [
+        {
+          "url": "../daily/2026-08-30.html",
+          "tags": [
+            "daily",
+            "agents"
+          ],
+          "label": "Daily"
+        },
+        {
+          "url": "../projects/2026-08-30.html",
+          "tags": [
+            "plugins",
+            "tools"
+          ],
+          "label": "Projects"
+        },
+        {
+          "url": "../news/2026-08-30.html",
+          "tags": [
+            "copilot",
+            "collaboration"
+          ],
+          "label": "Events"
+        },
+        {
+          "url": "../models/2026-08-30.html",
+          "tags": [
+            "asr",
+            "evaluation"
+          ],
+          "label": "Models"
+        },
+        {
+          "url": "../voices/2026-08-30.html",
+          "tags": [
+            "governance",
+            "inclusion"
+          ],
+          "label": "Voices"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "title": "AI Content Radar",
+      "summary": "插件化交付、模型迁移与开源采用信号。X 抓取状态：python_access_denied。",
+      "sections": [
+        {
+          "label": "Daily",
+          "url": "../daily/2026-08-28.html",
+          "tags": [
+            "daily",
+            "agents"
+          ]
+        },
+        {
+          "label": "Projects",
+          "url": "../projects/2026-08-28.html",
+          "tags": [
+            "plugins",
+            "tools"
+          ]
+        },
+        {
+          "label": "Events",
+          "url": "../news/2026-08-28.html",
+          "tags": [
+            "copilot",
+            "migration"
+          ]
+        },
+        {
+          "label": "Models",
+          "url": "../models/2026-08-28.html",
+          "tags": [
+            "open-models",
+            "evaluation"
+          ]
+        },
+        {
+          "label": "Voices",
+          "url": "../voices/2026-08-28.html",
+          "tags": [
+            "governance",
+            "regression"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "title": "AI Content Radar",
+      "summary": "Agent 插件化、Copilot 模型迁移与开源采用信号。X 本地抓取未成功。",
+      "sections": [
+        {
+          "label": "Daily",
+          "url": "../daily/2026-08-26.html",
+          "tags": [
+            "daily",
+            "agents"
+          ]
+        },
+        {
+          "label": "Projects",
+          "url": "../projects/2026-08-26.html",
+          "tags": [
+            "plugins",
+            "tools"
+          ]
+        },
+        {
+          "label": "Events",
+          "url": "../news/2026-08-26.html",
+          "tags": [
+            "copilot",
+            "migration"
+          ]
+        },
+        {
+          "label": "Models",
+          "url": "../models/2026-08-26.html",
+          "tags": [
+            "open-models",
+            "evaluation"
+          ]
+        },
+        {
+          "label": "Voices",
+          "url": "../voices/2026-08-26.html",
+          "tags": [
+            "governance",
+            "regression"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-25",
+      "title": "AI Content Radar",
+      "summary": "模型扩容、默认策略与开源模型采用证据。X 候选仅本地缓存。",
+      "sections": [
+        {
+          "label": "Daily",
+          "url": "../daily/2026-08-25.html",
+          "tags": [
+            "daily",
+            "governance"
+          ]
+        },
+        {
+          "label": "Projects",
+          "url": "../projects/2026-08-25.html",
+          "tags": [
+            "copilot",
+            "tools"
+          ]
+        },
+        {
+          "label": "Events",
+          "url": "../news/2026-08-25.html",
+          "tags": [
+            "policy",
+            "governance"
+          ]
+        },
+        {
+          "label": "Models",
+          "url": "../models/2026-08-25.html",
+          "tags": [
+            "open-models",
+            "evaluation"
+          ]
+        },
+        {
+          "label": "Voices",
+          "url": "../voices/2026-08-25.html",
+          "tags": [
+            "adoption",
+            "routing"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "title": "AI Content Radar",
+      "summary": "Model choice, MCP connectivity, and agent risk governance. X status: execution_policy_blocked.",
+      "sections": [
+        {
+          "label": "Daily",
+          "url": "../daily/2026-08-12.html",
+          "tags": [
+            "overview",
+            "daily"
+          ]
+        },
+        {
+          "label": "Projects",
+          "url": "../projects/2026-08-12.html",
+          "tags": [
+            "copilot",
+            "tools"
+          ]
+        },
+        {
+          "label": "Events",
+          "url": "../news/2026-08-12.html",
+          "tags": [
+            "mcp",
+            "governance"
+          ]
+        },
+        {
+          "label": "Models",
+          "url": "../models/2026-08-12.html",
+          "tags": [
+            "agents",
+            "evaluation"
+          ]
+        },
+        {
+          "label": "Voices",
+          "url": "../voices/2026-08-12.html",
+          "tags": [
+            "safety",
+            "adoption"
+          ]
+        }
+      ]
+    },
     {
       "date": "2026-08-09",
       "title": "AI Content Radar",
-      "summary": "Agent 使用可见性、成本迁移与长程评估。X 状态：python_access_denied。",
+      "summary": "Prior daily report.",
       "sections": [
-        {"label": "Daily", "url": "../daily/2026-08-09.html", "tags": ["overview", "daily"]},
-        {"label": "Projects", "url": "../projects/2026-08-09.html", "tags": ["metrics", "tools"]},
-        {"label": "Events", "url": "../news/2026-08-09.html", "tags": ["billing", "governance"]},
-        {"label": "Models", "url": "../models/2026-08-09.html", "tags": ["research", "evaluation"]},
-        {"label": "Voices", "url": "../voices/2026-08-09.html", "tags": ["adoption", "quality"]}
+        {
+          "label": "Daily",
+          "url": "../daily/2026-08-09.html",
+          "tags": [
+            "overview",
+            "daily"
+          ]
+        }
       ]
     },
     {
       "date": "2026-08-05",
       "title": "AI Content Radar",
-      "summary": "模型入口迁移与成本治理。X 状态：execution_policy_blocked。",
+      "summary": "Prior daily report.",
       "sections": [
         {
           "label": "Daily",
@@ -25,45 +263,13 @@
             "overview",
             "daily"
           ]
-        },
-        {
-          "label": "Projects",
-          "url": "../projects/2026-08-05.html",
-          "tags": [
-            "migration",
-            "tools"
-          ]
-        },
-        {
-          "label": "Events",
-          "url": "../news/2026-08-05.html",
-          "tags": [
-            "billing",
-            "governance"
-          ]
-        },
-        {
-          "label": "Models",
-          "url": "../models/2026-08-05.html",
-          "tags": [
-            "research",
-            "evaluation"
-          ]
-        },
-        {
-          "label": "Voices",
-          "url": "../voices/2026-08-05.html",
-          "tags": [
-            "governance",
-            "adoption"
-          ]
         }
       ]
     },
     {
       "date": "2026-08-02",
       "title": "AI Content Radar",
-      "summary": "Model-access migration and Copilot cost governance. X status: python_access_denied.",
+      "summary": "Prior daily report.",
       "sections": [
         {
           "label": "Daily",
@@ -71,38 +277,6 @@
           "tags": [
             "overview",
             "daily"
-          ]
-        },
-        {
-          "label": "Projects",
-          "url": "../projects/2026-08-02.html",
-          "tags": [
-            "migration",
-            "tools"
-          ]
-        },
-        {
-          "label": "Events",
-          "url": "../news/2026-08-02.html",
-          "tags": [
-            "billing",
-            "governance"
-          ]
-        },
-        {
-          "label": "Models",
-          "url": "../models/2026-08-02.html",
-          "tags": [
-            "research",
-            "evaluation"
-          ]
-        },
-        {
-          "label": "Voices",
-          "url": "../voices/2026-08-02.html",
-          "tags": [
-            "governance",
-            "adoption"
           ]
         }
       ]
@@ -125,7 +299,7 @@
     {
       "date": "2026-07-29",
       "title": "AI Content Radar",
-      "summary": "Reproducible tooling and measurable coding-agent adoption.",
+      "summary": "Prior daily report.",
       "sections": [
         {
           "label": "Daily",
@@ -140,7 +314,7 @@
     {
       "date": "2026-07-28",
       "title": "AI Content Radar",
-      "summary": "Production agent controls.",
+      "summary": "Prior daily report.",
       "sections": [
         {
           "label": "Daily",
@@ -154,4 +328,3 @@
     }
   ]
 }
-
