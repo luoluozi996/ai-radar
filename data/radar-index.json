@@ -1,6 +1,53 @@
 {
-  "generated_at": "2026-08-30",
+  "generated_at": "2026-08-31",
   "reports": [
+    {
+      "date": "2026-08-31",
+      "title": "AI Content Radar",
+      "summary": "插件化交付、Slack 协作 agent 与开放模型证据分层。X 抓取状态：python_stdout_encoding_error。",
+      "sections": [
+        {
+          "tags": [
+            "daily",
+            "agents"
+          ],
+          "url": "../daily/2026-08-31.html",
+          "label": "Daily"
+        },
+        {
+          "tags": [
+            "plugins",
+            "tools"
+          ],
+          "url": "../projects/2026-08-31.html",
+          "label": "Projects"
+        },
+        {
+          "tags": [
+            "copilot",
+            "collaboration"
+          ],
+          "url": "../news/2026-08-31.html",
+          "label": "Events"
+        },
+        {
+          "tags": [
+            "open-models",
+            "evaluation"
+          ],
+          "url": "../models/2026-08-31.html",
+          "label": "Models"
+        },
+        {
+          "tags": [
+            "governance",
+            "adoption"
+          ],
+          "url": "../voices/2026-08-31.html",
+          "label": "Voices"
+        }
+      ]
+    },
     {
       "date": "2026-08-30",
       "title": "AI Content Radar",
@@ -328,3 +375,4 @@
     }
   ]
 }
+
