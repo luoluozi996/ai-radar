@@ -1,27 +1,28 @@
 {
-  "date": "2026-08-30",
-  "title": "AI Content Radar - 2026-08-30",
-  "headline": "Agent 协作走向团队化，评测开始补齐语言覆盖。",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-08-30.html",
+  "date": "2026-08-31",
+  "title": "AI Content Radar - 2026-08-31",
+  "headline": "协作式 agent 扩展到团队沟通，开放模型更需证据分层。",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-08-31.html",
   "top_items": [
     {
       "score": 90,
-      "source": "GitHub Changelog",
       "url": "https://github.blog/changelog/2026-08-12-agent-plugins-1-0-in-vs-code-copilot-cli-and-the-copilot-app/",
+      "source": "GitHub Changelog",
       "title": "Agent Plugins 1.0"
     },
     {
       "score": 88,
+      "url": "https://github.blog/changelog/2026-08-21-the-new-github-copilot-experience-in-slack/",
       "source": "GitHub Changelog",
-      "url": "https://github.blog/changelog/2026-08-21-shared-agentic-work-with-github-copilot-in-microsoft-teams/",
-      "title": "Shared agentic work with GitHub Copilot in Microsoft Teams"
+      "title": "The new GitHub Copilot experience in Slack"
     },
     {
       "score": 86,
+      "url": "https://huggingface.co/blog/state-of-open-models-summer-2026",
       "source": "Hugging Face",
-      "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
-      "title": "The Open ASR Leaderboard Adds Its First Global South Language"
+      "title": "State of Open Models: Summer 2026 Observations"
     }
   ],
-  "x_status": "python_access_denied"
+  "x_status": "python_stdout_encoding_error"
 }
+
