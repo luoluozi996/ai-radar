@@ -1,6 +1,53 @@
 {
-  "generated_at": "2026-09-01",
+  "generated_at": "2026-09-02",
   "reports": [
+    {
+      "date": "2026-09-02",
+      "title": "AI Content Radar",
+      "summary": "模型迁移、Copilot 计费与开放模型的证据分层。X 抓取状态：python_access_denied。",
+      "sections": [
+        {
+          "url": "../daily/2026-09-02.html",
+          "label": "Daily",
+          "tags": [
+            "daily",
+            "governance"
+          ]
+        },
+        {
+          "url": "../projects/2026-09-02.html",
+          "label": "Projects",
+          "tags": [
+            "agents",
+            "tools"
+          ]
+        },
+        {
+          "url": "../news/2026-09-02.html",
+          "label": "Events",
+          "tags": [
+            "copilot",
+            "billing"
+          ]
+        },
+        {
+          "url": "../models/2026-09-02.html",
+          "label": "Models",
+          "tags": [
+            "open-models",
+            "evaluation"
+          ]
+        },
+        {
+          "url": "../voices/2026-09-02.html",
+          "label": "Voices",
+          "tags": [
+            "governance",
+            "adoption"
+          ]
+        }
+      ]
+    },
     {
       "date": "2026-09-01",
       "title": "AI Content Radar",
@@ -422,4 +469,3 @@
     }
   ]
 }
-
