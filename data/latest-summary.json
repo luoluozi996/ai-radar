@@ -1,28 +1,27 @@
 {
-  "date": "2026-09-01",
-  "title": "AI Content Radar - 2026-09-01",
+  "date": "2026-09-02",
+  "title": "AI Content Radar - 2026-09-02",
   "headline": "模型迁移与组织治理，成为今天的优先事项。",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-01.html",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-02.html",
   "top_items": [
     {
-      "url": "https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing/",
       "source": "GitHub Changelog",
       "score": 91,
+      "url": "https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing/",
       "title": "Upcoming changes to GitHub Copilot policies and billing"
     },
     {
-      "url": "https://github.blog/changelog/2026-07-31-upcoming-august-2026-model-deprecations-in-github-copilot/",
       "source": "GitHub Changelog",
       "score": 90,
+      "url": "https://github.blog/changelog/2026-07-31-upcoming-august-2026-model-deprecations-in-github-copilot/",
       "title": "Upcoming August 2026 model deprecations in GitHub Copilot"
     },
     {
-      "url": "https://huggingface.co/blog/state-of-open-models-summer-2026",
       "source": "Hugging Face",
       "score": 87,
+      "url": "https://huggingface.co/blog/state-of-open-models-summer-2026",
       "title": "State of Open Models: Summer 2026 Observations"
     }
   ],
   "x_status": "python_access_denied"
 }
-
