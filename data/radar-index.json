@@ -1,6 +1,53 @@
 {
-  "generated_at": "2026-09-02",
+  "generated_at": "2026-09-03",
   "reports": [
+    {
+      "date": "2026-09-03",
+      "title": "AI Content Radar",
+      "summary": "Agent 上下文边界与企业默认模型策略。X 抓取状态：python_stdout_encoding_error。",
+      "sections": [
+        {
+          "url": "../daily/2026-09-03.html",
+          "tags": [
+            "daily",
+            "governance"
+          ],
+          "label": "Daily"
+        },
+        {
+          "url": "../projects/2026-09-03.html",
+          "tags": [
+            "agents",
+            "tools"
+          ],
+          "label": "Projects"
+        },
+        {
+          "url": "../news/2026-09-03.html",
+          "tags": [
+            "copilot",
+            "governance"
+          ],
+          "label": "Events"
+        },
+        {
+          "url": "../models/2026-09-03.html",
+          "tags": [
+            "models",
+            "evaluation"
+          ],
+          "label": "Models"
+        },
+        {
+          "url": "../voices/2026-09-03.html",
+          "tags": [
+            "governance",
+            "context"
+          ],
+          "label": "Voices"
+        }
+      ]
+    },
     {
       "date": "2026-09-02",
       "title": "AI Content Radar",
