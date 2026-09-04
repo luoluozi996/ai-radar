@@ -1,20 +1,26 @@
 {
-  "date": "2026-09-03",
-  "title": "AI Content Radar - 2026-09-03",
-  "headline": "今天优先治理 agent 的上下文与模型默认值。",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-03.html",
+  "date": "2026-09-04",
+  "title": "AI Content Radar - 2026-09-04",
+  "headline": "今天先做一次模型依赖盘点。",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-04.html",
   "top_items": [
     {
-      "url": "https://github.blog/changelog/2026-09-02-content-exclusions-generally-available-in-the-copilot-app-and-cli/",
+      "score": 93,
+      "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot/",
       "source": "GitHub Changelog",
-      "title": "Content exclusions generally available in the Copilot app and CLI",
-      "score": 92
+      "title": "Gemini 3.8 Flash is now available in GitHub Copilot"
     },
     {
-      "url": "https://github.blog/changelog/2026-09-02-enterprise-managed-settings-support-any-default-model/",
+      "score": 92,
+      "url": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models/",
       "source": "GitHub Changelog",
-      "title": "Enterprise-managed settings support any default model",
-      "score": 90
+      "title": "Upcoming deprecation of selected GitHub Copilot models"
+    },
+    {
+      "score": 89,
+      "url": "https://huggingface.co/blog/Hcompany/neomme",
+      "source": "Hugging Face",
+      "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder"
     }
   ],
   "x_status": "python_stdout_encoding_error"
