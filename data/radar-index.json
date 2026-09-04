@@ -1,6 +1,53 @@
 {
-  "generated_at": "2026-09-03",
+  "generated_at": "2026-09-04",
   "reports": [
+    {
+      "date": "2026-09-04",
+      "title": "AI Content Radar",
+      "summary": "Copilot 模型迁移清单与 NeoMME 视觉文档检索。X 抓取状态：python_stdout_encoding_error。",
+      "sections": [
+        {
+          "url": "../daily/2026-09-04.html",
+          "label": "Daily",
+          "tags": [
+            "daily",
+            "model-lifecycle"
+          ]
+        },
+        {
+          "url": "../projects/2026-09-04.html",
+          "label": "Projects",
+          "tags": [
+            "copilot",
+            "tools"
+          ]
+        },
+        {
+          "url": "../news/2026-09-04.html",
+          "label": "Events",
+          "tags": [
+            "copilot",
+            "migration"
+          ]
+        },
+        {
+          "url": "../models/2026-09-04.html",
+          "label": "Models",
+          "tags": [
+            "multimodal",
+            "retrieval"
+          ]
+        },
+        {
+          "url": "../voices/2026-09-04.html",
+          "label": "Voices",
+          "tags": [
+            "governance",
+            "evaluation"
+          ]
+        }
+      ]
+    },
     {
       "date": "2026-09-03",
       "title": "AI Content Radar",
