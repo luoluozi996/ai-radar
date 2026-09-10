@@ -1,27 +1,27 @@
 {
-  "date": "2026-09-04",
-  "title": "AI Content Radar - 2026-09-04",
-  "headline": "今天先做一次模型依赖盘点。",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-04.html",
+  "date": "2026-09-10",
+  "title": "AI Content Radar - 2026-09-10",
+  "headline": "没有新发布，也不要降低证据门槛。",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-10.html",
   "top_items": [
     {
-      "score": 93,
-      "url": "https://github.blog/changelog/2026-09-03-gemini-3-8-flash-is-now-available-in-github-copilot/",
       "source": "GitHub Changelog",
-      "title": "Gemini 3.8 Flash is now available in GitHub Copilot"
+      "score": 91,
+      "url": "https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains/",
+      "title": "Enterprise-managed sandbox in Copilot for JetBrains"
     },
     {
-      "score": 92,
-      "url": "https://github.blog/changelog/2026-09-03-upcoming-deprecation-of-selected-github-copilot-models/",
-      "source": "GitHub Changelog",
-      "title": "Upcoming deprecation of selected GitHub Copilot models"
+      "source": "OpenAI GitHub",
+      "score": 84,
+      "url": "https://github.com/openai/openai-node/releases/tag/v7.12.1",
+      "title": "openai-node v7.12.1"
     },
     {
-      "score": 89,
-      "url": "https://huggingface.co/blog/Hcompany/neomme",
       "source": "Hugging Face",
-      "title": "NeoMME: an efficient Multimodal-native and Multilingual Encoder"
+      "score": 82,
+      "url": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
+      "title": "Safety for Whom? Boundary-Aware Self-Distillation"
     }
   ],
-  "x_status": "python_stdout_encoding_error"
+  "x_status": "python_access_denied"
 }
