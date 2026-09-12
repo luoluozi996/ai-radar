@@ -1,6 +1,382 @@
 {
-  "generated_at": "2026-09-04",
+  "generated_at": "2026-09-12",
   "reports": [
+    {
+      "date": "2026-09-12",
+      "title": "AI Content Radar",
+      "summary": "Agents API、模型退役迁移与环境分层评测；X 抓取状态：python_access_denied。",
+      "sections": [
+        {
+          "label": "Daily",
+          "url": "../daily/2026-09-12.html",
+          "tags": [
+            "daily",
+            "agents"
+          ]
+        },
+        {
+          "label": "Projects",
+          "url": "../projects/2026-09-12.html",
+          "tags": [
+            "sdk",
+            "agents"
+          ]
+        },
+        {
+          "label": "Events",
+          "url": "../news/2026-09-12.html",
+          "tags": [
+            "models",
+            "migration"
+          ]
+        },
+        {
+          "label": "Models",
+          "url": "../models/2026-09-12.html",
+          "tags": [
+            "evaluation",
+            "sandbox"
+          ]
+        },
+        {
+          "label": "Voices",
+          "url": "../voices/2026-09-12.html",
+          "tags": [
+            "evaluation",
+            "governance"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-11",
+      "title": "AI Content Radar",
+      "summary": "企业托管 agent 权限与密钥到期控制；X 抓取状态：python_access_denied。",
+      "sections": [
+        {
+          "tags": [
+            "daily",
+            "governance"
+          ],
+          "label": "Daily",
+          "url": "../daily/2026-09-11.html"
+        },
+        {
+          "tags": [
+            "agent",
+            "permissions"
+          ],
+          "label": "Projects",
+          "url": "../projects/2026-09-11.html"
+        },
+        {
+          "tags": [
+            "governance",
+            "audit"
+          ],
+          "label": "Events",
+          "url": "../news/2026-09-11.html"
+        },
+        {
+          "tags": [
+            "tools",
+            "agents"
+          ],
+          "label": "Models",
+          "url": "../models/2026-09-11.html"
+        },
+        {
+          "tags": [
+            "tools",
+            "governance"
+          ],
+          "label": "Voices",
+          "url": "../voices/2026-09-11.html"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "title": "AI Content Radar",
+      "summary": "无新增高可信发布；继续验证 Sandbox、SDK 回归与双侧安全评测。X 抓取状态：python_access_denied。",
+      "sections": [
+        {
+          "url": "../daily/2026-09-10.html",
+          "label": "Daily",
+          "tags": [
+            "daily",
+            "evidence"
+          ]
+        },
+        {
+          "url": "../projects/2026-09-10.html",
+          "label": "Projects",
+          "tags": [
+            "sandbox",
+            "tools"
+          ]
+        },
+        {
+          "url": "../news/2026-09-10.html",
+          "label": "Events",
+          "tags": [
+            "governance",
+            "verification"
+          ]
+        },
+        {
+          "url": "../models/2026-09-10.html",
+          "label": "Models",
+          "tags": [
+            "safety",
+            "evaluation"
+          ]
+        },
+        {
+          "url": "../voices/2026-09-10.html",
+          "label": "Voices",
+          "tags": [
+            "governance",
+            "evidence"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "title": "AI Content Radar",
+      "summary": "企业托管 Sandbox 进入 JetBrains；用双侧指标评测安全拒绝。X 抓取状态：python_access_denied。",
+      "sections": [
+        {
+          "label": "Daily",
+          "url": "../daily/2026-09-09.html",
+          "tags": [
+            "daily",
+            "sandbox"
+          ]
+        },
+        {
+          "label": "Projects",
+          "url": "../projects/2026-09-09.html",
+          "tags": [
+            "copilot",
+            "sandbox"
+          ]
+        },
+        {
+          "label": "Events",
+          "url": "../news/2026-09-09.html",
+          "tags": [
+            "governance",
+            "ide"
+          ]
+        },
+        {
+          "label": "Models",
+          "url": "../models/2026-09-09.html",
+          "tags": [
+            "safety",
+            "evaluation"
+          ]
+        },
+        {
+          "label": "Voices",
+          "url": "../voices/2026-09-09.html",
+          "tags": [
+            "governance",
+            "refusal"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "title": "AI Content Radar",
+      "summary": "近 24 小时无新增高可信发布；完成 Copilot 策略准备与 agent 责任设计。X 抓取状态：python_access_denied。",
+      "sections": [
+        {
+          "tags": [
+            "daily",
+            "governance"
+          ],
+          "label": "Daily",
+          "url": "../daily/2026-09-08.html"
+        },
+        {
+          "tags": [
+            "agent-merge",
+            "tools"
+          ],
+          "label": "Projects",
+          "url": "../projects/2026-09-08.html"
+        },
+        {
+          "tags": [
+            "policy",
+            "review"
+          ],
+          "label": "Events",
+          "url": "../news/2026-09-08.html"
+        },
+        {
+          "tags": [
+            "agents",
+            "evaluation"
+          ],
+          "label": "Models",
+          "url": "../models/2026-09-08.html"
+        },
+        {
+          "tags": [
+            "governance",
+            "accountability"
+          ],
+          "label": "Voices",
+          "url": "../voices/2026-09-08.html"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "title": "AI Content Radar",
+      "summary": "近 24 小时无新增高可信发布；继续完成 Copilot agent 治理清单。X 抓取状态：x_fetch_no_cache。",
+      "sections": [
+        {
+          "url": "../daily/2026-09-07.html",
+          "tags": [
+            "daily",
+            "governance"
+          ],
+          "label": "Daily"
+        },
+        {
+          "url": "../projects/2026-09-07.html",
+          "tags": [
+            "agent-merge",
+            "tools"
+          ],
+          "label": "Projects"
+        },
+        {
+          "url": "../news/2026-09-07.html",
+          "tags": [
+            "policy",
+            "billing"
+          ],
+          "label": "Events"
+        },
+        {
+          "url": "../models/2026-09-07.html",
+          "tags": [
+            "gpt-6-astra",
+            "evaluation"
+          ],
+          "label": "Models"
+        },
+        {
+          "url": "../voices/2026-09-07.html",
+          "tags": [
+            "governance",
+            "approval"
+          ],
+          "label": "Voices"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "title": "AI Content Radar",
+      "summary": "GPT-6 Astra 进入 Copilot；统一体验前的策略审阅。X 抓取状态：python_access_denied。",
+      "sections": [
+        {
+          "url": "../daily/2026-09-06.html",
+          "tags": [
+            "daily",
+            "gpt-6-astra"
+          ],
+          "label": "Daily"
+        },
+        {
+          "url": "../projects/2026-09-06.html",
+          "tags": [
+            "copilot",
+            "evaluation"
+          ],
+          "label": "Projects"
+        },
+        {
+          "url": "../news/2026-09-06.html",
+          "tags": [
+            "policy",
+            "governance"
+          ],
+          "label": "Events"
+        },
+        {
+          "url": "../models/2026-09-06.html",
+          "tags": [
+            "coding",
+            "agents"
+          ],
+          "label": "Models"
+        },
+        {
+          "url": "../voices/2026-09-06.html",
+          "tags": [
+            "adoption",
+            "change-management"
+          ],
+          "label": "Voices"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "title": "AI Content Radar",
+      "summary": "Agent Merge 公测、内容排除进入 agent 工作流。X 抓取状态：python_access_denied。",
+      "sections": [
+        {
+          "tags": [
+            "daily",
+            "agents"
+          ],
+          "url": "../daily/2026-09-05.html",
+          "label": "Daily"
+        },
+        {
+          "tags": [
+            "agent-merge",
+            "tools"
+          ],
+          "url": "../projects/2026-09-05.html",
+          "label": "Projects"
+        },
+        {
+          "tags": [
+            "copilot",
+            "governance"
+          ],
+          "url": "../news/2026-09-05.html",
+          "label": "Events"
+        },
+        {
+          "tags": [
+            "retrieval",
+            "evaluation"
+          ],
+          "url": "../models/2026-09-05.html",
+          "label": "Models"
+        },
+        {
+          "tags": [
+            "governance",
+            "adoption"
+          ],
+          "url": "../voices/2026-09-05.html",
+          "label": "Voices"
+        }
+      ]
+    },
     {
       "date": "2026-09-04",
       "title": "AI Content Radar",
