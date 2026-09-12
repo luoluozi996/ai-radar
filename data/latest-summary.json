@@ -1,26 +1,26 @@
 {
-  "date": "2026-09-10",
-  "title": "AI Content Radar - 2026-09-10",
-  "headline": "没有新发布，也不要降低证据门槛。",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-10.html",
+  "date": "2026-09-12",
+  "title": "AI Content Radar - 2026-09-12",
+  "headline": "先验证接口与环境，再扩大 agent 的执行范围。",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-12.html",
   "top_items": [
     {
-      "source": "GitHub Changelog",
-      "score": 91,
-      "url": "https://github.blog/changelog/2026-09-08-enterprise-managed-sandbox-in-copilot-for-jetbrains/",
-      "title": "Enterprise-managed sandbox in Copilot for JetBrains"
+      "score": 92,
+      "title": "openai-node v7.15.0 — Agents API",
+      "url": "https://github.com/openai/openai-node/releases/tag/v7.15.0",
+      "source": "OpenAI GitHub"
     },
     {
-      "source": "OpenAI GitHub",
-      "score": 84,
-      "url": "https://github.com/openai/openai-node/releases/tag/v7.12.1",
-      "title": "openai-node v7.12.1"
+      "score": 87,
+      "title": "MAI-Code-1-Flash deprecated",
+      "url": "https://github.blog/changelog/2026-09-10-mai-code-1-flash-deprecated/",
+      "source": "GitHub Changelog"
     },
     {
-      "source": "Hugging Face",
-      "score": 82,
-      "url": "https://huggingface.co/blog/MultiverseComputingCAI/safety-for-whom",
-      "title": "Safety for Whom? Boundary-Aware Self-Distillation"
+      "score": 74,
+      "title": "One sandbox per rollout",
+      "url": "https://huggingface.co/blog/sergiopaniego/rl-environments-2026",
+      "source": "Hugging Face Community"
     }
   ],
   "x_status": "python_access_denied"
