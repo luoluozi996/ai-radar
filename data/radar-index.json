@@ -1,6 +1,147 @@
 {
-  "generated_at": "2026-09-12",
+  "generated_at": "2026-09-15",
   "reports": [
+    {
+      "date": "2026-09-15",
+      "title": "AI Content Radar",
+      "summary": "自动选模的成本、质量与延迟取舍；X 抓取状态：python_access_denied。",
+      "sections": [
+        {
+          "label": "Daily",
+          "url": "../daily/2026-09-15.html",
+          "tags": [
+            "daily",
+            "routing"
+          ]
+        },
+        {
+          "label": "Projects",
+          "url": "../projects/2026-09-15.html",
+          "tags": [
+            "routing",
+            "cost"
+          ]
+        },
+        {
+          "label": "Events",
+          "url": "../news/2026-09-15.html",
+          "tags": [
+            "governance",
+            "configuration"
+          ]
+        },
+        {
+          "label": "Models",
+          "url": "../models/2026-09-15.html",
+          "tags": [
+            "evaluation",
+            "routing"
+          ]
+        },
+        {
+          "label": "Voices",
+          "url": "../voices/2026-09-15.html",
+          "tags": [
+            "evidence",
+            "accountability"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-09-14",
+      "title": "AI Content Radar",
+      "summary": "自动解决审查评论与可控 agent 自动化；X 抓取状态：python_access_denied。",
+      "sections": [
+        {
+          "url": "../daily/2026-09-14.html",
+          "tags": [
+            "daily",
+            "automation"
+          ],
+          "label": "Daily"
+        },
+        {
+          "url": "../projects/2026-09-14.html",
+          "tags": [
+            "routing",
+            "agents"
+          ],
+          "label": "Projects"
+        },
+        {
+          "url": "../news/2026-09-14.html",
+          "tags": [
+            "review",
+            "governance"
+          ],
+          "label": "Events"
+        },
+        {
+          "url": "../models/2026-09-14.html",
+          "tags": [
+            "timeseries",
+            "evaluation"
+          ],
+          "label": "Models"
+        },
+        {
+          "url": "../voices/2026-09-14.html",
+          "tags": [
+            "automation",
+            "accountability"
+          ],
+          "label": "Voices"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-13",
+      "title": "AI Content Radar",
+      "summary": "定时 agent、实验性路由与企业沙箱；X 抓取状态：python_access_denied。",
+      "sections": [
+        {
+          "tags": [
+            "daily",
+            "automation"
+          ],
+          "url": "../daily/2026-09-13.html",
+          "label": "Daily"
+        },
+        {
+          "tags": [
+            "routing",
+            "agents"
+          ],
+          "url": "../projects/2026-09-13.html",
+          "label": "Projects"
+        },
+        {
+          "tags": [
+            "governance",
+            "sandbox"
+          ],
+          "url": "../news/2026-09-13.html",
+          "label": "Events"
+        },
+        {
+          "tags": [
+            "evaluation",
+            "sandbox"
+          ],
+          "url": "../models/2026-09-13.html",
+          "label": "Models"
+        },
+        {
+          "tags": [
+            "automation",
+            "governance"
+          ],
+          "url": "../voices/2026-09-13.html",
+          "label": "Voices"
+        }
+      ]
+    },
     {
       "date": "2026-09-12",
       "title": "AI Content Radar",
