@@ -1,26 +1,26 @@
 {
-  "date": "2026-09-12",
-  "title": "AI Content Radar - 2026-09-12",
-  "headline": "先验证接口与环境，再扩大 agent 的执行范围。",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-12.html",
+  "date": "2026-09-15",
+  "title": "AI Content Radar - 2026-09-15",
+  "headline": "自动选模，先把取舍和证据分开。",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-15.html",
   "top_items": [
     {
-      "score": 92,
-      "title": "openai-node v7.15.0 — Agents API",
-      "url": "https://github.com/openai/openai-node/releases/tag/v7.15.0",
-      "source": "OpenAI GitHub"
+      "source": "GitHub Changelog",
+      "url": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection/",
+      "title": "Configure cost and quality in Copilot auto model selection",
+      "score": 91
     },
     {
-      "score": 87,
-      "title": "MAI-Code-1-Flash deprecated",
-      "url": "https://github.blog/changelog/2026-09-10-mai-code-1-flash-deprecated/",
-      "source": "GitHub Changelog"
+      "source": "GitHub Changelog",
+      "url": "https://github.blog/changelog/2026-09-10-github-copilot-weekly-releases-september-7/",
+      "title": "GitHub Copilot weekly releases — September 7",
+      "score": 79
     },
     {
-      "score": 74,
-      "title": "One sandbox per rollout",
-      "url": "https://huggingface.co/blog/sergiopaniego/rl-environments-2026",
-      "source": "Hugging Face Community"
+      "source": "OpenAI Research",
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai/",
+      "title": "Research acceleration: The view inside OpenAI",
+      "score": 68
     }
   ],
   "x_status": "python_access_denied"
