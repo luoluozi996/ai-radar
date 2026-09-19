@@ -1,6 +1,147 @@
 {
-  "generated_at": "2026-09-15",
+  "generated_at": "2026-09-19",
   "reports": [
+    {
+      "date": "2026-09-19",
+      "title": "AI Content Radar",
+      "summary": "Copilot 审查进度可追溯，Sentry 进入修复画布；模型迁移需在 10 月 19 日前验证。X 抓取状态：python_runtime_not_found。",
+      "sections": [
+        {
+          "label": "Daily",
+          "tags": [
+            "daily",
+            "review"
+          ],
+          "url": "../daily/2026-09-19.html"
+        },
+        {
+          "label": "Projects",
+          "tags": [
+            "sentry",
+            "tools"
+          ],
+          "url": "../projects/2026-09-19.html"
+        },
+        {
+          "label": "Events",
+          "tags": [
+            "review",
+            "migration"
+          ],
+          "url": "../news/2026-09-19.html"
+        },
+        {
+          "label": "Models",
+          "tags": [
+            "model-lifecycle",
+            "migration"
+          ],
+          "url": "../models/2026-09-19.html"
+        },
+        {
+          "label": "Voices",
+          "tags": [
+            "governance",
+            "traceability"
+          ],
+          "url": "../voices/2026-09-19.html"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "title": "AI Content Radar",
+      "summary": "AI Scan 扩展覆盖，Copilot 预算申请正式可用；X 抓取状态：python_access_denied。",
+      "sections": [
+        {
+          "tags": [
+            "daily",
+            "governance"
+          ],
+          "url": "../daily/2026-09-17.html",
+          "label": "Daily"
+        },
+        {
+          "tags": [
+            "budget",
+            "operations"
+          ],
+          "url": "../projects/2026-09-17.html",
+          "label": "Projects"
+        },
+        {
+          "tags": [
+            "security",
+            "ai-scan"
+          ],
+          "url": "../news/2026-09-17.html",
+          "label": "Events"
+        },
+        {
+          "tags": [
+            "safety",
+            "reporting"
+          ],
+          "url": "../models/2026-09-17.html",
+          "label": "Models"
+        },
+        {
+          "tags": [
+            "reliability",
+            "evaluation"
+          ],
+          "url": "../voices/2026-09-17.html",
+          "label": "Voices"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "title": "AI Content Radar",
+      "summary": "AI 协助建立仓库治理分类；X 抓取状态：python_access_denied。",
+      "sections": [
+        {
+          "label": "Daily",
+          "url": "../daily/2026-09-16.html",
+          "tags": [
+            "daily",
+            "governance"
+          ]
+        },
+        {
+          "label": "Projects",
+          "url": "../projects/2026-09-16.html",
+          "tags": [
+            "governance",
+            "metadata"
+          ]
+        },
+        {
+          "label": "Events",
+          "url": "../news/2026-09-16.html",
+          "tags": [
+            "rulesets",
+            "review"
+          ]
+        },
+        {
+          "label": "Models",
+          "url": "../models/2026-09-16.html",
+          "tags": [
+            "evaluation",
+            "classification"
+          ]
+        },
+        {
+          "label": "Voices",
+          "url": "../voices/2026-09-16.html",
+          "tags": [
+            "evidence",
+            "governance"
+          ]
+        }
+      ]
+    },
     {
       "date": "2026-09-15",
       "title": "AI Content Radar",
