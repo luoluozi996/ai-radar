@@ -1,27 +1,27 @@
 {
-  "date": "2026-09-15",
-  "title": "AI Content Radar - 2026-09-15",
-  "headline": "自动选模，先把取舍和证据分开。",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-15.html",
+  "date": "2026-09-19",
+  "title": "AI Content Radar - 2026-09-19",
+  "headline": "让 AI 审查能解释，让模型迁移可验证。",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-19.html",
   "top_items": [
     {
       "source": "GitHub Changelog",
-      "url": "https://github.blog/changelog/2026-09-14-configure-cost-and-quality-in-copilot-auto-model-selection/",
-      "title": "Configure cost and quality in Copilot auto model selection",
-      "score": 91
+      "score": 93,
+      "url": "https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience/",
+      "title": "Copilot code review: An improved review experience"
     },
     {
       "source": "GitHub Changelog",
-      "url": "https://github.blog/changelog/2026-09-10-github-copilot-weekly-releases-september-7/",
-      "title": "GitHub Copilot weekly releases — September 7",
-      "score": 79
+      "score": 90,
+      "url": "https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14/",
+      "title": "GitHub Copilot weekly releases — September 14"
     },
     {
-      "source": "OpenAI Research",
-      "url": "https://openai.com/index/research-acceleration-view-inside-openai/",
-      "title": "Research acceleration: The view inside OpenAI",
-      "score": 68
+      "source": "GitHub Changelog",
+      "score": 89,
+      "url": "https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/",
+      "title": "Upcoming deprecation of selected GitHub Copilot models in mid-October"
     }
   ],
-  "x_status": "python_access_denied"
+  "x_status": "python_runtime_not_found"
 }
