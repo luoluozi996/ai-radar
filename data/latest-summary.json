@@ -1,26 +1,26 @@
 {
-  "date": "2026-09-19",
-  "title": "AI Content Radar - 2026-09-19",
-  "headline": "让 AI 审查能解释，让模型迁移可验证。",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-19.html",
+  "date": "2026-09-20",
+  "title": "AI Content Radar - 2026-09-20",
+  "headline": "让 AI 审查可解释，让自动化可复盘。",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-20.html",
   "top_items": [
     {
-      "source": "GitHub Changelog",
-      "score": 93,
       "url": "https://github.blog/changelog/2026-09-18-copilot-code-review-an-improved-review-experience/",
-      "title": "Copilot code review: An improved review experience"
+      "title": "Copilot code review: An improved review experience",
+      "score": 92,
+      "source": "GitHub Changelog"
     },
     {
-      "source": "GitHub Changelog",
-      "score": 90,
-      "url": "https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14/",
-      "title": "GitHub Copilot weekly releases — September 14"
+      "url": "https://openai.com/index/research-acceleration-view-inside-openai/",
+      "title": "Research acceleration: The view inside OpenAI",
+      "score": 86,
+      "source": "OpenAI"
     },
     {
-      "source": "GitHub Changelog",
-      "score": 89,
-      "url": "https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/",
-      "title": "Upcoming deprecation of selected GitHub Copilot models in mid-October"
+      "url": "https://openai.com/index/ai-policy-window/",
+      "title": "The AI policy window is open",
+      "score": 80,
+      "source": "OpenAI"
     }
   ],
   "x_status": "python_runtime_not_found"
