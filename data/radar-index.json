@@ -1,6 +1,53 @@
 {
-  "generated_at": "2026-09-20",
+  "generated_at": "2026-09-21",
   "reports": [
+    {
+      "date": "2026-09-21",
+      "title": "AI Content Radar",
+      "summary": "Copilot 模型迁移有明确日期；数据库 agent 的失败需要分清模型、工具与环境。X 抓取状态：python_runtime_not_found。",
+      "sections": [
+        {
+          "url": "../daily/2026-09-21.html",
+          "tags": [
+            "daily",
+            "migration"
+          ],
+          "label": "Daily"
+        },
+        {
+          "url": "../projects/2026-09-21.html",
+          "tags": [
+            "workflow",
+            "evaluation"
+          ],
+          "label": "Projects"
+        },
+        {
+          "url": "../news/2026-09-21.html",
+          "tags": [
+            "migration",
+            "copilot"
+          ],
+          "label": "Events"
+        },
+        {
+          "url": "../models/2026-09-21.html",
+          "tags": [
+            "agents",
+            "reproducibility"
+          ],
+          "label": "Models"
+        },
+        {
+          "url": "../voices/2026-09-21.html",
+          "tags": [
+            "observability",
+            "accountability"
+          ],
+          "label": "Voices"
+        }
+      ]
+    },
     {
       "date": "2026-09-20",
       "title": "AI Content Radar",
@@ -8,43 +55,43 @@
       "sections": [
         {
           "label": "Daily",
-          "url": "../daily/2026-09-20.html",
           "tags": [
             "daily",
             "review"
-          ]
+          ],
+          "url": "../daily/2026-09-20.html"
         },
         {
           "label": "Projects",
-          "url": "../projects/2026-09-20.html",
           "tags": [
             "review",
             "workflow"
-          ]
+          ],
+          "url": "../projects/2026-09-20.html"
         },
         {
           "label": "Events",
-          "url": "../news/2026-09-20.html",
           "tags": [
             "governance",
             "review"
-          ]
+          ],
+          "url": "../news/2026-09-20.html"
         },
         {
           "label": "Models",
-          "url": "../models/2026-09-20.html",
           "tags": [
             "research",
             "evaluation"
-          ]
+          ],
+          "url": "../models/2026-09-20.html"
         },
         {
           "label": "Voices",
-          "url": "../voices/2026-09-20.html",
           "tags": [
             "governance",
             "accountability"
-          ]
+          ],
+          "url": "../voices/2026-09-20.html"
         }
       ]
     },
