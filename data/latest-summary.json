@@ -1,27 +1,27 @@
 {
-  "date": "2026-09-21",
-  "title": "AI Content Radar - 2026-09-21",
-  "headline": "模型迁移要验收，agent 失败要归因。",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-21.html",
+  "date": "2026-09-22",
+  "title": "AI Content Radar - 2026-09-22",
+  "headline": "审查要收敛，agent 环境要可复现。",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-22.html",
   "top_items": [
     {
-      "source": "GitHub Changelog",
-      "score": 94,
-      "url": "https://github.blog/changelog/2026-09-18-upcoming-deprecation-of-selected-github-copilot-models-in-mid-october/",
-      "title": "Upcoming deprecation of selected GitHub Copilot models in mid-October"
+      "title": "Upcoming changes to GitHub Copilot policies and billing",
+      "url": "https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing/",
+      "score": 93,
+      "source": "GitHub Changelog"
     },
     {
-      "source": "arXiv",
+      "title": "Auto-resolution and analysis updates in Copilot code review",
+      "url": "https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review/",
       "score": 87,
-      "url": "https://arxiv.org/abs/2609.21341",
-      "title": "What Stops a Small Language Model From Driving a Database Agent"
+      "source": "GitHub Changelog"
     },
     {
-      "source": "GitHub Changelog",
-      "score": 82,
-      "url": "https://github.blog/changelog/2026-09-18-github-copilot-weekly-releases-september-14/",
-      "title": "GitHub Copilot weekly releases — September 14"
+      "title": "One sandbox per rollout, or how labs run RL for agents in 2026",
+      "url": "https://huggingface.co/blog/sergiopaniego/rl-environments-2026",
+      "score": 78,
+      "source": "Hugging Face Community"
     }
   ],
-  "x_status": "python_runtime_not_found"
+  "x_status": "python_exit_9009"
 }
