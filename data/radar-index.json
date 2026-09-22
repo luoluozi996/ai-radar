@@ -4,47 +4,47 @@
     {
       "date": "2026-09-22",
       "title": "AI Content Radar",
-      "summary": "Copilot 的策略和审查默认值将在 9 月 28 日迎来变更窗口；agent 环境需分层复现。X 抓取状态：python_exit_9009。",
+      "summary": "Copilot 的策略和审查默认值将在 9 月 28 日迎来变更窗口；agent 环境需分层复现。X 抓取状态：python_runtime_not_found。",
       "sections": [
         {
-          "label": "Daily",
-          "url": "../daily/2026-09-22.html",
           "tags": [
             "daily",
             "governance"
-          ]
+          ],
+          "label": "Daily",
+          "url": "../daily/2026-09-22.html"
         },
         {
-          "label": "Projects",
-          "url": "../projects/2026-09-22.html",
           "tags": [
             "code-review",
             "workflow"
-          ]
+          ],
+          "label": "Projects",
+          "url": "../projects/2026-09-22.html"
         },
         {
-          "label": "Events",
-          "url": "../news/2026-09-22.html",
           "tags": [
             "copilot",
             "policy"
-          ]
+          ],
+          "label": "Events",
+          "url": "../news/2026-09-22.html"
         },
         {
-          "label": "Models",
-          "url": "../models/2026-09-22.html",
           "tags": [
             "agents",
             "reproducibility"
-          ]
+          ],
+          "label": "Models",
+          "url": "../models/2026-09-22.html"
         },
         {
-          "label": "Voices",
-          "url": "../voices/2026-09-22.html",
           "tags": [
             "observability",
             "governance"
-          ]
+          ],
+          "label": "Voices",
+          "url": "../voices/2026-09-22.html"
         }
       ]
     },
