@@ -1,27 +1,27 @@
 {
-  "date": "2026-09-22",
-  "title": "AI Content Radar - 2026-09-22",
-  "headline": "审查要收敛，agent 环境要可复现。",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-22.html",
+  "date": "2026-09-23",
+  "title": "AI Content Radar - 2026-09-23",
+  "headline": "新模型要验收，本地量化要复现。",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-09-23.html",
   "top_items": [
     {
-      "title": "Upcoming changes to GitHub Copilot policies and billing",
-      "source": "GitHub Changelog",
-      "url": "https://github.blog/changelog/2026-08-28-upcoming-changes-to-github-copilot-policies-and-billing/",
-      "score": 93
+      "title": "Introducing Claude Opus 5.5",
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "score": 95,
+      "source": "Anthropic"
     },
     {
-      "title": "Auto-resolution and analysis updates in Copilot code review",
-      "source": "GitHub Changelog",
-      "url": "https://github.blog/changelog/2026-09-11-auto-resolution-and-analysis-updates-in-copilot-code-review/",
-      "score": 87
+      "title": "Transformers now runs llama.cpp quants",
+      "url": "https://huggingface.co/blog/transformers-llama-cpp-quants",
+      "score": 89,
+      "source": "Hugging Face"
     },
     {
-      "title": "One sandbox per rollout, or how labs run RL for agents in 2026",
-      "source": "Hugging Face Community",
-      "url": "https://huggingface.co/blog/sergiopaniego/rl-environments-2026",
-      "score": 78
+      "title": "Detecting and countering misuse of AI: September 2026",
+      "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+      "score": 81,
+      "source": "Anthropic"
     }
   ],
-  "x_status": "python_runtime_not_found"
+  "x_status": "x_fetch_no_cache"
 }
