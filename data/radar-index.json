@@ -1,6 +1,53 @@
 {
-  "generated_at": "2026-09-22",
+  "generated_at": "2026-09-23",
   "reports": [
+    {
+      "date": "2026-09-23",
+      "title": "AI Content Radar",
+      "summary": "Opus 5.5 上线，本地 GGUF 进入 Transformers 工作流；模型升级和代理链路都应验证。X 抓取状态：x_fetch_no_cache。",
+      "sections": [
+        {
+          "label": "Daily",
+          "url": "../daily/2026-09-23.html",
+          "tags": [
+            "daily",
+            "evaluation"
+          ]
+        },
+        {
+          "label": "Projects",
+          "url": "../projects/2026-09-23.html",
+          "tags": [
+            "transformers",
+            "local-ai"
+          ]
+        },
+        {
+          "label": "Events",
+          "url": "../news/2026-09-23.html",
+          "tags": [
+            "claude",
+            "governance"
+          ]
+        },
+        {
+          "label": "Models",
+          "url": "../models/2026-09-23.html",
+          "tags": [
+            "opus",
+            "benchmarking"
+          ]
+        },
+        {
+          "label": "Voices",
+          "url": "../voices/2026-09-23.html",
+          "tags": [
+            "security",
+            "supply-chain"
+          ]
+        }
+      ]
+    },
     {
       "date": "2026-09-22",
       "title": "AI Content Radar",
