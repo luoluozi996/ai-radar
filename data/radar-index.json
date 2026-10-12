@@ -1,6 +1,53 @@
 {
-  "generated_at": "2026-10-08",
+  "generated_at": "2026-10-12",
   "reports": [
+    {
+      "date": "2026-10-12",
+      "title": "AI Content Radar",
+      "summary": "默认模型与 MCP 启动进入 IDE 管理面；10 月 19 日模型迁移需完成回归。X 抓取状态：python_runtime_not_found。",
+      "sections": [
+        {
+          "url": "../daily/2026-10-12.html",
+          "tags": [
+            "daily",
+            "governance"
+          ],
+          "label": "Daily"
+        },
+        {
+          "url": "../projects/2026-10-12.html",
+          "tags": [
+            "mcp",
+            "secret-protection"
+          ],
+          "label": "Projects"
+        },
+        {
+          "url": "../news/2026-10-12.html",
+          "tags": [
+            "copilot",
+            "migration"
+          ],
+          "label": "Events"
+        },
+        {
+          "url": "../models/2026-10-12.html",
+          "tags": [
+            "model-routing",
+            "evaluation"
+          ],
+          "label": "Models"
+        },
+        {
+          "url": "../voices/2026-10-12.html",
+          "tags": [
+            "governance",
+            "vram"
+          ],
+          "label": "Voices"
+        }
+      ]
+    },
     {
       "date": "2026-10-08",
       "title": "AI Content Radar",
