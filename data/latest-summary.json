@@ -1,26 +1,26 @@
 {
-  "date": "2026-10-08",
-  "title": "AI Content Radar - 2026-10-08",
-  "headline": "高可信信号不足时，不用低可信内容凑数。",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-10-08.html",
+  "date": "2026-10-12",
+  "title": "AI Content Radar - 2026-10-12",
+  "headline": "把 agent 的模型与工具纳入同一套变更治理",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-10-12.html",
   "top_items": [
     {
-      "source": "GitHub Docs",
-      "title": "GitHub Copilot documentation",
-      "url": "https://docs.github.com/en/copilot",
-      "score": 84
+      "title": "New controls and chat improvements in Copilot for JetBrains",
+      "url": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains/",
+      "source": "GitHub Changelog",
+      "score": 91
     },
     {
-      "source": "Hugging Face",
-      "title": "Transformers GGUF documentation",
-      "url": "https://huggingface.co/docs/transformers/gguf",
-      "score": 79
+      "title": "Purpose-built model for leaked secret detection",
+      "url": "https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection/",
+      "source": "GitHub Changelog",
+      "score": 85
     },
     {
-      "source": "Hugging Face",
-      "title": "Model cards documentation",
-      "url": "https://huggingface.co/docs/hub/model-cards",
-      "score": 76
+      "title": "Claude Haiku 5.5 in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot/",
+      "source": "GitHub Changelog",
+      "score": 80
     }
   ],
   "x_status": "python_runtime_not_found"
