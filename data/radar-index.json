@@ -1,6 +1,53 @@
 {
-  "generated_at": "2026-10-12",
+  "generated_at": "2026-10-14",
   "reports": [
+    {
+      "date": "2026-10-14",
+      "title": "AI Content Radar",
+      "summary": "Gemini 4 Argon 进入 Copilot；LFM2.5-24B-A2B 提供端侧私有 agent 信号。X 抓取状态：python_runtime_not_found。",
+      "sections": [
+        {
+          "url": "../daily/2026-10-14.html",
+          "label": "Daily",
+          "tags": [
+            "daily",
+            "model-routing"
+          ]
+        },
+        {
+          "url": "../projects/2026-10-14.html",
+          "label": "Projects",
+          "tags": [
+            "copilot",
+            "edge-agent"
+          ]
+        },
+        {
+          "url": "../news/2026-10-14.html",
+          "label": "Events",
+          "tags": [
+            "enterprise",
+            "policy"
+          ]
+        },
+        {
+          "url": "../models/2026-10-14.html",
+          "label": "Models",
+          "tags": [
+            "lfm",
+            "evaluation"
+          ]
+        },
+        {
+          "url": "../voices/2026-10-14.html",
+          "label": "Voices",
+          "tags": [
+            "governance",
+            "rollbacks"
+          ]
+        }
+      ]
+    },
     {
       "date": "2026-10-12",
       "title": "AI Content Radar",
@@ -43,6 +90,53 @@
           "tags": [
             "governance",
             "vram"
+          ],
+          "label": "Voices"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "title": "AI Content Radar",
+      "summary": "OpenAI 披露虚假前台行动；本期未确认高可信新模型，保留仓库安全与评测核验路径。X 抓取状态：x_fetch_no_cache。",
+      "sections": [
+        {
+          "url": "../daily/2026-10-09.html",
+          "tags": [
+            "daily",
+            "safety"
+          ],
+          "label": "Daily"
+        },
+        {
+          "url": "../projects/2026-10-09.html",
+          "tags": [
+            "secret-scanning",
+            "agent"
+          ],
+          "label": "Projects"
+        },
+        {
+          "url": "../news/2026-10-09.html",
+          "tags": [
+            "trust-safety",
+            "provenance"
+          ],
+          "label": "Events"
+        },
+        {
+          "url": "../models/2026-10-09.html",
+          "tags": [
+            "model-cards",
+            "evaluation"
+          ],
+          "label": "Models"
+        },
+        {
+          "url": "../voices/2026-10-09.html",
+          "tags": [
+            "governance",
+            "workflow"
           ],
           "label": "Voices"
         }
