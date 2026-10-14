@@ -1,26 +1,26 @@
 {
-  "date": "2026-10-12",
-  "title": "AI Content Radar - 2026-10-12",
-  "headline": "把 agent 的模型与工具纳入同一套变更治理",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-10-12.html",
+  "date": "2026-10-14",
+  "title": "AI Content Radar - 2026-10-14",
+  "headline": "把新模型接入与端侧部署放进同一张验收表",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-10-14.html",
   "top_items": [
     {
-      "title": "New controls and chat improvements in Copilot for JetBrains",
-      "url": "https://github.blog/changelog/2026-10-10-new-controls-and-chat-improvements-in-copilot-for-jetbrains/",
-      "source": "GitHub Changelog",
-      "score": 91
+      "title": "Gemini 4 Argon in GitHub Copilot",
+      "score": 92,
+      "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot/",
+      "source": "GitHub Changelog"
     },
     {
-      "title": "Purpose-built model for leaked secret detection",
-      "url": "https://github.blog/changelog/2026-10-07-purpose-built-model-for-leaked-secret-detection/",
-      "source": "GitHub Changelog",
-      "score": 85
+      "title": "LFM2.5-24B-A2B",
+      "score": 87,
+      "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-24b-a2b",
+      "source": "Hugging Face / Liquid AI"
     },
     {
-      "title": "Claude Haiku 5.5 in GitHub Copilot",
-      "url": "https://github.blog/changelog/2026-10-07-claude-haiku-5-5-in-github-copilot/",
-      "source": "GitHub Changelog",
-      "score": 80
+      "title": "Enterprise managed settings enforcement updates",
+      "score": 83,
+      "url": "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates/",
+      "source": "GitHub Changelog"
     }
   ],
   "x_status": "python_runtime_not_found"
