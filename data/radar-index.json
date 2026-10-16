@@ -1,6 +1,100 @@
 {
-  "generated_at": "2026-10-14",
+  "generated_at": "2026-10-16",
   "reports": [
+    {
+      "date": "2026-10-16",
+      "title": "AI Content Radar",
+      "summary": "AI Scan 与 agentic autofix GA；修复能力应与验证、预算和人工合并一起度量。X 抓取状态：python_runtime_not_found。",
+      "sections": [
+        {
+          "tags": [
+            "daily",
+            "security"
+          ],
+          "url": "../daily/2026-10-16.html",
+          "label": "Daily"
+        },
+        {
+          "tags": [
+            "ai-scan",
+            "codeql"
+          ],
+          "url": "../projects/2026-10-16.html",
+          "label": "Projects"
+        },
+        {
+          "tags": [
+            "agentic-autofix",
+            "governance"
+          ],
+          "url": "../news/2026-10-16.html",
+          "label": "Events"
+        },
+        {
+          "tags": [
+            "indic",
+            "data-provenance"
+          ],
+          "url": "../models/2026-10-16.html",
+          "label": "Models"
+        },
+        {
+          "tags": [
+            "review",
+            "budget"
+          ],
+          "url": "../voices/2026-10-16.html",
+          "label": "Voices"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "title": "AI Content Radar",
+      "summary": "Copilot 新模型的策略化上线与 HiRO-ACEv2 的适用域验证。X 抓取状态：python_runtime_not_found。",
+      "sections": [
+        {
+          "label": "Daily",
+          "tags": [
+            "daily",
+            "evaluation"
+          ],
+          "url": "../daily/2026-10-15.html"
+        },
+        {
+          "label": "Projects",
+          "tags": [
+            "copilot",
+            "model-routing"
+          ],
+          "url": "../projects/2026-10-15.html"
+        },
+        {
+          "label": "Events",
+          "tags": [
+            "governance",
+            "policy"
+          ],
+          "url": "../news/2026-10-15.html"
+        },
+        {
+          "label": "Models",
+          "tags": [
+            "scientific-ai",
+            "evaluation"
+          ],
+          "url": "../models/2026-10-15.html"
+        },
+        {
+          "label": "Voices",
+          "tags": [
+            "reproducibility",
+            "rollbacks"
+          ],
+          "url": "../voices/2026-10-15.html"
+        }
+      ]
+    },
     {
       "date": "2026-10-14",
       "title": "AI Content Radar",
