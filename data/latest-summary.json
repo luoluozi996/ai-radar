@@ -1,26 +1,26 @@
 {
-  "date": "2026-10-14",
-  "title": "AI Content Radar - 2026-10-14",
-  "headline": "把新模型接入与端侧部署放进同一张验收表",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-10-14.html",
+  "date": "2026-10-16",
+  "title": "AI Content Radar - 2026-10-16",
+  "headline": "把 AI 安全扫描的建议、修复与成本放进同一条审查链",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-10-16.html",
   "top_items": [
     {
-      "title": "Gemini 4 Argon in GitHub Copilot",
-      "score": 92,
-      "url": "https://github.blog/changelog/2026-10-13-gemini-4-argon-in-github-copilot/",
-      "source": "GitHub Changelog"
+      "source": "GitHub Changelog",
+      "title": "AI Scan for pull requests GA",
+      "score": 94,
+      "url": "https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/"
     },
     {
-      "title": "LFM2.5-24B-A2B",
-      "score": 87,
-      "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-24b-a2b",
-      "source": "Hugging Face / Liquid AI"
+      "source": "GitHub Changelog",
+      "title": "Agentic autofix for code scanning alerts GA",
+      "score": 93,
+      "url": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/"
     },
     {
-      "title": "Enterprise managed settings enforcement updates",
-      "score": 83,
-      "url": "https://github.blog/changelog/2026-10-13-enterprise-managed-settings-enforcement-updates/",
-      "source": "GitHub Changelog"
+      "source": "NVIDIA / AI4Bharat / Hugging Face",
+      "title": "Nemotron-pretraining-Indic-v1",
+      "score": 88,
+      "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining"
     }
   ],
   "x_status": "python_runtime_not_found"
