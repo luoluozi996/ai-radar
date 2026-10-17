@@ -1,6 +1,53 @@
 {
-  "generated_at": "2026-10-16",
+  "generated_at": "2026-10-17",
   "reports": [
+    {
+      "date": "2026-10-17",
+      "title": "AI Content Radar",
+      "summary": "许可证合规 GA 与 Tokenizers 可复现实验：先把 agent 依赖选择和性能基线纳入审查。X 抓取状态：python_runtime_not_found。",
+      "sections": [
+        {
+          "tags": [
+            "daily",
+            "governance"
+          ],
+          "label": "Daily",
+          "url": "../daily/2026-10-17.html"
+        },
+        {
+          "tags": [
+            "tokenizers",
+            "benchmark"
+          ],
+          "label": "Projects",
+          "url": "../projects/2026-10-17.html"
+        },
+        {
+          "tags": [
+            "license",
+            "policy"
+          ],
+          "label": "Events",
+          "url": "../news/2026-10-17.html"
+        },
+        {
+          "tags": [
+            "evaluation",
+            "tokenization"
+          ],
+          "label": "Models",
+          "url": "../models/2026-10-17.html"
+        },
+        {
+          "tags": [
+            "agents",
+            "audit"
+          ],
+          "label": "Voices",
+          "url": "../voices/2026-10-17.html"
+        }
+      ]
+    },
     {
       "date": "2026-10-16",
       "title": "AI Content Radar",
