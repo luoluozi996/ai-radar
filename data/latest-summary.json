@@ -1,26 +1,20 @@
 {
-  "date": "2026-10-16",
-  "title": "AI Content Radar - 2026-10-16",
-  "headline": "把 AI 安全扫描的建议、修复与成本放进同一条审查链",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-10-16.html",
+  "date": "2026-10-17",
+  "title": "AI Content Radar - 2026-10-17",
+  "headline": "把 agent 的依赖选择与文本吞吐放进可复核的工程基线",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-10-17.html",
   "top_items": [
     {
+      "url": "https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available/",
       "source": "GitHub Changelog",
-      "title": "AI Scan for pull requests GA",
-      "score": 94,
-      "url": "https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/"
+      "title": "Open source license compliance generally available",
+      "score": 94
     },
     {
-      "source": "GitHub Changelog",
-      "title": "Agentic autofix for code scanning alerts GA",
-      "score": 93,
-      "url": "https://github.blog/changelog/2026-10-15-agentic-autofix-for-code-scanning-alerts-general-availability/"
-    },
-    {
-      "source": "NVIDIA / AI4Bharat / Hugging Face",
-      "title": "Nemotron-pretraining-Indic-v1",
-      "score": 88,
-      "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining"
+      "url": "https://huggingface.co/blog/huggingface/tokenmaxxing-bert",
+      "source": "Hugging Face",
+      "title": "Tokenmaxxing BERT: 50x faster tokenization",
+      "score": 91
     }
   ],
   "x_status": "python_runtime_not_found"
