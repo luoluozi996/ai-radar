@@ -1,6 +1,53 @@
 {
-  "generated_at": "2026-10-17",
+  "generated_at": "2026-10-18",
   "reports": [
+    {
+      "date": "2026-10-18",
+      "title": "AI Content Radar",
+      "summary": "Indic 预训练数据与 Copilot 模型迁移：以来源追溯和可重复验收管理 AI 依赖。X 抓取状态：x_fetch_no_cache。",
+      "sections": [
+        {
+          "tags": [
+            "daily",
+            "governance"
+          ],
+          "label": "Daily",
+          "url": "../daily/2026-10-18.html"
+        },
+        {
+          "tags": [
+            "dataset",
+            "multilingual"
+          ],
+          "label": "Projects",
+          "url": "../projects/2026-10-18.html"
+        },
+        {
+          "tags": [
+            "copilot",
+            "deprecation"
+          ],
+          "label": "Events",
+          "url": "../news/2026-10-18.html"
+        },
+        {
+          "tags": [
+            "pretraining",
+            "evaluation"
+          ],
+          "label": "Models",
+          "url": "../models/2026-10-18.html"
+        },
+        {
+          "tags": [
+            "migration",
+            "audit"
+          ],
+          "label": "Voices",
+          "url": "../voices/2026-10-18.html"
+        }
+      ]
+    },
     {
       "date": "2026-10-17",
       "title": "AI Content Radar",

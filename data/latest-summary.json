@@ -1,21 +1,21 @@
 {
-  "date": "2026-10-17",
-  "title": "AI Content Radar - 2026-10-17",
-  "headline": "把 agent 的依赖选择与文本吞吐放进可复核的工程基线",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-10-17.html",
+  "date": "2026-10-18",
+  "title": "AI Content Radar - 2026-10-18",
+  "headline": "把多语种训练数据的可追溯性与模型迁移计划放进同一张工程清单",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-10-18.html",
   "top_items": [
     {
-      "url": "https://github.blog/changelog/2026-10-16-open-source-license-compliance-generally-available/",
-      "source": "GitHub Changelog",
-      "title": "Open source license compliance generally available",
-      "score": 94
+      "title": "Nemotron Indic pretraining data and open generation pipeline",
+      "score": 95,
+      "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
+      "source": "NVIDIA / AI4Bharat on Hugging Face"
     },
     {
-      "url": "https://huggingface.co/blog/huggingface/tokenmaxxing-bert",
-      "source": "Hugging Face",
-      "title": "Tokenmaxxing BERT: 50x faster tokenization",
-      "score": 91
+      "title": "Upcoming deprecation of selected GitHub Copilot models",
+      "score": 93,
+      "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/",
+      "source": "GitHub Changelog"
     }
   ],
-  "x_status": "python_runtime_not_found"
+  "x_status": "x_fetch_no_cache"
 }
