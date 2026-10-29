@@ -1,21 +1,27 @@
 {
-  "date": "2026-10-18",
-  "title": "AI Content Radar - 2026-10-18",
-  "headline": "把多语种训练数据的可追溯性与模型迁移计划放进同一张工程清单",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-10-18.html",
+  "date": "2026-10-29",
+  "title": "AI Content Radar - 2026-10-29",
+  "headline": "把 agent 工作流、原型工具和小型多模态模型放进可验证的交付链路",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-10-29.html",
   "top_items": [
     {
-      "title": "Nemotron Indic pretraining data and open generation pipeline",
-      "score": 95,
-      "url": "https://huggingface.co/blog/nvidia/scaling-indic-pretraining",
-      "source": "NVIDIA / AI4Bharat on Hugging Face"
+      "source": "GitHub Changelog",
+      "score": 96,
+      "title": "GitHub Agentic Workflows generally available",
+      "url": "https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available/"
     },
     {
-      "title": "Upcoming deprecation of selected GitHub Copilot models",
+      "source": "Hugging Face / Liquid AI",
       "score": 93,
-      "url": "https://github.blog/changelog/2026-10-15-upcoming-deprecation-of-selected-github-copilot-models-in-mid-november/",
-      "source": "GitHub Changelog"
+      "title": "Build specialized multimodal models with LFM3",
+      "url": "https://huggingface.co/blog/LiquidAI/lfm3"
+    },
+    {
+      "source": "GitHub Changelog",
+      "score": 92,
+      "title": "Introducing Replica, an open-source AI prototyping tool",
+      "url": "https://github.blog/changelog/2026-10-28-introducing-replica-an-open-source-ai-prototyping-tool/"
     }
   ],
-  "x_status": "x_fetch_no_cache"
+  "x_status": "python_runtime_not_found"
 }
