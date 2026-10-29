@@ -1,6 +1,100 @@
 {
-  "generated_at": "2026-10-18",
+  "generated_at": "2026-10-29",
   "reports": [
+    {
+      "date": "2026-10-29",
+      "title": "AI Content Radar",
+      "summary": "Agentic Workflows GA、Replica 开源与 LFM3 发布：将 agent 和模型试验纳入权限、验证与基准闭环。X 抓取状态：python_runtime_not_found。",
+      "sections": [
+        {
+          "url": "../daily/2026-10-29.html",
+          "label": "Daily",
+          "tags": [
+            "daily",
+            "governance"
+          ]
+        },
+        {
+          "url": "../projects/2026-10-29.html",
+          "label": "Projects",
+          "tags": [
+            "replica",
+            "prototyping"
+          ]
+        },
+        {
+          "url": "../news/2026-10-29.html",
+          "label": "Events",
+          "tags": [
+            "agentic-workflows",
+            "github-actions"
+          ]
+        },
+        {
+          "url": "../models/2026-10-29.html",
+          "label": "Models",
+          "tags": [
+            "lfm3",
+            "multimodal"
+          ]
+        },
+        {
+          "url": "../voices/2026-10-29.html",
+          "label": "Voices",
+          "tags": [
+            "evaluation",
+            "permissions"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "title": "AI Content Radar",
+      "summary": "TorchNeuron 公测与 Copilot 模型退役：将硬件后端和模型 ID 作为可验证依赖管理。X 抓取状态：python_runtime_not_found。",
+      "sections": [
+        {
+          "tags": [
+            "daily",
+            "reproducibility"
+          ],
+          "label": "Daily",
+          "url": "../daily/2026-10-20.html"
+        },
+        {
+          "tags": [
+            "torchneuron",
+            "trainium"
+          ],
+          "label": "Projects",
+          "url": "../projects/2026-10-20.html"
+        },
+        {
+          "tags": [
+            "copilot",
+            "deprecation"
+          ],
+          "label": "Events",
+          "url": "../news/2026-10-20.html"
+        },
+        {
+          "tags": [
+            "backend",
+            "evaluation"
+          ],
+          "label": "Models",
+          "url": "../models/2026-10-20.html"
+        },
+        {
+          "tags": [
+            "migration",
+            "governance"
+          ],
+          "label": "Voices",
+          "url": "../voices/2026-10-20.html"
+        }
+      ]
+    },
     {
       "date": "2026-10-18",
       "title": "AI Content Radar",
