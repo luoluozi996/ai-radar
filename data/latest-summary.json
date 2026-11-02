@@ -1,27 +1,15 @@
 {
-  "date": "2026-10-29",
-  "title": "AI Content Radar - 2026-10-29",
-  "headline": "把 agent 工作流、原型工具和小型多模态模型放进可验证的交付链路",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-10-29.html",
+  "date": "2026-11-02",
+  "title": "AI Content Radar - 2026-11-02",
+  "headline": "把 agent 记忆和自动化收益，放回可删除、可审查的工程边界",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-11-02.html",
   "top_items": [
     {
       "source": "GitHub Changelog",
-      "score": 96,
-      "title": "GitHub Agentic Workflows generally available",
-      "url": "https://github.blog/changelog/2026-10-28-github-agentic-workflows-generally-available/"
-    },
-    {
-      "source": "Hugging Face / Liquid AI",
-      "score": 93,
-      "title": "Build specialized multimodal models with LFM3",
-      "url": "https://huggingface.co/blog/LiquidAI/lfm3"
-    },
-    {
-      "source": "GitHub Changelog",
-      "score": 92,
-      "title": "Introducing Replica, an open-source AI prototyping tool",
-      "url": "https://github.blog/changelog/2026-10-28-introducing-replica-an-open-source-ai-prototyping-tool/"
+      "score": 91,
+      "title": "GitHub intelligence puts your code, context, and history to work",
+      "url": "https://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work/"
     }
   ],
-  "x_status": "python_runtime_not_found"
+  "x_status": "x_fetch_no_cache"
 }
