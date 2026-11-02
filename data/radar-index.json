@@ -1,6 +1,18 @@
 {
-  "generated_at": "2026-10-29",
+  "generated_at": "2026-11-02",
   "reports": [
+    {
+      "date": "2026-11-02",
+      "title": "AI Content Radar",
+      "summary": "Agent 记忆与持续改进需放入可删除、可审查的工程边界；近 24 小时无新增高可信项目或模型。X 抓取状态：x_fetch_no_cache。",
+      "sections": [
+        { "url": "../daily/2026-11-02.html", "label": "Daily", "tags": ["daily", "memory"] },
+        { "url": "../projects/2026-11-02.html", "label": "Projects", "tags": ["verification", "tools"] },
+        { "url": "../news/2026-11-02.html", "label": "Events", "tags": ["copilot", "memory"] },
+        { "url": "../models/2026-11-02.html", "label": "Models", "tags": ["evaluation", "evidence"] },
+        { "url": "../voices/2026-11-02.html", "label": "Voices", "tags": ["governance", "context"] }
+      ]
+    },
     {
       "date": "2026-10-29",
       "title": "AI Content Radar",
