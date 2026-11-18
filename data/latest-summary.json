@@ -1,15 +1,21 @@
 {
-  "date": "2026-11-02",
-  "title": "AI Content Radar - 2026-11-02",
-  "headline": "把 agent 记忆和自动化收益，放回可删除、可审查的工程边界",
-  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-11-02.html",
+  "date": "2026-11-18",
+  "title": "AI Content Radar - 2026-11-18",
+  "headline": "让 agent 的每次升级，都能通过真实任务的回归与安全验收",
+  "report_url": "https://luoluozi996.github.io/ai-radar/daily/2026-11-18.html",
   "top_items": [
     {
-      "source": "GitHub Changelog",
-      "score": 91,
-      "title": "GitHub intelligence puts your code, context, and history to work",
-      "url": "https://github.blog/changelog/2026-10-28-github-intelligence-puts-your-code-context-and-history-to-work/"
+      "title": "GPT-6.2 Astra and Sol",
+      "score": 96,
+      "source": "OpenAI",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+    },
+    {
+      "title": "GitHub Copilot Evals public preview",
+      "score": 93,
+      "source": "GitHub",
+      "url": "https://github.blog/changelog/2026-11-17-github-copilot-evals-is-now-in-public-preview/"
     }
   ],
-  "x_status": "x_fetch_no_cache"
+  "x_status": "python_runtime_not_found"
 }
