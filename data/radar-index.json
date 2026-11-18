@@ -1,16 +1,145 @@
 {
-  "generated_at": "2026-11-02",
+  "generated_at": "2026-11-18",
   "reports": [
+    {
+      "date": "2026-11-18",
+      "title": "AI Content Radar",
+      "summary": "GPT-6.2 Astra / Sol 与 Copilot Evals、代码审查更新：把 agent 变更纳入真实任务回归、安全检查和人工升级路径。X 抓取状态：python_runtime_not_found。",
+      "sections": [
+        {
+          "url": "../daily/2026-11-18.html",
+          "tags": [
+            "daily",
+            "agent-evals"
+          ],
+          "label": "Daily"
+        },
+        {
+          "url": "../projects/2026-11-18.html",
+          "tags": [
+            "copilot",
+            "evals"
+          ],
+          "label": "Projects"
+        },
+        {
+          "url": "../news/2026-11-18.html",
+          "tags": [
+            "code-review",
+            "security"
+          ],
+          "label": "Events"
+        },
+        {
+          "url": "../models/2026-11-18.html",
+          "tags": [
+            "gpt-6.2",
+            "safety"
+          ],
+          "label": "Models"
+        },
+        {
+          "url": "../voices/2026-11-18.html",
+          "tags": [
+            "governance",
+            "evaluation"
+          ],
+          "label": "Voices"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "title": "AI Content Radar",
+      "summary": "日语金融合成 persona 数据集发布：把模拟数据也纳入偏差、合规与真实世界验证。X 抓取状态：x_fetch_no_cache。",
+      "sections": [
+        {
+          "url": "../daily/2026-11-10.html",
+          "tags": [
+            "daily",
+            "synthetic-data"
+          ],
+          "label": "Daily"
+        },
+        {
+          "url": "../projects/2026-11-10.html",
+          "tags": [
+            "japan",
+            "personas"
+          ],
+          "label": "Projects"
+        },
+        {
+          "url": "../news/2026-11-10.html",
+          "tags": [
+            "privacy",
+            "evaluation"
+          ],
+          "label": "Events"
+        },
+        {
+          "url": "../models/2026-11-10.html",
+          "tags": [
+            "evidence",
+            "model-cards"
+          ],
+          "label": "Models"
+        },
+        {
+          "url": "../voices/2026-11-10.html",
+          "tags": [
+            "governance",
+            "fairness"
+          ],
+          "label": "Voices"
+        }
+      ]
+    },
     {
       "date": "2026-11-02",
       "title": "AI Content Radar",
       "summary": "Agent 记忆与持续改进需放入可删除、可审查的工程边界；近 24 小时无新增高可信项目或模型。X 抓取状态：x_fetch_no_cache。",
       "sections": [
-        { "url": "../daily/2026-11-02.html", "label": "Daily", "tags": ["daily", "memory"] },
-        { "url": "../projects/2026-11-02.html", "label": "Projects", "tags": ["verification", "tools"] },
-        { "url": "../news/2026-11-02.html", "label": "Events", "tags": ["copilot", "memory"] },
-        { "url": "../models/2026-11-02.html", "label": "Models", "tags": ["evaluation", "evidence"] },
-        { "url": "../voices/2026-11-02.html", "label": "Voices", "tags": ["governance", "context"] }
+        {
+          "url": "../daily/2026-11-02.html",
+          "label": "Daily",
+          "tags": [
+            "daily",
+            "memory"
+          ]
+        },
+        {
+          "url": "../projects/2026-11-02.html",
+          "label": "Projects",
+          "tags": [
+            "verification",
+            "tools"
+          ]
+        },
+        {
+          "url": "../news/2026-11-02.html",
+          "label": "Events",
+          "tags": [
+            "copilot",
+            "memory"
+          ]
+        },
+        {
+          "url": "../models/2026-11-02.html",
+          "label": "Models",
+          "tags": [
+            "evaluation",
+            "evidence"
+          ]
+        },
+        {
+          "url": "../voices/2026-11-02.html",
+          "label": "Voices",
+          "tags": [
+            "governance",
+            "context"
+          ]
+        }
       ]
     },
     {
